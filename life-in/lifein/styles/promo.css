@@ -1,0 +1,70 @@
+.lifein_service2 h3,
+.lifein_service3 h3{ font-size: 1.125rem; font-weight: bold; color: #222; text-align: center; line-height: 1.4; padding-bottom:20px; }
+
+.lifein_service1{ position:relative; padding:40px 0 45px 0; background: rgb(38,132,235); background: linear-gradient(140deg, rgba(38,132,235,1) 35%, rgba(1,253,139,1) 100%); }
+.lifein_service1 h3{ color:#FFF; font-size: 1.125rem; font-weight: bold; text-align: center; line-height: 1.4; padding-bottom:20px; }
+
+.lifein_service1 .service-slider { position: relative; padding:0 10%; margin:0 auto;  } 
+.lifein_service1 .service-slider>div{ border-radius:10px; }
+
+.lifein_service1 .service-slider .slick-dots { position: absolute; top: 30px; left:0; list-style: none; display: block; padding: 0; margin: 0; width: 100%; font-size: 0; text-align: center; z-index: 9; }
+.lifein_service1 .service-slider .slick-dots li { position: relative; display: inline-block; margin: 0 2px; padding: 0; cursor: pointer; }
+.lifein_service1 .service-slider .slick-dots li button { border: 0; background: transparent; display: block; padding: 0; width: 6px; height: 6px; outline: none; line-height: 0px; font-size: 0px; color: transparent; background: transparent; border: 1px solid #23A685; border-radius: 3px; cursor: pointer; }
+.lifein_service1 .service-slider .slick-dots li button:hover, .service-slider .slick-dots li button:focus { outline: none; }
+.lifein_service1 .service-slider .slick-dots li button:hover:before, .service-slider .slick-dots li button:focus:before { opacity: .7; }
+.lifein_service1 .service-slider .slick-dots li.slick-active button { width: 18px; background: #23A685; }
+
+.lifein_service1 .service-top{ padding:40px 0 30px 0!important; background:#FFF !important; }
+.lifein_service1 .service-top>img{  width:50%; margin:0 auto; }
+.lifein_service1 .service-top .text-area { color: #2684EB; font-size: 1rem; font-weight: 700; margin-bottom:8px; }
+.lifein_service1 .service-top p{ color:#222; }
+
+.lifein_service2{ padding:40px 0 0 0; }
+.lifein_service2 .tab-nav { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; }
+.lifein_service2 .tab-nav li { -webkit-box-flex: 1; -moz-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; height: 42px; text-align: center; line-height: 42px; border-bottom: 1px solid #e9e9e9; font-size:1rem; }
+.lifein_service2 .tab-nav li.current { font-weight: bold; color: #23A685; border-bottom: 2px solid #23A685; }
+.lifein_service2 .tab-nav li a { display: block; }
+.lifein_service2 .tab-content { display: none; }
+.lifein_service2 .tab-content.current { display: block; }
+.benefit_list{ padding:20px; position: relative; background:#F0FEFB; }
+.benefit_list>ul>li{ position:relative; top:0; left:0; background:#fff; border-radius:10px; padding:20px 25px; margin-bottom:20px; box-shadow: 3px 3px 10px rgba(35,166,133,0.1); }
+.benefit_list>ul>li:first-child{ margin-top:10px !important; }
+.benefit_list>ul>li:last-child{ margin-bottom:10px !important; }
+.benefit_list>ul>li .benefit_cont{ clear:both; height:54px; }
+.benefit_list>ul>li .benefit_cont .benefit_cont_icon{ float:left; display: inline-block; width: 54px; height: 54px; background-size: contain; font-size: 1px; color: transparent; background-position: 0 0; vertical-align: middle; }
+.benefit_list>ul>li .benefit_cont .benefit_cont_icon.poshop{ background: url('../images/benefit/benefit_img01.png') no-repeat; background-size: contain; }
+.benefit_list>ul>li .benefit_cont .benefit_cont_icon.logii{ background: url('../images/benefit/benefit_img02.png') no-repeat; background-size: contain; }
+.benefit_list>ul>li .benefit_cont .benefit_cont_icon.fnb{ background: url('../images/benefit/benefit_img03.png') no-repeat; background-size: contain; }
+.benefit_list>ul>li .benefit_cont .benefit_cont_icon.e-magazine{ background: url('../images/benefit/benefit_img04.png') no-repeat; background-size: contain; }
+.benefit_list>ul>li .benefit_cont .benefit_cont_icon.delievery{ background: url('../images/benefit/benefit_img05.png') no-repeat; background-size: contain; }
+.benefit_list>ul>li .benefit_cont .benefit_cont_icon.autopassword{ background: url('../images/benefit/benefit_img06.png') no-repeat; background-size: contain; }
+.benefit_list>ul>li .benefit_cont .benefit_cont_icon.shield{ background: url('../images/benefit/benefit_img07.png') no-repeat; background-size: contain; }
+
+.benefit_list>ul>li .benefit_cont .benefit_cont_desc{ float:left; margin:6px 0 0 15px; }
+.benefit_list>ul>li .benefit_cont .benefit_cont_desc h4{ font-size:0.95rem; color:#23A685; font-weight:700; }
+.benefit_list>ul>li .benefit_cont .benefit_cont_desc p{ font-size:0.8rem; font-weight:600; }
+.benefit_list>ul>li .benefit_desc{ margin-left:10px; margin-top:20px; }
+.benefit_list>ul>li .benefit_desc>li{ margin-bottom:2px; color:#777; font-size:0.875rem; text-indent: -0.5rem; }
+.benefit_list>ul>li .benefit_desc>li::before { content: '\2219'; margin-right: .3em; }
+.logoList { text-align: center; }
+.logoList>img { width:100%; margin:0 auto; padding:10px 0 0 0; }
+
+.lifein_service3{ padding:40px 0 60px 0; text-align:center; margin:0 auto;  }
+.lifein_service3 .life-in_app{ display: inline-block; width: 280px; height: 230px; background-size: contain; font-size: 1px; color: transparent; background-position: 0 0; vertical-align: middle; background: url('../images/benefit/lifein_app_device.png') no-repeat; background-size: contain; }
+
+.button-confirm { background:#222; }
+.button-confirm:hover { background:#000; }
+
+@media screen and (max-width: 320px) {
+	.benefit_list>ul>li{ padding:20px 15px; }	
+	.benefit_list>ul>li .benefit_cont{ clear:both; height:36px; }	
+	.benefit_list>ul>li .benefit_cont .benefit_cont_icon{ width: 32px; height: 32px; }
+	.benefit_list>ul>li .benefit_cont .benefit_cont_desc{ float:left; margin:0 0 0 10px; }
+	.benefit_list>ul>li .benefit_cont .benefit_cont_desc h4{ font-size:0.9rem; color:#23A685; font-weight:700; }
+	.benefit_list>ul>li .benefit_cont .benefit_cont_desc p{ font-size:0.8rem; font-weight:600; }	
+	.benefit_list>ul>li .benefit_desc>li{ margin-bottom:2px; color:#777; font-size:0.8rem; text-indent: -0.4rem; }
+}
+@media screen and (min-width: 768px) {
+	.logoList>img{ text-align:center; width:40%; margin:0 auto; padding:10px 0 0 0; }
+}
+

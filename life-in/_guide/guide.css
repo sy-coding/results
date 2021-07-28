@@ -1,0 +1,314 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body, form, div, p, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, fieldset, input, td {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    line-height: 1.5;
+}
+body {
+    padding-bottom: 30px;
+    background-color: #fff;
+}
+ol, ul, dl {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+h1 {
+    display: table;
+    position: fixed;
+    overflow:hidden;
+    width: 100%;
+	height:50px;
+    top: 0;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    background: rgb(38,132,235);
+    background: linear-gradient(90deg, rgba(38,132,235,1) 35%, rgba(1,253,139,1) 100%);
+    border-bottom: 1px solid #fff;
+    z-index: 100;
+}
+h1 span {
+    display: table-cell;
+    padding-left: 20px;
+    vertical-align: middle;
+    color:#fff ;
+}
+dl {
+    position: relative;
+    margin-top:50px;
+}
+dl dt {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #ccc;
+    color: #333;
+    border-bottom: 1px solid #aaa;
+    border-top: 1px solid #999;
+}
+
+dl dt.on {
+    background-color: #23A685;
+    color: #fff;
+}
+
+dl dt span {
+    color: #333;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+dl dt.on span{
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.page span:before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 1em;
+    right: 1em;
+    border-width: 6px 0px 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #333;
+}
+
+.page.on > span:before {
+    position: absolute;
+    top: 1.2em;
+    right: 1em;
+    border-width: 6px 6px 0px 6px;
+    border-color: #fff transparent transparent transparent
+}
+
+dd {
+    display: none;
+}
+dd.on {
+    display: block !important;
+}
+dd>ul>li {
+    border-bottom:1px solid #b0b0b0;
+}
+.dep_01_list > li {
+    width: 100%;
+    /*padding: 1em;*/
+}
+.dep_01_list>li>a:first-child {
+    display: block;
+    padding: 0.5em 1em 0.2em;
+    color: #333333;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+ul.inner > li  {
+    width: 100%;
+    display: block;
+    background: #ffffff;
+    line-height: 10px;
+    background: #f1f1f1;
+    /*border-bottom: 2px solid #ffffff;*/
+    margin-bottom: 3px
+}
+
+ul.inner > li:hover {
+    background: #cccccc;
+}
+
+a, a:hover, a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
+a span {
+    color: #555;
+}
+a span.txt {
+    color: #267abf;
+	font-size:1.1em;
+	text-indent:0.2em;
+	font-weight:bold;
+}
+
+dd>ul>li>a:first-child {
+    position: relative;
+    display:block;
+    padding: 10px 0px 10px 26px;
+    color:#202125;
+    font-weight:bold;
+}
+
+dd>ul>li>a:before,
+dd>ul>li>a:before {
+    display:block;
+    position:absolute;
+    content:"";
+    top:13px;
+    left:9px;
+    border-width:6px 0px 6px 6px;
+    border-style:solid;
+    border-color:#fff #fff #fff #202125;
+}
+a+a {
+    color:#fff !important;
+    display: inline-block;
+    font-size: 0.9em;
+    padding:0.1em 0.8em;
+	background:#202125;
+	border-radius:2px;
+}
+a+a:hover{
+	opacity:0.6;
+}
+a+a:before {
+    display: none !important;
+}
+a.on *,
+a.on span:last-child{
+    text-decoration:underline;
+}
+dd>ul>li.on>a{
+ background:#F4F8F6; margin-bottom:2px;
+ color:#23A685;
+}
+dd>ul>li.on>a:before {
+    top:16px;
+    left:7px;
+    border-width:6px 6px 0px 6px;
+    border-color:#23A685 transparent transparent transparent;
+}
+dd div {
+    padding-right: 10px;
+}
+dd div span {
+    display: block;
+    width: 60px;
+    float: left;
+    color:green;
+    text-align: center;
+    border-radius:10px;
+}
+dd div span.today {
+    color:#fff;
+    background-color: green;
+}
+dd div span+span {
+    color: red;
+    margin-left: 6px;
+}
+dd div span+span.today {
+    background-color: red;
+}
+a.done
+a.modi {
+    position: relative;
+}
+a.done:after,
+a.modi span:after{
+    content:"";
+    display:block;
+    position: absolute;
+    top: 12px;
+    right: 30px;
+    width: 10px;
+    height: 10px;
+    border-radius:10px;
+    background-color:green;
+}
+a.modi span:after{
+    right: 12px;
+    background-color:red;
+}
+dd li {
+    position: relative;
+}
+/*새창*/
+a.new {
+    position: absolute;
+    top: 0.6em;
+    right: 1.5em;
+}
+/*//새창*/
+.guide+dd a+a {
+    position: absolute;
+    display: block;
+    top: 10px;
+    right: 1em;
+}
+.page+dd>ul>li>a span {
+    display: inline-block;
+    padding-left:2px;
+    color:#999;
+}
+.page+dd>ul>li>a span:before {
+    content:"/";
+}
+dd>ul>li a span {
+    display: block;
+    padding-left: 0;
+    padding-right:60px;
+}
+dd>ul>li>ul {
+    display:none;
+    /*display:block;*/
+    /*padding: 0 0 16px 26px;*/
+}
+dd>ul>li.on>ul {
+    display:block;
+}
+.page+dd>ul>li>ul>li {
+    line-height:1.8em;
+}
+ul.guide>li>ul,
+.page+dd>ul>li>ul>li>ul {
+    display: block !important;
+    padding: 0 0 4px 0;
+}
+ul.guide>li>ul>li,
+.page+dd>ul>li>ul>li>ul>li {
+    position: relative;
+    color:#666;
+    font-size:0.8em;
+    padding:0.5em 1.5em;
+    line-height:1.6em;
+}
+.page+dd>ul>li>ul>li>ul>li:before {
+    display:block;
+    position: absolute;
+    content:"";
+    top:-5px;
+    left: 0px;
+}
+ul.guide>li>ul>li,
+.page+dd>ul>li>ul>li>ul>li li {
+    line-height:1.5em;
+}
+
+ul li div {
+    float:right;
+    /*border: 1px solid #000;*/
+}
+ul li a {
+
+}
+ul li {
+}
+.db {
+    display: block !important;
+}

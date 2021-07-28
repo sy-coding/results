@@ -1,0 +1,277 @@
+@import url('../styles/noto-sans-kr.css');
+
+/* reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+a{text-decoration: none !important}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+button{cursor: pointer;}
+
+select::-ms-expand {display: none;}
+select::-webkit-expand {display: none;}
+select {-moz-appearance: window;-webkit-appearance: none;appearance:none;}
+
+.screen-out { position: absolute; width: 0; height: 0; line-height: 0; text-indent: 100%; overflow: hidden; color: transparent; }
+
+/* ============================== AutoPassword setting 19-09-23 ============================== */
+/* 버튼들은 컬러값만 지정되어있다. 사이즈나 font-weight, padding은 따로 클래스를 지정하여 조절 */
+
+/* 버튼 공통  */
+button{outline: none !important;border: none;}
+
+/* 확인 버튼 */
+.confirm-btn{ background-color:#23a685; border: none; color: #fff; transition: all 0.3s; }
+.confirm-btn:hover { background-color:#23a685; }
+.confirm-btn:active { background-color:#23a685; }
+
+/* 취소버튼 */
+.cancel_btn { background-color: #d5d8d8; color: #333; transition: all 0.3s; }
+.cancel_btn:hover { background-color: #d5d8d8; color: #333; }
+.cancel_btn:active { background-color: #d5d8d8; color: #333; }
+
+/* 실패버튼 */
+.dismiss-btn { background-color: #fb4343; color: #fff; transition: all 0.3s; }
+.dismiss-btn:hover { background-color: #E93E3E; color: #fff; }
+.dismiss-btn:active { background-color:#CF2A2A; color: #fff; }
+
+/* 이전 페이지로 가기 버튼 */
+/*
+button.close-btn{width:100%; height: 100%;;background-image: url(../images/normal.png); background-repeat: no-repeat;transition: all 0.3s}
+button.close-btn:hover {background-image: url(../images/hover.png);transition: all 0.3s}
+button.close-btn:active {background-image: url(../images/press.png);transition: all 0.3s}
+*/
+
+/* float한 마크업 부분을 감싸고 있는 div에 clearfix */
+.clearfix:after{ content: ""; clear: both; display: block; }
+
+/* 텍스트를 강조하고 싶을 때 */
+.color-orange{ color: #df4747; } .color-green{ color: #23A685; }
+
+/* 성공 텍스트가 나올 때 */
+.color-success{ color: #23A685; }
+
+/* 웹사이트 주소나, 상태 같은 정보 텍스트 */
+.color-info{color: #23a685;}
+
+/* margin padding text-style */
+.mb8{margin-bottom: 8px;}.mb10{margin-bottom: 10px;}.mb20{margin-bottom: 20px;}.mb28{margin-bottom: 28px;}.mt10{margin-top: 10px;}.mt20{margin-top: 20px;}.pb8{padding-bottom:8px !important;}.fontB{ font-weight:500; }.fontL{ font-weight:100; }.nowrap{white-space:nowrap;}
+
+/* 이미지나 wrap 따위를 숨길 때 */
+.display-none { display: none; }
+
+/* Slider Common */
+.slick-slider { position: relative; display: block; box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
+.slick-list { position: relative; overflow: hidden; display: block; margin: 0; padding: 0; }
+.slick-list:focus { outline: 0px; }
+.slick-list.dragging { cursor: pointer; cursor: hand; }
+.slick-slider .slick-track, .slick-slider .slick-list { -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+.slick-track { position: relative; left: 0; top: 0; display: block; margin-left: auto; margin-right: auto; }
+.slick-track:before, .slick-track:after { content: ""; display: table; }
+.slick-track:after { clear: both; }
+.slick-loading .slick-track { visibility: hidden; }
+.slick-slide { float: left; height: 100%; min-height: 1px; display: none; outline: 0px; }
+[dir="rtl"] .slick-slide { float: right; }
+.slick-slide img { display: block; }
+.slick-slide.slick-loading img { display: none; }
+.slick-slide.dragging img { pointer-events: none; }
+.slick-initialized .slick-slide { display: block; }
+.slick-loading .slick-slide { visibility: hidden; }
+.slick-vertical .slick-slide { display: block; height: auto; border: 1px solid transparent; }
+.slick-arrow.slick-hidden { display: none; }
+
+/*공통 body, header css*/
+body { width: 100%; position: relative; overflow-y: scroll; font-family: 'Noto Sans KR', sans-serif; line-height: 1.5; letter-spacing: -.05rem; }
+header { position: fixed; top: 0; left: 0; padding: 0; width: 100%; height: 50px; background: #fff; z-index: 10; color:#181818; text-align:center; }
+header h1 { background-color: #fff; text-align: center; font-weight: 600; color: #181818; display: inline-block; font-size: 20px; padding-top: 15px; padding-bottom: 15px; line-height: 0.9; }
+header button { position: absolute; right: 0; top:0; border: none; background: none; padding: 0; height: 48px; left: calc(100% - 48px); }
+.header-left, .header-right { display:none; }
+
+
+select:focus{outline: none;}
+input[type=text]::-ms-clear { display: none; }
+
+@media screen and (max-width: 1024px){
+	.header-left { display:block; position: absolute; top: 0; left: 0; height: 50px; }
+	.header-right { display:block; position: absolute; top: 0; right: 0; height: 50px; }
+	.header-left .btn-prev { display: block; width: 50px; height: 50px; background: url(../images/aps/icon_prev.png) no-repeat; background-size: cover; transition: all 0.3s;}
+	.header-right .btn-close { display: block; width: 50px; height: 50px; background: url(../images/aps/icon_close.png) no-repeat; background-size: cover; transition: all 0.3s; }	
+}
+
+@media screen and (max-width: 480px){
+	body{ overflow: auto !important; }
+	header h1 { font-size: 17px; padding:14px 0; }
+}
+
+/* ------------------------------------- login(aps.html) ------------------------------------- */
+
+.aps { width: 480px; height: auto; transition: all 0.4s; background-color: #fff; margin: auto; position: relative; overflow: hidden; }
+ 
+.aps .login_wrap { padding:30% 15%; }
+.aps .login_wrap h2 img { width:25%; margin-left:5%; }
+.aps .login_wrap h3 { text-align: center; padding-bottom:40px; }
+.aps .login_wrap h3 img { width:100%; height: auto; }
+
+/* 인증 방식 선택 시 셀렉트박스 */ 
+.aps .login_wrap .select_box { padding-bottom: 24px; position: relative; }
+.aps .login_wrap .select_box:before { content:''; position: absolute; top:30%; right:15px; width:0; height:0; margin-top:-1px; border-left:5px solid transparent; border-right:5px solid transparent; border-top:5px solid #FFF; }
+.aps .login_wrap .select_box label { position: absolute; top:1px; left:5px; padding:.8em .5em; color:#FFF; z-index: -1; }
+/*.aps .login_wrap .select_box span.arrow{ position:absolute; background: url(../images/dropdown-arrow.png); width: 14px; height: 8px; right: 23px; top: 25%; }*/
+.aps .login_wrap .select_box select { width: 100%; font-size: 16px; color:#fff; padding: 12.5px 0 12.5px 21px; border:none; background-color: #a6a6a6; border-radius: 4px; font-weight: 600; }
+.aps .login_wrap .select_box select option { background-color: #fff; color: #666; }
+
+/* input */
+.aps .login_wrap .box_1 input{width: 100%; height: 58px; border: 1px solid #b4b4b4; background-image: url(../images/aps/input-icon-1.png); background-repeat: no-repeat; background-size: 20px 21px; background-position: center right 20px; border-radius: 4px; box-sizing: border-box; text-align: left; padding-left: 21px;font-size: 16px; }
+.aps .login_wrap .box_5{ margin-top: 12px; }
+.aps .login_wrap .box_5 input{ width: 100%; height: 58px; border: 1px solid #b4b4b4;background-image: url(../images/aps/input-icon-2.png); background-repeat: no-repeat; background-size: 20px 21px; background-position: center right 20px; border-radius: 4px; box-sizing: border-box;; text-align: left; padding-left: 21px;font-size: 16px; }
+.aps .login_wrap .box_1 input::placeholder, .aps .login_wrap .box_5 input::placeholder { font-size: 16px; color: #b4b4b4; }
+.aps .login_wrap .box_1 input:focus, .aps .login_wrap .box_5 input:focus { outline: none; }
+
+.aps .login_wrap .box_2{ position: relative; }
+.aps .login_wrap .box_2, .aps .login_wrap .box_3 { height: 58px; border-radius: 6px; border: 1px solid #c7ccd3; background-color: #a6a6a6
+; background-image: url(../images/aps/bi.png); background-repeat: no-repeat; -webkit-background-size: 28px; background-size: 28px; background-position: center right 15px; box-sizing: border-box; margin-top: 12px; }
+
+.aps .login_wrap .box_2 .progress { width: 100% !important; height: 58px !important; margin: 0 !important; border-radius: 5px !important; }
+.aps .login_wrap .box_2 .progress-bar{ background-color:#23a685; opacity: 0.8; height: 56px; border-radius: 5px; }
+.aps .login_wrap .box_2 .otpNum { position:absolute; top: 25%; left: 50%; transform: translateX(-50%); }
+.aps .login_wrap .box_2 .otpNum ul { z-index: 2; width: 100%; text-align: center; left: 0px; margin: 0; }
+.aps .login_wrap .box_2 .otpNum ul li { display:inline-block;z-index: 2; }
+.aps .login_wrap .box_2 .otpNum .ir { width:0px; height:0px; text-indent:-9999px; position:absolute; left:0; top:0; overflow:hidden; font-size:0; line-height:0; }
+.aps .login_wrap .box_2 .otpNum ul li img { height: 30px; width: auto; }
+.aps .login_wrap .box_2 .otpNum .Right { margin-left: 8px; }
+
+.aps .login_btn, .aps .cancel_btn { width: 100%; padding:17.5px 0; border-radius: 4px; font-size: 18px; margin-top: 36px; border: none; }
+.aps .login_wrap .error_wrap { position: absolute; left: 0px; right:0px; text-align: center; margin-top: 30px; font-size: 14px; color: #df4747;}
+
+@media screen and (max-width: 480px){
+	.aps { width: 100%; height: 100vh; }
+	.aps .login_wrap { padding: 40% 10%; }
+	.aps .login_wrap h3 img { width: 100%; }
+	.aps .login_wrap .box_1 input, .aps .login_wrap .box_2 .progress-bar { height: 48px; }
+	.aps .login_wrap .box_2, .aps .login_wrap .box_3 { height: 50px; background-position: 94% 50%; }
+	.aps .login_wrap .box_5 input{ height: 50px; }
+	.aps .login_wrap .box_2 .otpNum{ top:18% !important; }
+}
+
+@media screen and (max-width: 320px) {
+	.aps .login_wrap .box_2 .otpNum{ left: 44%; top:18% !important; }
+	.aps .login_btn, .aps .cancel_btn{ padding: 17.5px 0;}
+}
+
+/* ------------------------------------- setting (aps-setting.html) ------------------------------------- */
+
+.aps-modal-setting{ width: 100%; height: auto; transition: all 0.4s; background-color: #fff; margin: auto; position: relative; overflow: hidden;}
+.aps-modal-setting header h1 { background:transparent; vertical-align: middle; }
+.aps-modal-setting header h1 .logo-lifein { display:inline-block; width:45px; margin:0 0 7px 0; }
+.aps-modal-setting header h1 .logo-aps { display:inline-block; width:142px; margin:0; }
+
+/* ========= 오토패스워드 사이트 및 상태 ========= */
+.aps-modal-setting .site-code-info { width: 100%; background-color: #FFF; margin: auto; display: table; position: relative; margin-top: 20px; padding:30px 0 40px 0; border-bottom:8px solid #ebebeb; }
+.aps-modal-setting .site-code-info dl { padding: 14.5px 20px; }
+.aps-modal-setting .site-code-info dl dt { color: #181818; font-size: 1rem; padding-bottom: 8px; font-weight:600; }
+.aps-modal-setting .site-code-info dl dd { border:1px solid #23a685; background:#F4F8F6; padding: 15px 15px 17px 15px; text-align:center; font-weight: 500; border-radius: 4px; line-height:1em; }
+.aps-modal-setting .site-code-info dl dd span.info-txt{ line-height: 1.5em; font-size: 1.125rem; vertical-align: middle; word-break: break-all; transition: all 0.3s; font-weight:500; }
+.aps-modal-setting .site-code-info dl:last-child{ padding-top: 14.5px; }
+.aps-modal-setting .site-code-info .confirm-code dd #selfconformno { font-size:1.4rem; font-weight:600 !important; letter-spacing: 0 !important; }
+.aps-modal-setting .site-code-info .confirm-code-time { padding-left:20px; font-size: .8em; line-height:1.7; font-weight:100; }
+.aps-modal-setting .site-code-info .confirm-code-time span.count#ViewTimer span{ font-weight:400; }
+.aps-modal-setting .site-code-info dl.confirm-state button{ width: 100%; height: 4px; font-size: 20px; font-weight: 600; border-radius: 4px; }
+.aps-modal-setting .site-code-info dl.confirm-state span{ display: block; text-align: center; }
+.aps-modal-setting .site-code-info .unset-state { padding: 14.5px 20px; }
+.aps-modal-setting .site-code-info .unset-state button { background:#FFF; color:#333; padding: 15px 15px 17px 15px; text-align:center; border-radius: 4px; line-height:1em; border:1px solid #ddd; width:100%; font-size:.9rem; }
+.again-message { font-size:.85rem !important; color:#5b5c65; font-weight:100; line-height:2em; }
+/*
+.aps-modal-setting .site-code-info .fail-state button{ margin:0 20px; width: 94%; height: 40px; border: none; font-size: 20px; font-weight: 600; border-radius:4px; }
+.aps-modal-setting .site-code-info .alert-message{ width: 100%; text-align: center; color: #df4747; font-size: .85rem; line-height: 1.5em; padding-top:20px; }
+*/
+
+/* ========= 오토패스워드 사용방법 안내 ========= */
+.aps-step-info { position: relative; }
+.aps-step-info h2 { color: #181818; font-size: 1rem; padding:20px 0 0 20px; font-weight:600; }
+.aps-step-wrap { position: relative; padding:30px 0 0 0; }
+.aps-step-wrap:after { content: ''; position: absolute; display: block; bottom: 0; left: 0; width: 100%; height: 0; background: rgba(255, 255, 255, 0.6); }
+.aps-step-wrap .slick-dots { position: absolute; top: 20px; list-style: none; display: block; padding: 0; margin: 0; width: 100%; font-size: 0; text-align: center; z-index: 9; }
+.aps-step-wrap .slick-dots li { position: relative; display: inline-block; margin: 0 6px; padding: 0; cursor: pointer; }
+.aps-step-wrap .slick-dots li button { border: 0; background: transparent; display: block; padding: 0; width: 24px; height: 24px; outline: none; line-height: 0px; font-size: 12px; color: #23A685; background: transparent; border: 1px solid #23A685; border-radius: 12px; cursor: pointer; }
+.aps-step-wrap .slick-dots li button:hover, .service-slider .slick-dots li button:focus { outline: 0px; }
+.aps-step-wrap .slick-dots li button:hover:before, .service-slider .slick-dots li button:focus:before { opacity: .7; }
+.aps-step-wrap .slick-dots li.slick-active button { width: 24px; background: #23A685; color:#FFF; }
+
+.aps-step-wrap .step { position: relative; padding: 40px 20px 20px 20px; }
+.aps-step-wrap .step h3 { color: #181818; font-size: 1rem; margin-bottom: 20px; font-weight:500; }
+.aps-step-wrap .step h3 .step_label { color:#23A685; padding-right:3px; }
+
+.aps-step-wrap .step .box { border: 1px solid #e1e1e1; text-align: left; border-radius: 4px; box-sizing: border-box; padding: 15px; position: relative; }
+.aps-step-wrap .step .box p { color:#5b5c65; font-weight:300; font-size:.85rem; line-height: 1.5em; }
+.aps-step-wrap .step .box p span { display:block; }
+
+.aps-step-wrap .step .img-content { background-color: #23A685; border-radius: 8px; position: relative; overflow: hidden; border:none !important; padding:30px 40px 0 40px !important; }
+.aps-step-wrap .step .img-content img { margin:0 auto; width:23%; }
+
+.aps-step-wrap .step1 .badge { margin: 0 auto; position: relative; padding-top:1em; }
+.aps-step-wrap .step1 .badge li a { float:left; display:inline-block; width:49%; margin-right:1%; padding:.3em 0; margin-bottom:.4em; border:1px solid #ccc; border-radius:6px; background:#FFF; }
+.aps-step-wrap .step1 .badge li:last-child a { margin-right:0; }
+.aps-step-wrap .step1 .badge li a:focus { outline:0; }
+.aps-step-wrap .step1 .badge li a img { width:22%; margin:0 auto; }
+
+.aps-step-wrap .step .wrap { background:#fafafa; text-align: left; border-radius: 4px; box-sizing: border-box; padding: 15px; }
+.aps-step-wrap .step .wrap p { position: relative; font-size:.85rem; line-height: 1.5em; font-weight:100; }
+.aps-step-wrap .step .wrap p span { display: block; }
+.aps-step-wrap .step .wrap p .info-notice { margin: 0 2px 0 0; position: relative; display: inline-block; padding: 1px; width: .75rem; height: .75rem; color: #23a685; border: 1px solid #23a685; border-radius: 50%; top:2px; }
+.aps-step-wrap .step .wrap p .info-notice:before { content: '!'; position: absolute; top: 50%; left: 50%; display: inline-block; transform: translate(-50%, -50%); font-size:.65rem; font-weight:600;  }
+.aps-step-wrap .step .wrap p span.info-notice-text { color:#23A685; }
+
+
+/* 앱 설정 웹-팝업용 */
+@media screen and (max-width: 640px){ 
+	.aps-step-wrap .step .img-content img { width:35%; }
+	.aps-modal-setting .site-code-info dl dd span.info-txt { font-size: 1.125rem; }
+	.aps-step-wrap .step1 .badge li a img { width:50%; margin:0 auto; }	
+}
+
+/* 앱 설정 모바일용 */
+@media screen and (max-width: 480px){
+	.aps-modal-setting { width: 100%; height: 100vh; overflow: auto; }
+	.aps-modal-setting header { position: fixed; top: 0px; width: 100%; z-index: 999; }
+	.aps-modal-setting .site-code-info { margin-top:30px; }
+	.aps-modal-setting .site-code-info dl { margin: 0 auto; }
+	.aps-step-wrap .step .img-content img { width:40%; }
+	.aps-step-wrap .step1 .badge li a { display:block !important; width:88%; padding:.2em 1em; }
+	.aps-step-wrap .step1 .badge li a img { width:40%; margin:0 auto; }
+}
+
+@media screen and (max-width: 380px){
+	.aps-step-wrap .step1 .badge li a img { width:50%; margin:0 auto; }
+}
+
+@media screen and (max-width: 320px) {
+	.aps-step-wrap .step1 .badge li a img { width:60%; margin:0 auto; }	
+}
+
+
+/* ========= 오토패스워드 문의사항 ========= */
+.aps-setting-support-box { position: relative; padding-bottom:40px; }
+.aps-setting-support-box h2 { color: #181818; font-size: 1rem; padding:20px 0 0 20px; font-weight:600; }
+.aps-setting-support-box .step { position: relative; padding: 20px 20px 20px 20px; }
+.aps-setting-support-box .step .box { border: 1px solid #e1e1e1; text-align: left; border-radius: 4px; box-sizing: border-box; padding: 15px; position: relative; }
+.aps-setting-support-box .step .img-content { background-color: #23A685; border-radius: 8px; position: relative; overflow: hidden; border:none !important; padding:30px 30px 0 30px !important; text-align: center; line-height: 0.5 !important; }
+.aps-setting-support-box .step .img-content img { margin:0 auto; width:50%; }
+
+.aps-setting-support-box .step .box p { color:#5b5c65; font-weight:300; font-size:.85rem; line-height: 1.5em; }
+.aps-setting-support-box .step .box p span { display: block; }
+.aps-setting-support-box .step .box p a { color: #23a685; font-weight:500; text-decoration: underline !important; text-decoration-color: #23a685 !important; letter-spacing: 0; }
+
+@media screen and (max-width: 640px){ 
+	.aps-setting-support-box .step .img-content img { width:53%; }	
+}
+
+@media screen and (max-width: 480px){
+	.aps-setting-support-box .step .img-content img { width:70%; }	
+}

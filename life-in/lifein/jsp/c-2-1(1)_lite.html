@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>생활보상서비스</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- do not link // -->
+    <meta name="format-detection" content="no" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- // do not link  -->
+
+    <link rel="stylesheet" href="../styles/style_200407.min.css" />
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js" type="text/javascript"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="//oss.maxcd.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="../scripts/lib/html5shiv.min.js"></script>
+    <script type="text/javascript" src="../scripts/lib/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/lib/slick.min.js"></script>
+    <script type="text/javascript" src="../scripts/lib/howler.js"></script>
+    <script type="text/javascript" src="../scripts/common.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header class="header-wrap sub">
+        <h1 class="text"> 굿모닝팝스 학습하기</h1>
+        <p class="header-right">
+            <a href="#" class="btn-close"><span class="screen-out">닫기</span></a>
+        </p>
+    </header> 
+    <!-- //header -->
+    <!-- contents -->
+    <div class="contents-wrap nobottom">
+        <h2 class="screen-out">굿모닝팝스 학습 컨텐츠 상세 (Lite 회원 화면)</h2>
+
+        <!-- 학습 컨텐츠 재생 bar // -->
+        <section class="gmp-audio-wrap">
+            <!-- Top Info -->
+            <div id="title">
+                <span id="track" class="display-none" aria-label="음원명"><span class="screen-out">음원명</span></span>
+                <div id="timer" aria-label="음원 시작시간">00:00</div>
+                <div id="duration" aria-label="음원 종료시간">33:33</div>
+                <div id="rate" class="display-none" aria-label="속도조절"><span class="screen-out">속도조절</span></div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controlsOuter">
+                <div class="controlsInner">
+                    <div id="loading" aria-label="로딩중"><span class="screen-out">로딩중</span></div>
+                    <div class="btn" id="playBtn" aria-label="재생하기"><span class="screen-out">재생하기</span></div>
+                    <div class="btn" id="pauseBtn" aria-label="일시정지"><span class="screen-out">일시정지</span></div>
+                    <div class="btn" id="prevBtn" aria-label="처음으로"><span class="screen-out">처음으로</span></div>
+                    <div class="btn" id="nextBtn" aria-label="다음으로"><span class="screen-out">다음으로</span></div>
+                    <div class="btn" id="seekPrevBtn" aria-label="15초 뒤로 가기"><span class="screen-out">15초 뒤로 가기</span></div>
+                    <div class="btn" id="seekNextBtn" aria-label="15초 앞으로 가기"><span class="screen-out">15초 앞으로 가기</span></div>
+                </div>
+                <div class="btn" id="playlistBtn" aria-label="재생목록"><span class="screen-out">재생목록</span></div>
+                <div class="btn" id="muteBtn" aria-label="음소거"><span class="screen-out">음소거</span></div>
+                <div class="btn" id="volumeBtn" aria-label="음량조절"><span class="screen-out">음량조절</span></div>
+                <div class="btn" id="spdUpBtn" aria-label="속도 빠르게"><span class="screen-out">속도 빠르게</span></div>
+                <div class="btn" id="spdDnBtn" aria-label="속도 느리게"><span class="screen-out">속도 느리게</span></div>
+            </div>
+
+            <!-- Progress -->
+            <!-- div id="waveform" ></div-->
+            <div id="bar" aria-label="재생 bar"><span class="screen-out">재생 bar</span></div>
+            <div id="progress" aria-label="진행중인 상태"><span class="screen-out">진행중인 상태</span></div>
+
+            <!-- Playlist -->
+            <div id="playlist" class="" aria-label="재생중인 목록">
+                <div id="list"></div>
+            </div>
+
+            <!-- Volume -->
+            <div id="volume" class="fadeout" aria-label="음량조절">
+                <div id="barFull" class="bar" aria-label="제일 크게"><span class="screen-out">제일 크게</span></div>
+                <div id="barEmpty" class="bar" aria-label="제일 낮게"><span class="screen-out">제일 낮게</span></div>
+                <div id="sliderBtn"></div>
+            </div>    
+        </section>  
+        <!-- // 학습 컨텐츠 재생 bar -->
+
+        <!-- 굿모닝팝스 학습 컨텐츠(스크릡트) // -->
+        <section class="gmp-study-wrap">
+
+                <!-- 프리미엄 회원 결제하기 Modal, Lite 회원일 경우 보임 // -->
+                <div class="proposal_message">
+                    <p class="title">굿모닝팝스 컨텐츠 100% 즐기려면?</p>
+                    <span class="text">라이프인 프리미엄 서비스에 가입하세요!</span>   
+                    <a href="../jsp/au-1(4).html" title="바로가기" role="button" class="proposal_btn">프리미엄 서비스 이용하기</a>
+
+                    <a href="#" class="btn-close" id="proposal_msg_close"><span class="screen-out">닫기</span></a>
+                </div>
+                <!-- // 프리미엄 회원 결제하기 Modal, Lite 회원일 경우 보임 -->
+
+                <!-- 일자 및 탭 고정 -->
+                <div class="gmp-study-toparea"> 
+                    <!-- 일자 선택하기/캘린더 // -->
+                    <div class="gmp-study-daily">
+                        <div class="study-indicator">
+                            <a href="#" class="prev" title="바로가기" role="button">
+                                <span class="screen-out">이전</span>
+                            </a>
+                            <span class="today">2020. 7. 23 (목)</span>                
+                            <a href="../jsp/c-2-1(2).html" class="next" title="바로가기" role="button">
+                                <span class="screen-out">다음</span>
+                            </a>
+                        </div>
+                        <a href="../jsp/c-2-1(5)_lite.html" class="study-calendar" title="바로가기" role="button">
+                            <span class="screen-out">학습캘린더 보기</span>
+                        </a>
+                    </div>
+                    <!-- // 일자 선택하기/캘린더 -->
+
+                    <!-- 학습 컨텐츠(스크립트) 상세 // -->
+                    <div class="gmp-study-contents">
+                        <!-- 탭 메뉴 -->
+                        <div class="tab-nav-wrap">
+                            <ul class="tab-nav" role="tablist">
+                                <li class="current" role="presentation">
+                                    <a href="#none" aria-controls="tab1" role="tab" data-tab="tab1">
+                                        SCREEN<br>ENGLISH
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none" aria-controls="tab2" role="tab" data-tab="tab2">
+                                        POPS<br>ENGLISH
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none" aria-controls="tab3" role="tab" data-tab="tab3">
+                                        SMARTY WITTY<br>ENGLISH
+                                    </a>
+                                </li>                        
+                            </ul>
+                        </div>
+                        <!-- //탭 메뉴 -->
+                    </div>
+                </div>
+
+                <!-- 탭 컨텐츠// -->
+                <div class="gmp-study-tabpanel tab-contents-wrap">
+                    <!-- tab1 contents -->
+                    <div id="tab1" class="tab-content current" role="tabpanel">
+                        
+                        <!-- Screen English // -->
+                        <div class="scripts-wrap">
+
+                            <div class="today_it">
+                                <p class="monthly_topic">
+                                    <em>
+                                        이달의 영화&nbsp;&nbsp;|&nbsp;&nbsp;
+                                        <span class="monlthy_movie">미스비헤이비어(MIS BEHAVIOUR)</span>
+                                    </em>
+                                </p>
+
+                                <dl class="today_sentence">
+                                    <dt>They're very dependent on me.</dt>
+                                    <dd>그들은 나에게 많이 의존해.</dd>        
+                                </dl>
+                            </div>
+
+                            <div class="today_dialog_scripts blur"><!-- 대화형 스크립트, Lite 회원일 경우 blur 클래스 추가 -->
+                                <dl class="en"><!-- (영문) -->
+                                    <dt>Anold</dt>
+                                    <dd>You get divorced from the woman, no the kids.</dd>
+                                    <dt>Gloria</dt>
+                                    <dd>Ah.</dd>
+                                    <dt>Anold</dt>
+                                    <dd>
+                                        Yes, I’ve been living alone now for a year.<br>
+                                        But I still have to help out. I help out the girls a lot.<br>
+                                        They’re… <span class="study_this">They’re very dependent on me.</span><br>
+                                        It’s just the way things are, so, you know…<br>
+                                        It’s not all of me, but it’s a part of me.                                        
+                                    </dd>
+                                </dl>
+                                <dl class="ko"><!-- (한글) -->
+                                    <dt>Anold</dt>
+                                    <dd>부인과 이혼을 한거지, 아이들은 아니잖아요.</dd>
+                                    <dt>Gloria</dt>
+                                    <dd>아.</dd>
+                                    <dt>Anold</dt>
+                                    <dd>
+                                        그래요. 혼자 산지는 일 년이 됐지만,<br>
+                                        아직 도와주고 있어요, 딸들을 많이 챙겨주고 있죠.<br>
+                                        <span class="study_this">애들이 나에게 많이 의존하거든요.</span><br>
+                                        상황이 그래요. 그렇잖아요.<br>
+                                        내 인생의 전부는 아니지만 일부인 거죠.                                       
+                                    </dd>
+                                </dl>                                
+                            </div>
+                        </div>
+                        <!-- // Screen English -->
+
+                        <!-- 월간 굿모닝팝스 출간정보 // -->
+                        <div class="gmp-book-box">
+                            <div class="gmp-cover-img">
+                                <img src="../images/gmp/gmp_mgz_cover/gmp_book_202007.png" alt="">
+                            </div>                    
+                            <div class="gmp-book-info">
+                                <h2 class="title">월간 <span class="color-lifein1">굿모닝팝스</span></h2>
+                                <p>
+                                    <span class="gmp_month_date">2020년 7월호</span>
+                                    <span class="gmp_publisher">한국방송출판 저</span>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- // 월간 굿모닝팝스 출간정보 -->                         
+
+                    </div>
+                    <!-- //tab1 contents -->
+
+                    <!-- tab2 contents-->
+                    <div id="tab2" class="tab-content" role="tabpanel">
+
+                        <!-- Pops English // -->
+                        <div class="scripts-wrap">
+
+                            <!-- 팝스 잉글리시의 오늘의 팝송의 공식 M/V 유튜브 링크 추가 // -->
+                            <div class="gmp-youtube-btn">
+                                <a href="https://youtu.be/OczRpuGKTfY" target="_blank" title="새창열림" class="screen-out" role="button">오늘의 팝송 유튜브 보러가기</a>
+                            </div>
+                            <!-- // 팝스 잉글리시의 오늘의 팝송의 공식 M/V 유튜브 링크 추가 -->                            
+
+                            <div class="today_it">
+                                <p class="monthly_topic">
+                                    <em>
+                                        오늘의 팝송&nbsp;&nbsp;|&nbsp;&nbsp;
+                                        <span class="monlthy_movie">Kings of Convenience - I’d Rather Dance With You.</span>
+                                    </em>
+                                </p>
+
+                                <dl class="today_sentence">
+                                    <dt>There’s space for us to shake.</dt>
+                                    <dd>우리가 춤출 수 있는 공간이 있어.</dd>        
+                                </dl>
+                            </div>
+
+                            <div class="today_song_scripts blur"><!-- 가사형 스크립트, Lite 회원일 경우 blur 클래스 추가 -->
+                                <dl>
+                                    <dt class="en">
+                                        I’d rather dance with you than talk with you.<br>
+                                        So why don’t we just move into the other room.<br>
+                                        <span class="study_this">There’s space for us to shake</span> and hey, I like this tune.<br>
+                                        Even if I could hear what you said.<br>
+                                        I doubt my reply would be interesting for you to hear<br>
+                                        because I haven’t read a single book all year<br>
+                                        and the only film I saw, I didn’t like at all.<br>
+                                    </dt>
+                                    <dd class="ko">
+                                        당신과 얘길 나누는 것보단 춤을 추고 싶어요.<br>
+                                        그러니 다른 방으로 가는 게 어떨까요.<br>
+                                        <span class="study_this">우리가 춤출 수 있는 공간도 있고,</span> 음악도 좋네요.<br>
+                                        당신의 얘길 듣는다고 해도<br>
+                                        내 대답이 그리 흥미로울지 잘 모르겠어요.<br>
+                                        일 년 내내 책 한 권도 읽지 않았거든요.<br>
+                                        유일하게 본 영화마저 별로였어요.
+                                    </dd>
+                                </dl>                               
+                            </div>
+                        </div>
+                        <!-- // Pops English -->
+
+                        <!-- 월간 굿모닝팝스 출간정보 // -->
+                        <div class="gmp-book-box">
+                            <div class="gmp-cover-img">
+                                <img src="../images/gmp/gmp_mgz_cover/gmp_book_202007.png" alt="">
+                            </div>                    
+                            <div class="gmp-book-info">
+                                <h2 class="title">월간 <span class="color-lifein1">굿모닝팝스</span></h2>
+                                <p>
+                                    <span class="gmp_month_date">2020년 7월호</span>
+                                    <span class="gmp_publisher">한국방송출판 저</span>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- // 월간 굿모닝팝스 출간정보 -->                         
+
+                    </div>
+                    <!-- //tab2 contents -->   
+                    
+                    <!-- tab3 contents-->
+                    <div id="tab3" class="tab-content" role="tabpanel">
+
+                        <!-- Smarty Witty English // -->
+                        <div class="scripts-wrap">
+
+                            <div class="today_it">
+                                <dl class="today_sentence notop">
+                                    <dt>S + BE + just around the corner.</dt>
+                                    <dd>~이 임박했다.</dd>        
+                                </dl>
+                            </div>
+
+                            <div class="today_sentence_scripts blur"><!-- 문장형 스크립트, Lite 회원일 경우 blur 클래스 추가 -->
+                                <dl>
+                                    <dt>Spring is just around the corner.</dt>
+                                    <dd>봄이 얼마 남지 않았어요.</dd>
+                                </dl>     
+                                <dl>
+                                    <dt>My birthday is just around the corner.</dt>
+                                    <dd>곧 제 생일이에요.</dd>
+                                </dl> 
+                                <dl>
+                                    <dt>Our anniversary is just around the corner.</dt>
+                                    <dd>우리의 기념일이 얼마 남지 않았어요</dd>
+                                </dl>                                                                                           
+                            </div>
+                        </div>
+                        <!-- // Smarty Witty English -->
+
+                        <!-- 월간 굿모닝팝스 출간정보 // -->
+                        <div class="gmp-book-box">
+                            <div class="gmp-cover-img">
+                                <img src="../images/gmp/gmp_mgz_cover/gmp_book_202007.png" alt="">
+                            </div>                    
+                            <div class="gmp-book-info">
+                                <h2 class="title">월간 <span class="color-lifein1">굿모닝팝스</span></h2>
+                                <p>
+                                    <span class="gmp_month_date">2020년 7월호</span>
+                                    <span class="gmp_publisher">한국방송출판 저</span>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- // 월간 굿모닝팝스 출간정보 -->                         
+
+                    </div>
+                    <!-- //tab3 contents -->                     
+                </div>
+                <!-- //탭 컨텐츠 -->
+
+            </div>
+            <!-- // 학습 컨텐츠(스크립트) 상세 -->
+
+        </section>
+        <!-- // 굿모닝팝스 학습 컨텐츠(스크릡트) -->
+    </div>
+    <!-- //contents -->
+
+    <script>
+        $(function($){
+            var elms = ['track', 'timer', 'duration', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn','seekPrevBtn','seekNextBtn', 'playlistBtn', 'muteBtn','volumeBtn', 'progress', 'bar', 'wave', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn', 'spdUpBtn', 'spdDnBtn'];
+            elms.forEach(function(elm) {
+              window[elm] = document.getElementById(elm);
+            });
+            var self = this;
+            var sound;
+            var utils = {
+                formatTime: function (secs) {
+                    var minutes = Math.floor(secs / 60) || 0;
+                    var seconds = (secs - minutes * 60) || 0;
+                    return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+                },
+                updateTimeTracker: function () {
+                    var self = this;
+                    var seek = sound.seek() || 0;
+                    var currentTime = utils.formatTime(Math.round(seek));
+        
+                    $('#timer').text(currentTime);
+                    progress.style.width = (((seek / self.duration()) * 100) || 0) + '%';
+                    
+                    if (self.playing()) {
+                        requestAnimationFrame(utils.updateTimeTracker.bind(self));
+                    }
+                },
+                seekSeconds: function(sec) {
+                    console.log("seekSeconds : " + sec);
+                    var seekSec = sound.seek() || 0;
+                    console.log("currentSeconds : " + Math.round(seekSec));
+                    var seconds = Math.round(seekSec)+sec;
+                    
+                    if (sound.playing()) {
+                        //뒤로 10초
+                        if(sec < 0){
+                             if(Math.round(seekSec) <= 10){
+                              sound.seek(0);
+                             }else{
+                                 console.log("backSeconds : " + seconds);
+                                 sound.seek(seconds);
+                             }
+                        }
+                        //앞으로 10초
+                        else{
+                            console.log("toSeconds : " + seconds);
+                            sound.seek(seconds);
+                        }
+                        sound.play();
+                    }
+                },
+                play : function(soundSrc) {
+                    sound = new Howl({
+                        src:[soundSrc],
+                        html5: true, // Force to HTML5 so that the audio can stream in (best for large files).
+                        format:['mp3'],
+                        onplay: function() {
+                            var time = Math.round(sound.duration());
+                            $('#duration').html(utils.formatTime(time));
+                            requestAnimationFrame(utils.updateTimeTracker.bind(this));
+                            
+                            playBtn.style.display = 'none';
+                            pauseBtn.style.display = 'block';
+                        },
+                        onpause : function() {
+                            pauseBtn.style.display = 'none';
+                            playBtn.style.display = 'block';
+                        },
+                        onplayerror : function() {
+                            sound.once('unlock', function(){
+                                sound.play();
+                            })
+                        }
+                    });
+                },
+                getGmpContent : function(paramDay) {
+                    $.ajax({
+                        url: "/lifein/gmp/getGmpContents",
+                        dataType : "json",
+                        type : "post",
+                        async : true,
+                        data : {day: paramDay},
+                        success : function(data) {
+                            //console.log("getGmpContent : "+data);
+                            //$('#gmp_contents').html(data.data.contents);
+                            $('#gmp_screen_contents').html(data.data.contents);
+                            //$('#'+obj).html(data.data.combo);
+                        },
+                        error : function() {
+                            //alert('실패');
+                        }		
+                    });
+                }
+            };
+            //var isMute = false;
+        
+            //seekPrevBtn.style.display = 'none';
+            //seekNextBtn.style.display = 'none';	
+            /*  기능 보류
+            var wave = new SiriWave({
+                  container: waveform,
+                  width: window.innerWidth,
+                  height: window.innerHeight * 0.3,
+                  cover: false,
+                  speed: 0.03,
+                  amplitude: 0.7,
+                  frequency: 2
+                });
+             */
+            utils.getGmpContent('20190528');
+            utils.play('https://lifein-test.vpay.co.kr/test/I0000-2014_S000_20200330_PI-1585530876-24-8AA_00_00_99_M3A30012.mp3');
+            //utils.play('http://down.kbs.gscdn.com/KBS_CMS_DOWN/R2018-0085/R2018-0085_S000_20190528_PS-2019087439-01-000_03_M3A30012.mp3');
+        
+            
+            $('#playBtn').unbind("click").on('click', function(){
+                sound.play();
+            });
+            $('#pauseBtn').unbind("click").on('click', function(){
+                sound.pause();
+            });
+            $('#prevBtn').unbind("click").on('click', function(){
+                sound.skip('prev');
+            });
+            $('#nextBtn').unbind("click").on('click', function(){
+                utils.sound.skip('next');
+            });
+            $('#seekPrevBtn').unbind("click").on('click', function(){
+                utils.seekSeconds(-15);
+            });
+            $('#seekNextBtn').unbind("click").on('click', function(){
+                utils.seekSeconds(15);
+            });
+            $('#bar').unbind("click").on('click', function(){
+                sound.seek(event.clientX / window.innerWidth *sound.duration());
+                sound.play();
+            });
+            
+        });
+        </script>    
+</body>
+</html>

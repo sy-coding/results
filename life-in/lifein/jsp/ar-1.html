@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>생활보상서비스</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- do not link // -->
+    <meta name="format-detection" content="no" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- // do not link  -->
+
+    <link rel="stylesheet" href="../styles/style_200407.min.css" />
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js" type="text/javascript"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="//oss.maxcd.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="../scripts/lib/html5shiv.min.js"></script>
+    <script type="text/javascript" src="../scripts/lib/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/lib/slick.min.js"></script>
+    <script type="text/javascript" src="../scripts/common.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header class="header-wrap sub">
+        <h1 class="text"> <span class="logo-img">Life in</span></h1>
+        <p class="header-right">
+            <a href="#" class="btn-close"><span class="screen-out">닫기</span></a>
+        </p>
+    </header> 
+    <!-- //header -->
+    <!-- contents -->
+    <article class="contents-wrap">
+        <!-- 본인인증 -->
+        <section class="contents-inner">
+            <!-- 본인인증폼 -->
+            <form id="" class="join-form-wrap">
+
+                <div class="join-step-indicator">
+                    <ul>
+                        <li class="current"><!-- 현재 단계 표시 current 클래스 추가 -->
+                            <a class="step-img" href="../jsp/ar-1.html">
+                                <span class="img-inner"></span>
+                                <span class="img-bg"></span>
+                            </a>
+                            <span class="step-indit"><em>본인인증</em></span>
+                        </li>
+                        <li><!-- 아직 넘어가지 않은 단계는 class 없음 -->
+                            <a class="step-img" href="../jsp/ar-2.html">
+                                <span class="img-inner"></span>
+                                <span class="img-bg"></span>
+                            </a>
+                            <span class="step-indit"><em>약관동의</em></span>
+                        </li>           
+                        <li><!-- 아직 넘어가지 않은 단계는 class 없음 -->
+                            <a class="step-img" href="../jsp/ar-3.html">
+                                <span class="img-inner"></span>
+                                <span class="img-bg"></span>
+                            </a>
+                            <span class="step-indit"><em>가입완료</em></span>
+                        </li>                                       
+                    </ul>
+                </div>
+                
+                <!-- 약관동의 -->
+                <fieldset class="join-agree-wrap2 step1a">
+                    <legend class="screen-out">약관동의</legend>
+                    
+                    <h3 class="step-title">
+                        라이프인을 이용하기 위해<br><em>본인인증</em>이 필요합니다.
+                    </h3>
+
+                    <div class="terms-list-wrap">
+                        <!-- 필수 동의 약관// -->
+                        <div class="join-agree2">
+                            <div class="checkbox-wrap">
+                                <input type="checkbox" name="eachAll" id="essentialAll" class="checkbox-style-1" title="필수 동의 약관">
+                                <label for="essentialAll">본인인증 약관 동의(필수)</label>
+                            </div>
+                        </div>
+                        <div class="join-agree">
+                            <ul class="form-text">                           
+                                <li>
+                                    <input type="checkbox" id="agree3" name="agree" class="checkbox-style-2">
+                                    <label for="agree3">개인정보 수집/이용 동의 (본인인증)</label>
+                                    <a href="javascript:openNew('https://safe.ok-name.co.kr/eterms/agreement001.jsp');" title="새 창 열림" class="view_more">보기</a>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="agree4" name="agree" class="checkbox-style-2">
+                                    <label for="agree4">본인확인서비스 이용 동의</label>
+                                    <a href="javascript:openNew('https://safe.ok-name.co.kr/eterms/agreement002.jsp');" title="새 창 열림" class="view_more">보기</a>
+                                </li>                                                                
+                                <li>
+                                    <input type="checkbox" id="agree5" name="agree" class="checkbox-style-2">
+                                    <label for="agree5">고유식별 정보처리 동의</label>
+                                    <a href="javascript:openNew('https://safe.ok-name.co.kr/eterms/agreement003.jsp');" title="새 창 열림" class="view_more">보기</a>
+                                </li> 
+                                <li>
+                                    <input type="checkbox" id="agree6" name="agree" class="checkbox-style-2">
+                                    <label for="agree6">통신사 이용약관 동의</label>
+                                    <a href="javascript:openNew('https://safe.ok-name.co.kr/eterms/agreement004.jsp');" title="새 창 열림" class="view_more">보기</a>
+                                </li>                                                                 
+                            </ul>
+                        </div>
+                        <!-- // 필수 동의 약관 -->                      
+                    </div>
+                </fieldset>
+                <!-- //약관동의 -->                
+
+                <!-- 휴대폰인증 입력 -->
+                <fieldset class="join-certi-wrap2 step1b" style="display:none;">
+                    <legend class="screen-out">휴대폰인증</legend>
+
+                    <h3 class="step-title"><em>기본정보</em>를<br>입력해 주세요.</h3>
+                    <div class="join-certi">
+                        <div class="join-certi-inner">
+                            <input type="text" id="username" class="input-text" placeholder="이름" title="이름" autocomplete="off">
+                        </div>
+                        <div class="join-certi-inner">
+                            <input type="number" id="" class="input-text" placeholder="생년월일(8자리)" title="생년월일" autocomplete="off">
+                        </div>
+                    </div>
+                    
+                    <div class="join-certi">
+                        <div class="join-certi-inner input-radio-wrap">
+                            <input type="radio" id="join-gender1" name="join-gender" class="input-radio" checked="checked">
+                            <label for="join-gender1">남자</label>
+                        </div>
+                        <div class="join-certi-inner input-radio-wrap">
+                            <input type="radio" id="join-gender2" name="join-gender" class="input-radio">
+                            <label for="join-gender2">여자</label>
+                        </div>
+                        <div class="join-certi-inner input-radio-wrap">
+                            <input type="radio" id="join-nation1" name="join-nation" class="input-radio" checked="checked">
+                            <label for="join-nation1">내국인</label>
+                        </div>
+                        <div class="join-certi-inner input-radio-wrap">
+                            <input type="radio" id="join-nation2" name="join-nation" class="input-radio">
+                            <label for="join-nation2">외국인</label>
+                        </div>
+                    </div>
+
+                    <div class="join-certi">
+                        <div class="join-certi-inner selectbox-wrap">
+                            <select>
+                                <option value="" selected>통신사 선택</option>
+                                <option value="">SKT</option>
+                                <option value="">KT</option>
+                                <option value="">LG U+</option>
+                                <option value="">SKT알뜰폰</option>
+                                <option value="">KT알뜰폰</option>
+                                <option value="">LG알뜰폰</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="join-certi"><!-- 인증번호 발송 전 기본 default -->
+                        <div class="join-certi-inner join-certi-inner-small selectbox-wrap">
+                            <select>
+                                <option value="" selected>010</option>
+                                <option value="">011</option>
+                                <option value="">016</option>
+                                <option value="">017</option>
+                                <option value="">018</option>
+                                <option value="">019</option>
+                            </select>
+                        </div>
+                        <div class="join-certi-inner">
+                            <input type="number" id="" class="input-text" placeholder="(휴대폰 번호 입력)" title="휴대폰 번호" autocomplete="off">
+                        </div>
+                        <div class="join-certi-inner join-certi-inner-small">
+                            <button type="button" class="button-small">전송</button>
+                        </div>
+                    </div>
+
+                    <div class="join-certi"><!-- 인증번호 발송 후 display block -->
+                        <div class="join-certi-inner join-certi-inner-small selectbox-wrap">
+                            <select>
+                                <option value="" selected>010</option>
+                                <option value="">011</option>
+                                <option value="">016</option>
+                                <option value="">017</option>
+                                <option value="">018</option>
+                                <option value="">019</option>
+                            </select>
+                        </div>
+                        <div class="join-certi-inner">
+                            <input type="number" id="" class="input-text" placeholder="(휴대폰 번호 입력)" title="휴대폰 번호" autocomplete="off">
+                        </div>
+                        <div class="join-certi-inner join-certi-inner-small">
+                            <button type="button" class="button-small greenbtn">다시전송</button>
+                        </div>
+                    </div>                    
+
+                    <div class="join-certi">
+                        <div class="join-certi-inner"><!-- 인증번호가 전송되면 인증번호 입력칸이 보여지도록 -->
+                            <input type="number" id="" class="input-text" placeholder="인증번호 6자리 입력" title="인증번호 입력" autocomplete="off">
+                            <p class="join-certi-time"><span class="screen-out">남은시간</span>03:00</p>
+                        </div>
+                    </div>       
+                    
+                    <!-- 버튼 -->
+                    <div class="button-wrap">
+                        <ul class="button-area">
+                            <li><a href="#" class="button-middle gray">인증하기</a></li><!-- 모든 정보가 입력된 경우 gray 클래스 제거 -->
+                        </ul>
+                    </div>
+                    <!-- //버튼 -->    
+                                     
+                </fieldset>
+                <!-- //휴대폰인증 입력 -->
+            </form>
+            <!-- //본인인증폼 -->
+        </section>
+        <!-- //본인인증 -->
+    </article>
+    <!-- //contents -->
+</body>
+
+<script>
+    // 약관 - 새창팝업
+    function openNew(url){
+        var tgUrl = url;
+        var pWidth = 400;
+        var pHeight = 500;
+		var pTop = (window.screen.height / 2) - (pHeight / 2) ;
+        var pLeft = (window.screen.width / 2) - (pWidth / 2)  ;
+        
+        window.open( tgUrl, '_blank', 'scrollbars=auto, top='+ (pTop) +', left='+ (pLeft) +', width='+ (pWidth) +', height='+ (pHeight) +', resizable=0'); 
+    }
+</script>
+</html>

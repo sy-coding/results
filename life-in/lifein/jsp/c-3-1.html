@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>생활보상서비스</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- do not link // -->
+    <meta name="format-detection" content="no" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- // do not link  -->
+
+    <link rel="stylesheet" href="../styles/style_200407.min.css" />
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js" type="text/javascript"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="//oss.maxcd.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="../scripts/lib/html5shiv.min.js"></script>
+    <script type="text/javascript" src="../scripts/lib/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/lib/slick.min.js"></script>
+    <script type="text/javascript" src="../scripts/common.js"></script>
+</head>
+<body>
+    <!-- header -->
+     <header class="header-wrap prev">
+        <h1 class="text"> 택배 배송조회</h1>
+        <p class="header-left">
+            <a href="#" class="btn-prev"><span class="screen-out">이전페이지</span></a>
+        </p>
+    </header>
+    <!-- //header -->
+    <!-- contents -->
+    <article class="contents-wrap">
+        <!-- 통합 택배조회 서비스 -->
+        <h2 class="screen-out">통합 택배조회 서비스</h2>
+
+        <div class="svcContTop">
+            <div class="svcContIcon">
+                <img src="../images/subtop/subtop_icon09.png" alt="">
+            </div>                    
+            <div class="svcContTxt">
+                <h2 class="title">택배 <span class="color-lifein1">배송조회</span></h2>
+                <p>국내외 11개 택배사의 택배 배송상황을 간편하게 실시간으로 조회해 보세요</p>
+            </div>
+            <div class="svcContTxtS">
+                <h3 class="title">조회 가능 택배사</h3>
+                <p>CJ대한통운, 롯데, 한진, 로젠, DHL, 우체국, 우체국EMS, 일양, 천일, 대신, 합동</p>
+            </div>            
+        </div>
+
+        <section class="contents-inner">
+
+            <!-- 탭 메뉴 -->
+            <div class="tab-nav-wrap" style="margin-top:20px;">
+                <ul class="tab-nav" role="tablist">
+                    <li class="current" role="presentation">
+                        <a href="#none" aria-controls="tab1" role="tab" data-tab="tab1">휴대폰 번호로 조회</a>
+                    </li>
+                    <li>
+                        <a href="#none" aria-controls="tab2" role="tab" data-tab="tab2">운송장 번호로 조회</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- //탭 메뉴 -->
+            <!-- 탭 컨텐츠 -->
+            <div class="tab-contents-wrap">
+                <!-- tab1 contents -->
+                <div id="tab1" class="tab-content current" role="tabpanel">
+                    <form class="join-certi-wrap" style="margin-bottom:30px;">
+
+                        <!-- 휴대폰 정보 입력 -->
+                        <div class="join-certi">
+                            <div class="join-certi-inner">
+                                <input type="text" id="" class="input-text" placeholder="이름" title="이름">
+                            </div>
+                        </div>
+                        <div class="join-certi">
+                            <div class="join-certi-inner join-certi-inner-small selectbox-wrap">
+                                <select>
+                                    <option value="" selected>010</option>
+                                    <option value="">011</option>
+                                    <option value="">016</option>
+                                    <option value="">017</option>
+                                    <option value="">018</option>
+                                    <option value="">019</option>                            
+                                </select>
+                            </div>
+                            <div class="join-certi-inner">
+                                <input type="number" id="" class="input-text" placeholder="12345678" title="휴대폰번호">
+                            </div>
+                        </div>
+                        <!-- //휴대폰 정보 입력 -->
+                        <!-- 버튼 -->
+                        <div class="button-wrap inner">
+                            <ul class="button-area">
+                                <li><a href="#" class="button-middle">조회</a></li>
+                            </ul>
+                        </div>
+                        <!-- //버튼 -->
+
+                        <!-- 조회내역 없음 -->
+                        <div class="delivery-result">
+                            <p class="nodata">조회 내역이 없습니다.</p>        
+                        </div>                        
+                        <!-- //조회내역 없음 -->
+
+                        <!-- 휴대폰 조회 실패 시 유의사항 -->
+                        <div class="accordion2-area top">
+                            <div class="accordion-title2">
+                                <p class="subtitle">휴대폰 번호로 조회가 안 되는 경우</p>
+                            </div>
+                            <div class="accordion-content2">                          
+                                <ul class="list-type-dash service-list-s">
+                                    <li>구매하신 쇼핑몰에서 안심번호 등 1회성 번호로 송신하는 경우</li>
+                                    <li>조회시점으로 3일 전 등록된 택배정보(과거 건)의 경우</li>
+                                    <li>그 외 경우 로지아이 택배예약 이용문의 <a href="http://m.logii.com/Customer/Question.asp" target="_blank" class="color-lifein1 fontw300">[바로가기]</a></li>
+                                </ul>                        
+                            </div>
+                        </div> 
+                        <!-- // 휴대폰 조회 실패 시 유의사항 -->                                                
+                    </form>
+                </div>
+                <!-- //tab1 contents -->
+
+                <!-- tab2 contents-->
+                <div id="tab2" class="tab-content" role="tabpanel">
+                    <form class="join-certi-wrap" style="margin-bottom:30px;">
+                        <!-- 운송장 정보 입력 -->                
+                        <div class="join-certi">
+                            <div class="join-certi-inner join-certi-inner-middle selectbox-wrap">
+                                <select id="delvCd" >
+                                    <option value="" selected>선택</option>
+                                    <option value="01" >CJ대한통운</option>
+                                    <option value="02" >롯데택배 (구)현대택배</option>
+                                    <option value="03" >한진택배</option>
+                                    <option value="05" >우체국택배</option>
+                                    <option value="06" >로젠택배</option>
+                                    <option value="07" >편의점택배</option>
+                                    <option value="10" >우체국EMS</option>
+                                    <option value="11" >일양택배</option>
+                                    <option value="12" >천일택배</option>
+                                    <option value="13" >대신택배</option>
+                                    <option value="14" >합동택배</option>
+                                    <option value="15" >DHL</option>
+                                </select>
+                            </div>
+
+                            <div class="join-certi-inner">
+                                <input type="number" id="" class="input-text" placeholder="운송장번호" title="운송장번호">
+                            </div>
+                        </div>
+                        <!-- //운송장 정보 입력 -->
+                        <!-- 버튼 -->
+                        <div class="button-wrap inner">
+                            <ul class="button-area">
+                                <li><a href="#" class="button-middle">조회</a></li>
+                            </ul>
+                        </div>
+                        <!-- //버튼 -->
+
+                        <!-- 조회결과 -->
+                        <div class="delivery-result">
+                            <p class="txt">조회하신 내역입니다.<span>(택배 총 <strong>3</strong>건)</span></p>
+                        
+                            <div class="delivery">
+                                <!-- 택배사구분 -->
+                                <h2 class="head"><span><img src="../images/delivery/01.png"></span> CJ 대한통운 - 배송 <strong>2</strong>건</h2>
+                                <!-- 택배배송 리스트 -->
+                                <article class="beefup1">			
+                                    <h3 class="beefup-head">
+                                        <table class="list">
+                                            <tr>
+                                                <th>제품명</th>
+                                                <td>[소다]여성정장 구두</td>
+                                            </tr>
+                                            <tr>
+                                                <th>운송장 번호</th>
+                                                <td>023456751216546521321</td>
+                                            </tr>
+                                            <tr>
+                                                <th>배송상태</th>
+                                                <td class="state">배송완료</td>
+                                            </tr>
+                                        </table>				
+                                    </h3>
+                                    <div class="beefup-body" style="display: none;">
+                                        <ul class="detail">
+                                        <li>
+                                        <span class="point"></span><span class="line"></span>
+                                        <p><span class="time">[0월 0일 0시 0분] 기준</span> 
+                                        물품의 현재 위치는 [담당영업소]에서 
+                                        고객님께 <strong>배송완료</strong>되었습니다.</p>
+                                        </li>
+                                        </ul>
+                                    </div>
+                                </article>
+                                <article class="beefup1">			
+                                    <h3 class="beefup-head">
+                                        <table class="list">
+                                            <tr>
+                                                <th>제품명</th>
+                                                <td>YES24 삼국지 전권세트</td>
+                                            </tr>
+                                            <tr>
+                                                <th>운송장 번호</th>
+                                                <td>023456751216546521321</td>
+                                            </tr>
+                                            <tr>
+                                                <th>배송상태</th>
+                                                <td class="state">배송중</td>
+                                            </tr>
+                                        </table>				
+                                    </h3>
+                                    <div class="beefup-body" style="display: none;">
+                                        <ul class="detail">
+                                        <li>
+                                        <span class="point"></span><span class="line"></span>
+                                        <p><span class="time">[0월 0일 0시 0분] 기준</span> 
+                                        물품의 현재 위치는 [담당영업소]에서 
+                                        고객님께 <strong>배송완료</strong>되었습니다.</p>
+                                        </li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+            
+                            <div class="delivery">
+                                <!-- 택배사구분 -->
+                                <h2 class="head"><span><img src="../images/delivery/02.png"></span> 현대택배 - 배송 <strong>1</strong>건</h2>
+                                <!-- 택배배송 리스트 -->
+                                <article class="beefup1">			
+                                    <h3 class="beefup-head">
+                                        <table class="list">
+                                            <tr>
+                                                <th>제품명</th>
+                                                <td>[소다]여성정장 구두</td>
+                                            </tr>
+                                            <tr>
+                                                <th>운송장 번호</th>
+                                                <td>023456751216546521321</td>
+                                            </tr>
+                                            <tr>
+                                                <th>배송상태</th>
+                                                <td class="state">배송중</td>
+                                            </tr>
+                                        </table>				
+                                    </h3>
+                                    <div class="beefup-body" style="display: none;">
+                                        <ul class="detail">
+                                        <li>
+                                        <span class="point"></span><span class="line"></span>
+                                        <p> <span class="time">[0월 0일 0시 0분] 기준</span> 
+                                        물품의 현재 위치는 <strong>[현재위치]</strong>이며, <strong>[보내는 분]</strong>께서 물픔을 보내셨습니다.</p>
+                                        </li>
+                                        <li>
+                                        <span class="point"></span><span class="line"></span>
+                                        <p> <span class="time">[0월 0일 0시 0분] 기준</span> 
+                                        물품의 현재 위치는 <strong>[현재위치]</strong>이며, <strong>[목적지]</strong>로 출발하였습니다.</p>
+                                        </li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                            
+                            <script src="../scripts/lib/jquery.beefup.js"></script>
+                            <script>
+                                $(function() {
+                                    $('.beefup1').beefup();
+                                    $('.beefup2').beefup({
+                                        openSingle: true
+                                    });
+                                    $('.beefup3').beefup({
+                                        animation: 'fade',
+                                        showSpeed: 1000
+                                    });
+                                    var $beefup4 = $('.beefup4').beefup();
+                                    $beefup4.open($('#beefup4-2'));
+                                    $('.beefup5').beefup({
+                                        scroll: true
+                                    });
+                                    $('.beefup6').beefup({
+                                        onOpen: function ($this) {
+                                            $this.css('border-color', 'red');
+                                        },
+                                        onClose: function ($this) {
+                                            $this.css('border-color', '');
+                                        }
+                                    });
+                                    $('.beefup7').beefup({
+                                        selfClose: true
+                                    });
+                                });
+                            </script>
+                        </div>
+                        <!-- //조회결과 -->                         
+                    </form>
+                </div>
+                <!-- //tab2 contents -->
+            </div>
+            <!-- //탭 컨텐츠 -->            
+
+        </section>
+        <!-- //통합 택배조회 서비스 -->
+    </article>
+    <!-- //contents -->
+</body>
+</html>

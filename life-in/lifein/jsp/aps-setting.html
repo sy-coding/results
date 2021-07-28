@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>라이프인 오토패스워드 로그인 설정</title>    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- do not link // -->
+    <meta name="format-detection" content="no" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<!-- // do not link  -->
+	
+    <link rel="stylesheet" href="../styles/aps.min.css">
+	<!--link rel="stylesheet" href="https://lifein-test.vpay.co.kr/vpay/lifein/assets/css/aps.css"-->
+	
+    <script type="text/javascript" src="../scripts/lib/html5shiv.min.js"></script>	
+    <script type="text/javascript" src="../scripts/lib/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/lib/slick.min.js"></script>
+</head>
+
+<body class="aps-body">
+	<div class="aps-modal-setting">
+        <header>
+			<h1>
+				<img src="../images/aps/logo.png" class="logo-lifein" alt="Lifein">
+				<img src="../images/aps/auto.png" class="logo-aps" alt="오토패스워드 로고">
+			</h1>
+            <!--p class="header-left">
+                <a href="#" class="btn-prev"><span class="screen-out">이전페이지</span></a>
+            </p-->
+            <p class="header-right">
+                <a href="#" class="btn-close"><span class="screen-out">닫기</span></a>
+            </p>            
+		</header>
+		
+		<!-- *** 오토패스워드 로그인 설정 내 표시 사항은 display-none 클래스 추가/삭제로 컨트롤할 수 있음 *** -->
+
+		<!-- 오토패스워드 설정 표시 -->
+		<div class="site-code-info">
+			<h2 class="screen-out">오토패스워드 사이트 및 상태 안내</h2>
+
+			<!--dl class="site-address wrap">
+				<dt class="txt">사이트 주소</dt>
+				<dd>
+					<span class="info-txt color-info"id="domain">lifein.vpay.co.kr</span>
+				</dd>
+			</dl-->
+
+			<!-- 본인 확인 코드 및 남은 시간 // -->
+			<dl class="confirm-code wrap pb8">
+				<dt class="txt">본인 확인 코드</dt>
+				<dd>
+					<span class="info-txt color-info" id="selfconformno">53214865</span>
+				</dd>
+			</dl>
+			<em class="confirm-code-time">
+				<span class="count viewtimer" id="ViewTimer">
+					남은 시간&nbsp;:&nbsp;<span id="resttime">02분 55초</span>
+				</span>
+			</em>
+			<!-- // 본인 확인 코드 및 남은 시간 -->
+
+			<!-- 설정 상태 : 등록 완료 // -->
+			<dl class="confirm-state display-none">
+				<dt class="txt">상태</dt>
+				<dd><span class="info-txt color-success result_msg">등록 완료되었습니다</span></dd>
+			</dl>
+			<!-- // 설정 상태 : 등록 완료 -->
+
+			<!-- 설정 상태 : 사용 중 // -->
+			<dl class="confirm-state display-none">
+				<dt class="txt">상태</dt>
+				<dd><span class="info-txt color-success result_msg">라이프인 오토패스워드를 사용 중입니다</span></dd>
+			</dl>
+
+			<div class="unset-state display-none">
+				<button class="" type="button" id="unset_btn">설정 해제</button>
+			</div>			
+			<!-- // 설정 상태 : 사용 중 -->		
+			
+			<!-- 설정 상태 : 사용 해제 후 // -->
+			<dl class="confirm-state display-none">
+				<dt class="txt">상태</dt>
+				<dd>
+					<span class="info-txt color-success result_msg">
+						설정이 해제되었습니다.
+						<span class="again-message">원하실 때 언제든지 재설정 하실 수 있습니다.</span>
+					</span>
+				</dd>
+			</dl>		
+			<!-- // 설정 상태 : 사용 해제 후 -->			
+
+			<!--p class="fail-state result_msg alert-message">
+				등록시간이 지났습니다.<br/>다시 등록을 시도해주세요.
+			</p-->
+
+			<!--div class="fail-state">
+				<button class="confirm-btn" type="button" id="create_btn">코드 재발급</button>
+			</div-->
+		</div>
+
+		<!-- 오토패스워드 소개 및 문의사항 -->
+		<div class="aps-setting-support-box display-none">
+			<h2>문의 안내</h2>
+			<div class="box mb10 img-content">
+				<img src="../images/aps/aps-step-img04.svg" alt="Lifein AutoPassword">
+			</div>				
+			<div class="step clearfix">
+				<div class="box">
+					<p>
+						<span>라이프인 오토패스워드는 자동으로 암호 생성하여 입력해주는 서비스입니다.</span>
+						<span class="mb20">사용 중 불편하시거나 궁금하신 사항이 있으시면 다음 연락처로 문의해 주시면 감사하겠습니다.</span>
+						<span><em class="fontB">이메일</em>&nbsp;&nbsp;<a href="mailto:lifein@vp.co.kr" title="이메일 보내기">lifein@vp.co.kr</a></span>
+						<span class="mb8"><em class="fontB">고객센터</em>&nbsp;&nbsp;<a href="tel:1899-4168" title="전화 걸기">1899-4168</a></span>
+						<span class="fontL">(평일(월-금) 09:00 ~ 18:00, 주말/공휴일 휴무)</span>
+					</p>
+				</div>
+			</div>	
+		</div>
+
+		<!-- 오토패스워드 설정 가이드 -->
+		<div class="aps-step-info">
+			<h2>설정 가이드</h2>
+			<div class="aps-step-wrap">
+				<div class="step step1 clearfix">
+					<h3><span class="step_label">STEP1</span> 모바일 인증 앱 '라이프인' 설치</h3>
+					<div class="box mb10 img-content">
+						<img src="../images/aps/aps-step-img01.svg" alt="안드로이드는 구글 플레이, iOS는 앱스토어에서 라이프인 앱을 다운로드하여 설치할 수 있다.">
+					</div>				
+					<div class="box mb28">
+						<p>
+							<span>오토패스워드를 사용하기 위해 <em class="color-info">'라이프인 (LifeIn)' 앱을 스마트폰에 설치</em>합니다.</span>
+							<span>(안드로이드는 구글 플레이스토어, iOS는 앱스토어에서 다운로드 가능)</span>
+						</p>
+						<ul class="badge clearfix">
+							<li>
+								<a href="javascript:window.open('https://play.google.com/store/apps/details?id=com.vp.lifein')" class="google_badge" title="새 창 열림">
+									<img src="../images/aps/google_store.png" alt="다운로드 하기 Google Play">
+								</a>
+							</li>
+							<li>
+								<a href="javascript:window.open('https://apps.apple.com/app/id1494453695')" class="apple_badge" title="새 창 열림">
+									<img src="../images/aps/app_store.png" alt="App Store에서 다운로드 하기">
+								</a>
+							</li>
+						</ul> 
+					</div>
+				</div>
+				<div class="step step2 clearfix">
+					<h3><span class="step_label">STEP2</span> 간편 로그인 사이트 추가</h3>
+					<div class="box mb10 img-content">
+						<img src="../images/aps/aps-step-img02.svg" alt="라이프인 앱을 실행하면 오토패스워드 기능을 이용할 수 있다.">
+					</div>					
+					<div class="box mb8">
+						<p>
+							<span>설치된 '라이프인 (LifeIn)' 앱을 실행하여, <em class="color-info">'오토패스워드'를 누른 후, '간편로그인 사이트 추가'를 선택</em>합니다.</span>
+							<span>(최초 실행 시 자동 표시됩니다)</span>
+						</p>
+					</div>
+					<div class="box mb28">
+						<p>
+							<span>상단의 <em class="color-info">'사이트 주소'</em>와 <em class="color-info">'본인확인코드'</em> 정보를 이용하여 사이트를 추가합니다.</span>
+						</p>
+					</div>
+				</div>
+				<div class="step step3 clearfix">
+					<h3><span class="step_label">STEP3</span> 간편 로그인 설정 확인</h3>
+					<div class="box mb10 img-content">
+						<img src="../images/aps/aps-step-img03.svg" alt="사이트를 추가하면 오토패스워드 로그인 설정에서 자동으로 상태가 등록된 것을 확인할 수 있다.">
+					</div>					
+					<div class="box mb8">
+						<p>
+							<span>'라이프인 (LifeIn)' 앱에서 사이트가 <em class="color-info">정상적으로 추가되면 자동으로 상태가 변경</em>됩니다.</span>
+						</p>
+					</div>
+					<div class="wrap mb28">
+						<p>
+							<span class="info-notice-text"><em class="info-notice"></em> 사이트가 정상 추가된 후에도 상태가 변경이 안 되는 경우 화면을 '새로 고침' 해 주세요.</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(function(){
+			$('.aps-step-wrap').slick({
+				dots: true,
+				arrows: false,
+				infinite: false,
+				autoplay: false,
+				adaptiveHeight: true
+			});			
+		});
+	</script>
+</body>
+</html>

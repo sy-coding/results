@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>생활보상서비스</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- do not link // -->
+    <meta name="format-detection" content="no" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- // do not link  -->
+
+    <link rel="stylesheet" href="../styles/style_200407.min.css" />
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js" type="text/javascript"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="//oss.maxcd.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="../scripts/lib/html5shiv.min.js"></script>
+    <script type="text/javascript" src="../scripts/lib/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/lib/slick.min.js"></script>
+    <script type="text/javascript" src="../scripts/common.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header class="header-wrap sub">
+        <h1 class="text"> <span class="logo-img">Life in</span></h1>
+        <p class="header-right">
+            <a href="#" class="btn-close"><span class="screen-out">닫기</span></a>
+        </p>
+    </header> 
+    <!-- //header -->
+    <!-- contents -->
+    <article class="contents-wrap">
+        <!-- 본인인증 -->
+        <section class="contents-inner">
+            <!-- 본인인증폼 -->
+            <form id="" class="join-form-wrap">
+
+                <div class="join-step-indicator">
+                    <ul>
+                        <li class="done"><!-- 단계를 완료한 경우 done 클래스 추가 -->
+                            <a class="step-img" href="../jsp/ar-1.html">
+                                <span class="img-inner"></span>
+                                <span class="img-bg"></span>
+                            </a>
+                            <span class="step-indit"><em>본인인증</em></span>
+                        </li>
+                        <li class="current"><!-- 현재 단계 표시 current 클래스 추가 -->
+                            <a class="step-img" href="../jsp/ar-2.html">
+                                <span class="img-inner"></span>
+                                <span class="img-bg"></span>
+                            </a>
+                            <span class="step-indit"><em>약관동의</em></span>
+                        </li>           
+                        <li><!-- 아직 넘어가지 않은 단계는 class 없음 -->
+                            <a class="step-img" href="../jsp/ar-3.html">
+                                <span class="img-inner"></span>
+                                <span class="img-bg"></span>
+                            </a>
+                            <span class="step-indit"><em>가입완료</em></span>
+                        </li>                                       
+                    </ul>
+                </div>
+                
+                <!-- 약관동의 -->
+                <fieldset class="join-agree-wrap2">
+                    <legend class="screen-out">약관동의</legend>
+                    
+                    <h3 class="step-title">
+                        <em>약관 동의</em>하고<br>라이프인에 가입하세요!
+                    </h3>
+
+                    <div class="terms-list-wrap step2a">
+                        <!-- 필수 동의 약관// -->
+                        <div class="join-agree2">
+                            <div class="checkbox-wrap">
+                                <input type="checkbox" name="join2All" id="joinAll" class="checkbox-style-1" title="필수 동의 약관">
+                                <label for="joinAll">가입 약관 동의(필수)</label>
+                            </div>
+                        </div>
+                        <div class="join-agree">
+                            <ul class="form-text">                           
+                                <li>
+                                    <input type="checkbox" id="agree1" name="agree-join" class="checkbox-style-2">
+                                    <label for="agree1">서비스 이용약관 동의</label>
+                                    <a href="javascript:openNew('../html/terms/agree_200602.html');" title="새 창 열림" class="view_more">보기</a>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="agree2" name="agree-join" class="checkbox-style-2">
+                                    <label for="agree2">개인정보 수집/이용 동의</label>
+                                    <a href="javascript:openNew('../html/terms/privacyInfo.html');" title="새 창 열림" class="view_more">보기</a>
+                                </li>                                                                 
+                                <li>
+                                    <input type="checkbox" id="agree7" name="agree-join" class="checkbox-style-2">
+                                    <label for="agree7">개인정보 제3자 제공 동의 (피싱 &amp; 해킹 보험)</label>
+                                    <a href="javascript:openNew('../html/terms/privacyThird.html');" title="새 창 열림" class="view_more">보기</a>
+                                </li>                            
+                                <li>
+                                    <input type="checkbox" id="agree8" name="agree-join" class="checkbox-style-2">
+                                    <label for="agree8">개인정보 제3자 제공 동의 (알뜰폰)</label>
+                                    <a href="javascript:openNew('https://safe.ok-name.co.kr/eterms/agreement005.jsp');" title="새 창 열림" class="view_more">보기</a>
+                                </li>                                                                  
+                            </ul>
+                        </div>
+                        <!-- // 필수 동의 약관 -->                      
+                    </div>
+
+                    <div class="terms-list-wrap step2b bottom">
+                        <!-- 선택 동의 약관// -->
+                        <div class="join-agree2">
+                            <div class="checkbox-wrap">
+                                <input type="checkbox" name="join2All" id="joinSelectAll" class="checkbox-style-1" title="선택 동의 약관">
+                                <label for="joinSelectAll">가입 약관 동의(선택)</label>
+                            </div>
+                        </div>
+                        <div class="join-agree">
+                            <ul class="form-text">                           
+                                <li>
+                                    <input type="checkbox" id="agree9" name="agree-joinselect" class="checkbox-style-2">
+                                    <label for="agree9">마케팅 활용 동의</label>
+                                    <a href="javascript:openNew('../html/terms/marketing.html');" title="새 창 열림" class="view_more">보기</a>
+                                </li>                                                                    
+                            </ul>
+                        </div>
+                        <!-- // 선택 동의 약관 -->                      
+                    </div>
+
+                    <!-- 버튼 -->
+                    <div class="button-wrap">
+                        <ul class="button-area">
+                            <li><a href="#" class="button-middle gray">라이프인 가입하기</a></li><!-- 비활성화 gray 클래스 -->
+                        </ul>
+                    </div>
+                    <!-- //버튼 -->                     
+                    
+                </fieldset>
+                <!-- //약관동의 -->                
+
+            </form>
+            <!-- //본인인증폼 -->
+        </section>
+        <!-- //본인인증 -->
+    </article>
+    <!-- //contents -->
+</body>
+
+<script>
+    // 약관 - 새창팝업
+    function openNew(url){
+        var tgUrl = url;
+        var pWidth = 400;
+        var pHeight = 500;
+		var pTop = (window.screen.height / 2) - (pHeight / 2) ;
+        var pLeft = (window.screen.width / 2) - (pWidth / 2)  ;
+        
+        window.open( tgUrl, '_blank', 'scrollbars=auto, top='+ (pTop) +', left='+ (pLeft) +', width='+ (pWidth) +', height='+ (pHeight) +', resizable=0'); 
+    }
+</script>
+</html>

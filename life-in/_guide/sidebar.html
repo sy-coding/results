@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=700" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+        <title>VP</title>
+        <link rel="stylesheet" href="./guide.css" type="text/css" />
+        <script type="text/javascript" src="./jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="./common.js"></script>
+    </head>
+
+    <body>
+        <h1>
+            <span>Life in</span>
+        </h1>
+        <dl>
+            <dt class="page on">
+                <span>
+                    Page List
+                </span>
+            </dt>
+            <dd>
+                <ul>
+                    <li>
+                        <a class="dep_01">Component</a>
+                        <ul class="dep_01_list">
+                            <li>
+                                <a>Popup</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/popup01.html">
+                                            <span>확인</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/popup02.html">
+                                            <span>아니오 / 예 (취소 / 확인)</span>
+                                        </a>
+                                    </li>                                    
+                                    <li>
+                                        <a href="../lifein/jsp/popup03.html">
+                                            <span>타이틀 및 닫기 버튼1</span>
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="../lifein/jsp/popup04.html">
+                                            <span>타이틀 및 닫기 버튼2</span>
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="../lifein/jsp/popup05.html">
+                                            <span>체크박스가 있는 팝업</span>
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="../lifein/jsp/svc_ready.html">
+                                            <span>서비스 준비중 (팝업)</span>
+                                        </a>
+                                    </li>                                                   
+                                </ul>
+                            </li>
+                            <li>
+                                <a>Checkbox</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/popup05.html">
+                                            <span>체크박스가 있는 팝업</span>
+                                        </a>
+                                    </li>                                                   
+                                </ul>
+                            </li>
+                            <li>
+                                <a>Toggle</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/e-1-1(2).html">
+                                            <span>토글</span>
+                                        </a>
+                                    </li>                                                   
+                                </ul>
+                            </li>                                                         
+                        </ul>
+                    </li>                    
+                    
+                    <li>
+                        <a class="dep_01">앱 설치 후 실행</a>
+                        <ul class="dep_01_list">
+                            <li>
+                                <a>앱 소개페이지</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a>튜토리얼</a>
+                                        <ul class="inner">
+                                            <li>
+                                                <a href="../lifein/jsp/tutorial.html">
+                                                    <span>앱 소개페이지 (Tutorial)</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>                                      
+                                </ul>
+                            </li>
+                            <li>
+                                <a>앱 접근권한</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/e-1-2(1).html">
+                                            <span>e-1-2(1). 앱 접근권한 안내 (iOS/팝업)</span>
+                                        </a>
+                                    </li>                                     
+                                    <li>
+                                        <a href="../lifein/jsp/e-1-2(2).html">
+                                            <span>e-1-2(2). 앱 접근권한 안내 (AOS/팝업)</span>
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="../lifein/jsp/e-1-2(3).html">
+                                            <span>e-1-2(3). 다른 앱 위에 그리기 허용 (AOS/팝업)</span>
+                                        </a>
+                                    </li>                                                                         
+                                </ul>
+                            </li>  
+                            <li>
+                                <a>앱 설정</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/e-1-1.html">
+                                            <span>e-1-1. 앱 버전정보 (최신버전)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/e-1-1(1).html">
+                                            <span>e-1-1(1). 앱 버전정보 (업데이트)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/e-1-1(2).html">
+                                            <span>e-1-1(2). 앱 접근권한 설정</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/e-1-1(3).html">
+                                            <span>e-1-1(3). 선택 약관 동의 설정</span>
+                                        </a>
+                                    </li>                                    
+                                    <li>
+                                        <a href="../lifein/jsp/e-1-1(5).html">
+                                            <span>e-1-1(5). PUSH 알림 권한설정 해제 여부 묻기 (팝업)</span>
+                                        </a>
+                                    </li>                                    
+                                </ul>
+                            </li>                                                       
+                        </ul>
+                    </li>
+                                        
+                    <li class="on">
+                        <a class="dep_01">메인/GNB</a>
+                        <ul class="dep_01_list">
+                            <li>
+                                <a>본인인증 및 회원가입</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/ar-1.html">
+                                            <span>ar-1. Step1) 본인인증</span>
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="../lifein/jsp/ar-2.html">
+                                            <span>ar-1. Step2) 약관동의</span>
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="../lifein/jsp/ar-3.html">
+                                            <span>ar-3. Step3) 가입완료 (팝업)</span>
+                                        </a>
+                                    </li>                                     
+                                    <li>
+                                        <a href="../lifein/jsp/au-1.html">
+                                            <span>au-1. 본인인증(bak)</span>
+                                        </a>
+                                    </li>                                                                     
+                                </ul>
+                            </li>                            
+                            <li>
+                                <a>메인</a>
+                                <ul class="inner">   
+                                    <li>
+                                        <a href="../lifein/jsp/a-1-1.html">
+                                            <span>a-2. 앱 메인 화면 (To-Be)</span>
+                                        </a>
+                                    </li>                                                                      
+                                    <li>
+                                        <a href="../lifein/jsp/a-1.html">
+                                            <span>a-1. 앱 메인 화면 (As-Is)</span>
+                                        </a>
+                                    </li>  
+                                    <li>
+                                        <a href="../lifein/jsp/a-1(1).html">
+                                            <span>a-1(1). 이용약관 (팝업)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/a-1(2).html">
+                                            <span>a-1(2). 개인정보처리방침 (팝업)</span>
+                                        </a>
+                                    </li> 
+                                    <!--li>
+                                        <a href="../lifein/jsp/au-1__2.html">
+                                            <span>au-1__2. 본인인증 - 마케팅활용동의 (팝업)</span>
+                                        </a>
+                                    </li-->                                                                        
+                                </ul>
+                            </li> 
+                            <li>
+                                <a>GNB</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/b-2(1).html">
+                                            <span>b-2(1). GNB - Lite 회원 (To-Be)</span>
+                                        </a>
+                                    </li>        
+                                    <li>
+                                        <a href="../lifein/jsp/b-2(2).html">
+                                            <span>b-2(2). GNB - Premium 회원 (To-Be)</span>
+                                        </a>
+                                    </li>                                                                 
+                                    <li>
+                                        <a href="../lifein/jsp/b-1.html">
+                                            <span>b-1. GNB (As-Is)</span>
+                                        </a>
+                                    </li>                                   
+                                </ul>
+                            </li>
+                            <li>
+                                <a>공통메뉴</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/c-5.html">
+                                            <span>c-5. My 쿠폰함 (2depth)</span>
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="../lifein/jsp/f-1-1.html">
+                                            <span>f-1-1. 공지사항</span>
+                                        </a>
+                                    </li>                                    
+                                    <li>
+                                        <a href="../lifein/jsp/f-1-3.html">
+                                            <span>f-1-3. FAQ/고객센터</span>
+                                        </a>
+                                    </li>
+                                    <!--li>
+                                        <a href="../lifein/jsp/f-1-2.html">
+                                            <span>f-1-2. FAQ</span>
+                                        </a>
+                                    </li--> 
+                                    <li>
+                                        <a href="../lifein/jsp/a-1(3).html">
+                                            <span>a-1(3). 제휴문의</span>
+                                        </a>
+                                    </li>                                    
+                                </ul>
+                            </li> 
+                        </ul>
+                    </li> 
+
+                    <li class="on">
+                        <a class="dep_01">라이프인</a>
+                        <ul class="dep_01_list">
+                            <li>
+                                <a>서비스소개</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/b-3-1.html">
+                                            <span>b-3-1. 서비스 소개 (생활)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/b-3-4.html">
+                                            <span>b-3-4. 서비스 소개 (문화)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/b-3-3.html">
+                                            <span>b-3-4. 서비스 소개 (인증)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/b-3-2.html">
+                                            <span>b-3-1. 서비스 소개 (보상)</span>
+                                        </a>
+                                    </li> 
+                                </ul>
+                            </li>
+                            <li>
+                                <a>이용약관(목록)</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/f-1-4.html">
+                                            <span>f-1-4. 이용약관 (목록)</span>
+                                        </a>
+                                    </li>                                  
+                                </ul>
+                            </li> 
+                            <li>
+                                <a>약관</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/html/terms/agree_200602.html">
+                                            <span>서비스 이용약관 (2020.06.02)</span>
+                                        </a>
+                                    </li>                                     
+                                    <!--li>
+                                        <a href="../lifein/html/terms/agree_200210.html">
+                                            <span>서비스 이용약관 (2020.02.10)</span>
+                                        </a>
+                                    </li>                                    
+                                    <li>
+                                        <a href="../lifein/html/terms/agree_190901.html">
+                                            <span>서비스 이용약관 (2019.09.01)</span>
+                                        </a>
+                                    </li-->
+                                    <li>
+                                        <a href="../lifein/html/terms/privacy_200923.html">
+                                            <span>개인정보처리방침 (2020.09.23)</span>
+                                        </a>
+                                    </li>                                      
+                                    <!--li>
+                                        <a href="../lifein/html/terms/privacy_200805.html">
+                                            <span>개인정보처리방침 (2020.08.05)</span>
+                                        </a>
+                                    </li-->                                     
+                                    <!--li>
+                                        <a href="../lifein/html/terms/privacy_200602.html">
+                                            <span>개인정보처리방침 (2020.06.02)</span>
+                                        </a>
+                                    </li--> 
+                                    <!--li>
+                                        <a href="../lifein/html/terms/privacy.html">
+                                            <span>개인정보처리방침</span>
+                                        </a>
+                                    </li-->                                    
+                                    <li>
+                                        <a href="../lifein/html/terms/privacyInfo.html">
+                                            <span>개인정보 수집/이용 동의 (2020.08.05)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/html/terms/privacyThird.html">
+                                            <span>개인정보 제3자 제공동의(피싱&amp;해킹 보험) (2020.08.05)</span>
+                                        </a>
+                                    </li>                                    
+                                    <li>
+                                        <a href="../lifein/html/terms/phishing.html">
+                                            <span>피싱해킹금융사기보상</span>
+                                        </a>
+                                    </li>                                    
+                                    <li>
+                                        <a href="../lifein/html/terms/marketing.html">
+                                            <span>마케팅 광고 활용 동의 약관 (2020.09.23)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/html/terms/ios_subscription.html">
+                                            <span>iOS 정기구독 안내</span>
+                                        </a>
+                                    </li>                                    
+                                </ul>
+                            </li>  
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a class="dep_01">프리미엄회원(유료결제)</a>
+                        <ul class="dep_01_list">
+                            <li>
+                                <a>프리미엄회원 구독</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/au-1(4).html">
+                                            <span>au-1(4). 프리미엄회원 구독</span>
+                                        </a>
+                                    </li>   
+                                    <li>
+                                        <a href="../lifein/jsp/a-1(7).html">
+                                            <span>a-1(7). iOS 프리미엄 구독 (팝업)</span>
+                                        </a>
+                                    </li>
+                               </ul>
+                            </li>
+                            <li>
+                                <a>이용료 결제</a>
+                                <ul class="inner">                                    
+                                    <!--li>
+                                        <a href="../lifein/jsp/au-1(2).html">
+                                            <span>au-1(2). 인증 후 이용료 결제</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/au-1(3).html">
+                                            <span>au-1(3). 이용료 결제 중단 시 (팝업)</span>
+                                        </a>
+                                    </li-->
+                                    <li>
+                                        <a href="../lifein/jsp/a-1(5).html">
+                                            <span>a-1(5). 인앱결제 안내 - AOS (팝업)</span>
+                                        </a>
+                                    </li>                                    
+                                    <li>
+                                        <a href="../lifein/jsp/a-1(6).html">
+                                            <span>a-1(6). 인앱결제 안내 - iOS (팝업)</span>
+                                        </a>
+                                    </li>                                   
+                                    <li>
+                                        <a href="../lifein/jsp/a-0__2.html">
+                                            <span>a-0__2. 구독(결제) 완료 (팝업)</span>
+                                        </a>
+                                    </li>                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <a>서비스해지(소액결제)</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/f-1-5.html">
+                                            <span>f-1-5. 서비스해지</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/f-1-5__2.html">
+                                            <span>f-1-5__2. 해지 신청 시 (팝업)</span>
+                                        </a>
+                                    </li>  
+                                    <li>
+                                        <a href="../lifein/jsp/f-1-5__3.html">
+                                            <span>f-1-5__3. 해지 완료 시 (팝업)</span>
+                                        </a>
+                                    </li>  
+                                    <li>
+                                        <a href="../lifein/jsp/f-1-5__4.html">
+                                            <span>f-1-5__4. 해지 후</span>
+                                        </a>
+                                    </li>                                   
+                                </ul>
+                            </li> 
+                            <li>
+                                <a>서비스해지가이드(인앱결제)</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/f-2.html">
+                                            <span>f-2. 해지 가이드 (구글)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/f-2(1).html">
+                                            <span>f-2. 해지 가이드 - 인앱결제(애플)</span>
+                                        </a>
+                                    </li>                                    
+                                </ul>
+                            </li>                            
+                        </ul>
+                    </li>                     
+
+                    <li>
+                        <a class="dep_01">생활 서비스</a>
+                        <ul class="dep_01_list">
+                            <li>
+                                <a>생활</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/c-5-0.html">
+                                            <span>c-5-0. 프리미엄할인</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/c-5-2.html">
+                                            <span>c-5-2. 맛있는할인</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/c-5-3.html">
+                                            <span>c-5-3. 맛있는할인 쿠폰함</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/c-3-1.html">
+                                            <span>c-3-1. 택배 배송조회</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/c-3-2.html">
+                                            <span>c-3-2. 방문택배 예약</span>
+                                        </a>
+                                    </li>                                 
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>  
+                    
+                    <li>
+                        <a class="dep_01">문화 서비스</a>
+                        <ul class="dep_01_list">
+                            <li>
+                                <a>E-매거진</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/popup05.html">
+                                            <span>E-매거진 진입 시 안내 팝업</span>
+                                        </a>
+                                    </li>                                    
+                                    <li>
+                                        <a href="../lifein/jsp/c-2-2.html">
+                                            <span>c-2-2. E-매거진</span>
+                                        </a>
+                                    </li>                               
+                                </ul>
+                            </li>
+                            <li>
+                                <a>GMP</a>
+                                <ul class="inner">                                             
+                                    <li>
+                                        <a href="../lifein/jsp/c-2-1.html">
+                                            <span>c-2-1. 굿모닝팝스 Intro</span>
+                                        </a>
+                                    </li>  
+                                    <li>
+                                        <a href="../lifein/jsp/c-2-1(1).html">
+                                            <span>c-2-1(1). 학습하기 (주중/월-목)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/c-2-1(1)_lite.html">
+                                            <span>c-2-1(1). 학습하기 (Lite 회원)</span>
+                                        </a>
+                                    </li>                                    
+                                    <li>
+                                        <a href="../lifein/jsp/c-2-1(2).html">
+                                            <span>c-2-1(2). 학습하기 (주말/금)</span>
+                                        </a>
+                                    </li>   
+                                    <li>
+                                        <a href="../lifein/jsp/c-2-1(3).html">
+                                            <span>c-2-1(3). 학습하기 (주말/토)</span>
+                                        </a>
+                                    </li>    
+                                    <li>
+                                        <a href="../lifein/jsp/c-2-1(4).html">
+                                            <span>c-2-1(4). 학습하기 (주말/일)</span>
+                                        </a>
+                                    </li>  
+                                    <li>
+                                        <a href="../lifein/jsp/c-2-1(5).html">
+                                            <span>c-2-1(5). 학습캘린더 (Premium)</span>
+                                        </a>
+                                    </li>  
+                                    <li>
+                                        <a href="../lifein/jsp/c-2-1(5)_lite.html">
+                                            <span>c-2-1(5). 학습캘린더 (Lite)</span>
+                                        </a>
+                                    </li>                                                                       
+                                </ul>
+                            </li>                            
+                        </ul>
+                    </li> 
+                    
+                    <li>
+                        <a class="dep_01">인증 서비스</a>
+                        <ul class="dep_01_list">
+                            <li>
+                                <a>오토패스워드</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/b-0.html">
+                                            <span>b-0. 오토패스워드 (메인>2depth)</span>
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="../lifein/jsp/e-1-2(3).html">
+                                            <span>e-1-2(3). 다른 앱 위에 그리기 허용 - AOS (팝업)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/b-1(2).html">
+                                            <span>b-1(2). PUSH 설정 허용 묻기 (팝업)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/user_guide.html">
+                                            <span>오토패스워드 이용방법</span>
+                                        </a>
+                                    </li>                                                                         
+                                    <li>
+                                        <a href="../lifein/jsp/b-1-2.html">
+                                            <span>b-1-2. 간편로그인 사이트 추가</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/b-1-2(1).html">
+                                            <span>b-1-2(1). 사이트 준비중일 경우</span>
+                                        </a>
+                                    </li>                                    
+                                    <li>
+                                        <a href="../lifein/jsp/b-1-2(2).html">
+                                            <span>b-1-2(2). 사이트 추가 시 (팝업)</span>
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="../lifein/jsp/b-1-3.html">
+                                            <span>b-1-3. 내 사이트 목록</span>
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="../lifein/jsp/b-1-3(1).html">
+                                            <span>b-1-3(1). 내 사이트 목록 (사용내역 없음)</span>
+                                        </a>
+                                    </li>                                     
+                                    <li>
+                                        <a href="../lifein/jsp/b-1-4.html">
+                                            <span>b-1-4. 패스워드 생성 OTP인증번호</span>
+                                        </a>
+                                    </li>                                 
+                                </ul>
+                            </li>
+                            <li>
+                                <a>가맹점용</a>
+                                <ul class="inner">  
+                                    <li>
+                                        <a href="../lifein/jsp/aps.html">
+                                            <span>(가맹점) 로그인(초기화면)</span>
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="../lifein/jsp/aps-error.html">
+                                            <span>(가맹점) 로그인(인증실패)</span>
+                                        </a>
+                                    </li>                                     
+                                    <li>
+                                        <a href="../lifein/jsp/aps-otp.html">
+                                            <span>(가맹점) 로그인(OTP인증번호)</span>
+                                        </a>
+                                    </li>                                       
+                                    <li>
+                                        <a href="../lifein/jsp/aps-setting.html">
+                                            <span>(가맹점) 설정 (본인확인코드)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/aps-setting(1).html">
+                                            <span>(가맹점) 설정 (등록완료)</span>
+                                        </a>
+                                    </li>                                    
+                                    <li>
+                                        <a href="../lifein/jsp/aps-setting(2).html">
+                                            <span>(가맹점) 설정 (사용중)</span>
+                                        </a>
+                                    </li>  
+                                    <li>
+                                        <a href="../lifein/jsp/aps-setting(3).html">
+                                            <span>(가맹점) 설정 (해제 시)</span>
+                                        </a>
+                                    </li>                               
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>  
+                    
+                    <li>
+                        <a class="dep_01">보상 서비스</a>
+                        <ul class="dep_01_list">
+                            <li>
+                                <a>보상</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/d-1.html">
+                                            <span>d-1. 피싱/해킹 보상접수</span>
+                                        </a>
+                                    </li>                                 
+                                </ul>
+                            </li>
+                        </ul>
+                    </li> 
+    
+                    <li>
+                        <a class="dep_01">Promotion</a>
+                        <ul class="dep_01_list">
+                            <li>
+                                <a>외부광고 및 회원가입</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/lifein_join_0.html">
+                                            <span>라이프인 외부광고</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/lifein_join_1.html">
+                                            <span>외부광고 회원가입 (팝업)</span>
+                                        </a>
+                                    </li>                                      
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a class="dep_01">bak</a>
+                        <ul class="dep_01_list">
+                          
+                            <li>
+                                <a>외부광고 및 회원가입</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/a-0.html">
+                                            <span>a-0. 회원가입</span>
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="../lifein/jsp/a-0-1.html">
+                                            <span>a-0-1. 혜택 자세히보기</span>
+                                        </a>
+                                    </li>                                                                       
+                                    <li>
+                                        <a href="../lifein/jsp/a-1(4).html">
+                                            <span>a-1(4). 이용료 결제방법 선택(팝업)</span>
+                                        </a>
+                                    </li> 
+                                </ul>
+                            </li>                            
+                            <li>
+                                <a>GNB / 2depth</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/b-1(bak).html">
+                                            <span>b-1. GNB (bak)</span>
+                                        </a>
+                                    </li>                                    
+                                    <li>
+                                        <a href="../lifein/jsp/c-2.html">
+                                            <span>c-2. 2depth 생활문화</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../lifein/jsp/c-4.html">
+                                            <span>c-4. 2depth 보안</span>
+                                        </a>
+                                    </li>                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <a>생활</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/c-3-1(bak).html">
+                                            <span>c-3-1(bak). 택배 배송조회 (휴대폰번호)</span>
+                                        </a>
+                                    </li>                                    
+                                    <li>
+                                        <a href="../lifein/jsp/c-3-1(2).html">
+                                            <span>c-3-1(2). 택배 배송조회 (운송장번호)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>인증</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/c-4-1.html">
+                                            <span>c-4-1. 스마트폰 클린케어</span>
+                                        </a>
+                                    </li>                                   
+                                </ul>
+                            </li>                            
+                            <li>
+                                <a>공지사항 (before)</a>
+                                <ul class="inner">
+                                    <li>
+                                        <a href="../lifein/jsp/alertDel.html">
+                                            <span>삭제 알림</span>
+                                        </a>
+                                    </li>                                                                       
+                                </ul>
+                            </li>                                                        
+                        </ul>
+                    </li>                     
+
+                </ul>
+            </dd>
+        </dl>
+    </body>
+</html>
