@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>포샵 포인트조회</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- do not link // -->
+    <meta name="format-detection" content="no" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- // do not link  -->
+
+    <!--link rel="stylesheet" href="../styles/style.css"-->
+    <link rel="stylesheet" href="../styles/style.min.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcd.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../scripts/lib/html5shiv.min.js"></script>   
+    <script src="../scripts/lib/jquery-3.4.1.min.js"></script>
+    <script src="../scripts/common.js"></script>
+</head>
+<body id="wrapper">
+    <!-- header -->
+    <header class="header">
+        <h1 class="logo"><img src="../images/logo.png" alt="브이피"></h1>
+    </header>
+    <!-- //header -->
+
+    <!-- container --> 
+    <section class="container">
+        <h2 class="screen-out">포인트 조회 및 사용</h2>
+
+        <!-- step -->
+        <nav class="step-wrap">
+            <ul class="step">
+                <li><span>약관동의</span></li>
+                <li class="active"><span>포인트 조회</span></li>
+            </ul>
+        </nav>
+        <!-- //step -->
+
+        <!-- contents -->
+        <div id="contents" class="contents-wrap">
+            <h2 class="screen-out">포인트 조회 및 사용</h2>  
+                                
+            <!-- 포인트 조회하기 -->
+            <form action="">            
+                <div class="contents-inner">            
+                    <!-- 포인트 조회 -->
+                    <div class="pay-wrap">
+
+                        <div class="pay-view-wrap"> 
+                            
+                            <h3>포인트 조회</h3>
+
+                            <!-- 카드사별 포인트 내역 -->
+                            <div class="pay-inner">
+                                <fieldset>
+                                    <legend class="screen-out">포인트 조회 및 사용하기 (상세내역)</legend> 
+
+                                    <table class="pointAlllist">
+                                        <caption class="screen-out">포인트 조회 및 사용하기</caption>                              
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">포인트</th>
+                                                <th scope="col">보유</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <span class="card_brand bc">BC TOP</span>
+                                                </td>
+                                                <td>
+                                                    <div class="input_area">
+                                                        <input type="text" name="" id="accountAmt_BC" value="10" class="usepoint-input" title="보유 포인트" disabled="disabled">
+                                                        <span class="measure">P</span>
+                                                    </div>
+                                                </td>
+                                            </tr>                    
+                                            <tr>
+                                                <td> 
+                                                    <span class="card_brand kb">KB 포인트리</span>                 
+                                                </td>
+                                                <td>
+                                                    <div class="input_area">
+                                                        <input type="text" name="" id="accountAmt_KB" value="20,340" class="usepoint-input" title="보유 포인트" disabled="disabled">
+                                                        <span class="measure">P</span>
+                                                    </div>
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td>
+                                                    <span class="card_brand sh">마이신한포인트</span>
+                                                </td>
+                                                <td>
+                                                    <div class="input_area">
+                                                        <input type="text" name="" id="accountAmt_SH" value="120,359" class="usepoint-input" title="보유 포인트" disabled="disabled">
+                                                        <span class="measure">P</span>
+                                                    </div>                           
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td>
+                                                    <span class="card_brand ss">삼성 보너스포인트</span>                
+                                                </td>
+                                                <td>
+                                                    <div class="input_area">
+                                                        <input type="text" name="" id="accountAmt_SS" value="6,534" class="usepoint-input" title="보유 포인트" disabled="disabled">
+                                                        <span class="measure">P</span>
+                                                    </div>
+                                                </td>
+                                            </tr>  
+                                            <tr>
+                                                <td>
+                                                    <span class="card_brand wr">우리 위비꿀머니</span>                  
+                                                </td>
+                                                <td>
+                                                    <div class="input_area">
+                                                        <input type="text" name="" id="accountAmt_WR" value="120" class="usepoint-input" title="보유 포인트" disabled="disabled">
+                                                        <span class="measure">P</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="card_brand hn">하나멤버스</span>                     
+                                                </td>
+                                                <td>
+                                                    <div class="input_area">
+                                                        <input type="text" name="" id="accountAmt_HN" value="0" class="usepoint-input" title="보유 포인트" disabled="disabled">
+                                                        <span class="measure">P</span>
+                                                    </div>
+                                                </td>
+                                            </tr>   
+                                            <tr>
+                                                <td>
+                                                    <span class="card_brand lp">롯데 L.POINT</span>                     
+                                                </td>
+                                                <td>
+                                                    <div class="input_area">
+                                                        <input type="text" name="" id="accountAmt_LP" value="7,864" class="usepoint-input" title="보유 포인트" disabled="disabled">
+                                                        <span class="measure">P</span>
+                                                    </div>
+                                                </td>
+                                            </tr>                                             
+                                        </tbody>
+                                    </table>
+                                </fieldset>   
+                            </div>
+                            <!-- //카드사별 포인트 내역 -->
+                        </div>
+
+                    </div>  
+                </div>
+
+                <!-- 사용할 포인트 합계/결제할 포인트 보기 -->
+                <div class="pointSum-inner">
+                    <h3>포인트 합계</h3>
+                    <div class="sum-wrap">
+                        <dl class="pointSum">
+                            <dt>내 포인트 총합</dt>
+                            <dd class="red">
+                                <span>155,227</span>
+                                <span>&nbsp;P</span>                               
+                            </dd>
+                        </dl>
+                    </div>
+                </div>    
+                <!-- //사용할 포인트 합계/결제할 포인트 보기 -->
+
+                <!-- button -->      
+                <div class="button-wrap">
+                    <ul class="button-area">
+                        <li><a href="#" class="button">확인</a></li>
+                    </ul>                    
+                </div>  
+                <!-- //button -->            
+
+            </form>            
+            <!-- //포인트 조회 및 사용 -->        
+               
+        </div>
+        <!-- //contents -->  
+    </section>
+    <!-- //container --> 
+  
+</body>
+</html>

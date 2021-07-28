@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>브이피 포인트결제</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- do not link // -->
+    <meta name="format-detection" content="no" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- // do not link  -->
+
+    <!--link rel="stylesheet" href="../styles/style.css"-->
+    <link rel="stylesheet" href="../styles/style.min.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcd.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../scripts/lib/html5shiv.min.js"></script>
+    <script src="../scripts/lib/jquery-3.4.1.min.js"></script>
+    <script src="../scripts/common.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <h1 class="logo"><img src="../images/logo.png" alt="브이피"></h1>
+    </header>
+    
+    <!-- //header -->
+    <!-- container -->
+    <section class="container">
+        <h2 class="screen-out">결제완료</h2>
+        
+        <!-- step -->
+        <nav class="step-wrap">
+            <ul class="step">
+                <li><span>약관동의</span></li>
+                <li><span>포인트 조회 및 사용</span></li>
+                <li class="active"><span>결제완료</span></li>
+            </ul>
+        </nav>
+        <!-- //step -->
+        <!-- contents -->
+        <div id="contents" class="contents-wrap">
+            <h2 class="screen-out">결제실패</h2>
+
+            <!-- 결제완료 -->
+            <div class="contents-inner">
+
+                <!-- 결제 결과 -->
+                <div class="result-wrap">
+                    <p class="icon-area"><i class="icon-fail" aria-hidden="true"></i></p>
+                    <div class="text-area">
+                        <p class="large_fail">포인트 결제를 실패하였습니다.</p>
+                        <p class="normal">다시 시도 바랍니다.</p>
+                    </div>
+                </div>
+                <!-- //결제 결과 -->
+                
+                <!-- 상품 결제 정보 -->
+                <div class="payresult-wrap">
+                    <div class="payresult-inner">
+                        <dl class="product">
+                            <dt>상품명</dt>
+                            <dd>스타벅스 텀블러</dd><!-- 상품명 data -->
+                        </dl>
+                        <hr class="product-div">
+                        <dl class="product">
+                            <dt>상품금액</dt>
+                            <dd>
+                                <span class="fail1">36,000</span><!-- 사용할 포인트 data -->
+                                <span>원</span><!-- 사용할 포인트 단위 -->
+                            </dd>                              
+                        </dl>
+                        <dl class="product">
+                            <dt>사용포인트</dt>
+                            <dd>
+                                <span class="fail2">0</span><!-- 사용할 포인트 data -->
+                                <span>P</span><!-- 사용할 포인트 단위 -->
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- //상품 결제 정보 -->
+
+                <!-- button -->      
+                <div class="button-wrap">
+                    <ul class="button-area">
+                        <li><button class="button cancle">다시하기</button></li>
+                    </ul>                    
+                </div>  
+                <!-- //button -->        
+            </div>
+            <!-- //결제완료 -->    
+        </div>
+        <!-- //contents -->
+    </section>
+    <!-- //container -->
+</body>
+</html>

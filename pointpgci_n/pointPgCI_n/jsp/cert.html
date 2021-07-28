@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>브이피 포인트결제</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- do not link // -->
+    <meta name="format-detection" content="no" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- // do not link  -->
+
+    <!--link rel="stylesheet" href="../styles/style.css"-->
+    <link rel="stylesheet" href="../styles/style.min.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcd.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../scripts/lib/html5shiv.min.js"></script>
+    <script src="../scripts/lib/jquery-3.4.1.min.js"></script>
+    <script src="../scripts/common.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <h1 class="logo"><img src="../images/logo.png" alt="브이피"></h1>
+    </header>
+    
+    <!-- //header -->
+    <!-- container -->
+    <section class="container">
+        <h2 class="screen-out">약관동의</h2>
+
+        <!-- step -->
+        <nav class="step-wrap">
+            <ul class="step">
+                <li class="active"><span>약관동의</span></li>
+                <li><span>포인트 조회 및 사용</span></li>
+                <li><span>결제완료</span></li>
+            </ul>
+        </nav>
+        <!-- //step -->
+
+        <!-- contents -->
+        <div id="contents" class="contents-wrap">
+            <h2 class="screen-out">휴대폰 본인인증</h2>
+
+            <!-- 약관동의 폼 -->
+            <form action="">
+
+                <!-- 개인정보 입력 -->
+                <div class="cert-inner">                    
+                    <fieldset>
+                        <legend class="screen-out">개인정보 입력</legend>
+
+                        <!-- 약관동의 선택 -->
+                        <div class="cert-agree-wrap">
+                            <div class="cert-agree-form">
+                                <fieldset>
+                                    <legend class="screen-out">약관동의 폼</legend>
+                                    <div class="cert-agree-all checkbox-type-2">
+                                        <input type="checkbox" id="agreeAll" name="agreeAll">
+                                        <label for="agreeAll"><span class="cert-agreeAll_ti">전체동의</span></label>
+                                    </div>
+                                    <div class="cert-agree-check-wrap checkbox-type-2">
+                                        <input type="checkbox" id="cert-agree1" name="agree">
+                                        <label for="cert-agree1">개인정보 이용 동의 (필수)</label>
+                                        <a href="#" target="_blank" class="link_more" title="약관보기">약관보기</a>
+                                    </div>
+                                    <div class="cert-agree-check-wrap checkbox-type-2">
+                                        <input type="checkbox" id="cert-agree2" name="agree">
+                                        <label for="cert-agree2">고유식별 정보처리 동의 (필수)</label>
+                                        <a href="#" target="_blank" class="link_more" title="약관보기">약관보기</a>
+                                    </div>
+                                    <div class="cert-agree-check-wrap checkbox-type-2">
+                                        <input type="checkbox" id="cert-agree3" name="agree">
+                                        <label for="cert-agree3">통신사 이용약관 동의 (필수)</label>
+                                        <a href="#" target="_blank" class="link_more" title="약관보기">약관보기</a>
+                                    </div>
+                                    <div class="cert-agree-check-wrap checkbox-type-2">
+                                        <input type="checkbox" id="cert-agree4" name="agree">
+                                        <label for="cert-agree4">서비스 이용약관 동의 (필수)</label>
+                                        <a href="#" target="_blank" class="link_more" title="약관보기">약관보기</a>
+                                    </div>
+                                </fieldset>   
+                            </div>
+                        </div>
+                        <!-- //약관동의 선택 -->                        
+
+                        <div class="cert-box">
+                            <!--label for="cert-name" class="item-1 cert-label">이름</label-->
+                            <input id="cert-name" type="text" class="item-2 cert-text" placeholder="이름" title="이름">
+                            <div class="item-right">
+                                <div class="cert-select">
+                                    <select style="padding-left:10px;">
+                                        <option value="">내국인</option>
+                                        <option value="">외국인</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cert-box">
+                            <!--label for="cert-birth" class="item-1 cert-label">생년월일</label-->
+                            <input id="cert-birth" type="number" class="item-2 cert-text not-kor" placeholder="생년월일(8자리)" title="생년월일">
+                            <div class="item-right">
+                                <div class="cert-radio-area">
+                                    <p class="cert-radio-input">
+                                        <input type="radio" id="cert-gender-1" name="cert-gender" class="cert-radio">
+                                        <label for="cert-gender-1" class="left">남</label>
+                                    </p>
+                                    <p class="cert-radio-input">
+                                        <input type="radio" id="cert-gender-2" name="cert-gender" class="cert-radio">
+                                        <label for="cert-gender-2" class="right">여</label>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cert-box">
+                            <!--label for="cert-phone" class="item-1 cert-label">통신사</label-->
+                            <div class="item-2">
+                                <div class="selectpicker cert-select">
+                                    <select title="통신사 선택" style="padding-left:10px;">
+                                        <option value>통신사 선택</option>
+                                        <option value="">SKT</option>
+                                        <option value="">KT</option>
+                                        <option value="">LG U+</option>
+                                        <option value="">SKT알뜰폰</option>
+                                        <option value="">KT알뜰폰</option>
+                                        <option value="">LG알뜰폰</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cert-box">
+                            <!--label for="cert-phone" class="item-1 cert-label">휴대폰번호</label-->
+                            <input id="cert-phone" type="number" class="item-2 cert-text not-kor" placeholder="01012345678" title="휴대폰번호">
+                            <p class="item-right">
+                                <button class="btn-certno">인증번호</button>
+                            </p>
+                        </div>
+
+                        <div class="cert-box">
+                            <!--label for="cert-certno" class="item-1 cert-label">인증번호</label-->
+                            <input id="cert-certno" type="number" class="item-2 cert-text not-kor" placeholder="인증번호 입력" title="인증번호">
+                            <p class="item-right2">
+                                <span class="screen-out">남은시간</span><span class="cert-time">03:00</span>
+                            </p>
+                        </div> 
+
+                    </fieldset>
+                </div>
+                <!-- //개인정보 입력 --> 
+
+                <!-- button -->      
+                <div class="button-wrap">
+                    <ul class="button-area">
+                        <li><a href="#" class="button cancle">취소</a></li>
+                        <li><a href="#" class="button">확인</a></li>
+                    </ul>                    
+                </div>  
+                <!-- //button -->        
+            </form>
+            <!-- //약관동의 폼 -->    
+        </div>
+        <!-- //contents -->
+    </section>
+    <!-- //container -->
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>브이피 포인트결제</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- do not link // -->
+    <meta name="format-detection" content="no" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- // do not link  -->
+
+    <!--link rel="stylesheet" href="../styles/style.css"-->
+    <link rel="stylesheet" href="../styles/style.min.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcd.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../scripts/lib/html5shiv.min.js"></script>
+    <script src="../scripts/lib/jquery-3.4.1.min.js"></script>
+    <script src="../scripts/common.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <h1 class="logo"><img src="../images/logo.png" alt="브이피"></h1>
+    </header>
+    <!-- //header -->
+
+    <!-- container -->
+    <section class="container">
+        <h2 class="screen-out">약관동의</h2>
+                
+        <!-- step -->
+        <nav class="step-wrap">
+            <ul class="step">
+                <li class="active"><span>약관동의</span></li>
+                <li><span>포인트 조회 및 사용</span></li>
+                <li><span>결제완료</span></li>
+            </ul>
+        </nav>
+        <!-- //step -->
+        
+        <!-- contents -->
+        <div id="contents" class="contents-wrap">
+            <h2 class="screen-out">약관동의</h2>
+
+            <!-- 상품 금액 정보 -->
+            <div class="product-wrap">
+                <dl class="product">
+                    <dt>상품명</dt>
+                    <dd>네이버 쿠키 충전</dd>
+                </dl>
+                <dl class="product">
+                    <dt>상품금액</dt>
+                    <dd><strong class="cost">53</strong>쿠키</dd>
+                </dl>
+            </div>
+            <!-- //상품 금액 정보 -->
+
+            <!-- 약관동의 폼 -->
+            <form action="">
+                <!-- 약관동의 선택 -->
+                <div class="agree-wrap">
+                    <div class="agree-form">
+                        <fieldset>
+                            <legend class="screen-out">약관동의 폼</legend>
+                            <div class="agree-all checkbox-type-1">
+                                <input type="checkbox" id="agreeAll" name="agreeAll">
+                                <label for="agreeAll"><span class="agreeAll_ti">전체동의</span></label>
+                            </div>
+                            <div class="agree-check-wrap checkbox-type-1">
+			                    <input type="checkbox" id="agree1" name="agree">
+                                <label for="agree1">전자금융거래 이용약관 (필수)</label>
+                                <a href="../html/termPoint1.html" target="_blank" class="link_more" title="약관보기">약관보기</a>
+                            </div>
+                            <div class="agree-check-wrap checkbox-type-1">
+			                    <input type="checkbox" id="agree2" name="agree">
+                                <label for="agree2">개인정보 수집 및 이용 동의 (필수)</label>
+                                <a href="../html/termPoint2.html" target="_blank" class="link_more" title="약관보기">약관보기</a>
+                            </div>
+                            <div class="agree-check-wrap checkbox-type-1">
+			                    <input type="checkbox" id="agree3" name="agree">
+                                <label for="agree3">개인정보 제3자 제공 및 위탁 동의 (필수)</label>
+                                <a href="../html/termPoint3.html" target="_blank" class="link_more" title="약관보기">약관보기</a>
+                            </div>
+                            <!--div class="agree-check-wrap checkbox-type-1">
+			                    <input type="checkbox" id="agree4" name="agree">
+                                <label for="agree4">고유식별정보 수집 및 이용 동의 (필수)</label>
+                                <a href="../html/termPoint4.html" target="_blank" class="link_more" title="약관보기">약관보기</a>
+                            </div-->                            
+                        </fieldset>     
+                    </div>
+                </div>
+                <!-- //약관동의 선택 -->   
+
+                <!-- button -->      
+                <div class="button-wrap">
+                    <ul class="button-area">
+                        <li><a href="cert.html" class="button">포인트 조회/사용</a></li>
+                    </ul>                    
+                </div>  
+                <!-- //button -->
+                
+            </form>
+            <!-- //약관동의 폼 -->    
+        </div>
+        <!-- //contents -->
+
+        <!-- banner -->
+        <aside class="banner-wrap">
+            <h3 class="screen-out">광고배너</h3>
+            <div class="banner-area">
+                <img src="../images/mainbn_01.png" alt="잠자고 있는 포인트 알뜰하게 이용하세요!" class="banner-img">
+            </div>
+        </aside>
+        <!-- //banner -->
+
+        <div class="term-zone">
+            <p><a href="../html/termPoint_privacy.html" target="_blank" title="약관보기">개인정보처리방침</a></p>  
+        </div>        
+
+    </section>
+    <!-- //container -->
+</body>
+</html>

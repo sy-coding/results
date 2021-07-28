@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>브이피 포인트결제</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- do not link // -->
+    <meta name="format-detection" content="no" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- // do not link  -->
+
+    <!--link rel="stylesheet" href="../styles/style.css"-->
+    <link rel="stylesheet" href="../styles/style.min.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcd.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../scripts/lib/html5shiv.min.js"></script>
+    <script src="../scripts/lib/jquery-3.4.1.min.js"></script>
+    <script src="../scripts/common.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <h1 class="logo"><img src="../images/logo.png" alt="브이피"></h1>
+    </header>
+    <!-- //header -->
+
+    <!-- container -->
+    <section class="container">
+        <h2 class="screen-out">포인트 조회 및 사용</h2>
+
+        <!-- step -->
+        <nav class="step-wrap">
+            <ul class="step">
+                <li><span>약관동의</span></li>
+                <li class="active"><span>포인트 조회 및 사용</span></li>
+                <li><span>결제완료</span></li>
+            </ul>
+        </nav>
+        <!-- //step -->
+
+        <!-- contents -->
+        <div id="contents" class="contents-wrap">
+            <h2 class="screen-out">포인트 조회 및 사용</h2>
+
+            <!-- 상품 금액 정보 -->
+            <div class="product-wrap">
+                <dl class="product">
+                    <dt>상품명</dt>
+                    <dd>네이버 쿠키 충전</dd><!-- 상품명 data -->
+                </dl>
+                <dl class="product">
+                    <dt>상품금액</dt>
+                    <dd>
+                        <strong class="cost">53</strong><!-- 상품금액 data -->
+                        <span>쿠키</span><!-- 상품금액의 단위 data -->
+                    </dd>
+                </dl>
+            </div>
+            <!-- //상품 금액 정보 -->
+
+            <!-- 포인트 조회 및 사용 -->
+            <form action="">            
+                <div class="contents-inner">            
+                    <!-- 포인트 조회/입력 -->
+                    <div class="pay-wrap">
+
+                        <!-- 상세보기 펼침/닫힘 -->
+                        <dl class="list-accordion">
+                            <dt>
+                                <a href="#" class="accordion-title">
+                                    <span>포인트 조회 및 사용하기</span>
+                                    <span class="btn_spread"><span class="screen-out">상세보기/닫기</span></span>
+                                </a>
+                            </dt>
+                            <dd>
+                                <div class="accordion-content">
+                                    <!-- 카드사별 포인트 내역 -->
+                                    <div class="pay-inner">
+                                        <fieldset>
+                                            <legend class="screen-out">포인트 조회 및 사용하기 (상세내역)</legend> 
+
+                                            <table class="pointAlllist">
+                                                <caption class="screen-out">포인트 조회 및 사용하기</caption>                              
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">포인트</th>
+                                                        <th scope="col">보유</th>
+                                                        <th scope="col">사용 포인트</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="card_brand bc">BC TOP</span>
+                                                            <span class="btn-info-card modal-open" data-modal="modal_cardnotice"><span>더 보기</span></span>
+                                                        </td>
+                                                        <td>
+                                                            <div class="input_area">
+                                                                <input type="text" name="" id="accountAmt_BC" value="10" class="usepoint-input" title="보유 포인트" disabled="disabled">
+                                                                <span class="measure">P</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="input_area red">
+                                                                <input type="text" name="" id="useAmt_BC" value="" class="usepoint-input red" title="사용가능 포인트" autocomplete="off">
+                                                                <span class="measure red">P</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>                    
+                                                    <tr>
+                                                        <td> 
+                                                            <span class="card_brand kb">KB 포인트리</span>
+                                                            <span class="btn-info-card modal-open" data-modal="modal_cardnotice"><span>더 보기</span></span>                   
+                                                        </td>
+                                                        <td>
+                                                            <div class="input_area">
+                                                                <input type="text" name="" id="accountAmt_KB" value="20,340" class="usepoint-input" title="보유 포인트" disabled="disabled">
+                                                                <span class="measure">P</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="input_area red">
+                                                                <input type="text" name="" id="useAmt_KB" value="" class="usepoint-input red" title="사용가능 포인트" autocomplete="off">
+                                                                <span class="measure red">P</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr> 
+                                                    <tr>
+                                                        <td>
+                                                            <span class="card_brand sh">마이신한포인트</span>
+                                                            <span class="btn-info-card modal-open" data-modal="modal_cardnotice"><span>더 보기</span></span>
+                                                        </td>
+                                                        <td>
+                                                            <div class="input_area">
+                                                                <input type="text" name="" id="accountAmt_SH" value="120,359" class="usepoint-input" title="보유 포인트" disabled="disabled">
+                                                                <span class="measure">P</span>
+                                                            </div>                           
+                                                        </td>
+                                                        <td>
+                                                            <div class="input_area red">
+                                                                <input type="text" name="" id="useAmt_SH" value="" class="usepoint-input red" title="사용가능 포인트" autocomplete="off">
+                                                                <span class="measure red">P</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr> 
+                                                    <!--tr>
+                                                        <td>
+                                                            <span class="card_brand_hd">현대 M포인트</span>
+                                                            <span class="btn-info-card modal-open" data-modal="modal_cardnotice"><span>더 보기</span></span>                     
+                                                        </td>
+                                                        <td>
+                                                            <div class="input_area">
+                                                                <input type="text" name="" id="accountAmt_HD" value="" class="usepoint-input" title="보유 포인트" disabled="disabled">
+                                                                <span class="measure">P</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="input_area red">
+                                                                <input type="text" name="" id="useAmt_HD" value="" class="usepoint-input red" title="사용가능 포인트" autocomplete="off">
+                                                                <span class="measure red">P</span>
+                                                            </div>
+                                                        </td>
+                                                    <tr-->  
+                                                    <tr>
+                                                        <td>
+                                                            <span class="card_brand ss">삼성 보너스포인트</span>
+                                                            <span class="btn-info-card modal-open" data-modal="modal_cardnotice"><span>더 보기</span></span>                   
+                                                        </td>
+                                                        <td>
+                                                            <div class="input_area">
+                                                                <input type="text" name="" id="accountAmt_SS" value="6,534" class="usepoint-input" title="보유 포인트" disabled="disabled">
+                                                                <span class="measure">P</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="input_area red">
+                                                                <input type="text" name="" id="useAmt_SS" value="" class="usepoint-input red" title="사용가능 포인트" autocomplete="off">
+                                                                <span class="measure red">P</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>  
+                                                    <!--tr>
+                                                        <td>
+                                                            <span class="card_brand kj">광주 K포인트</span>
+                                                            <span class="btn-info-card modal-open" data-modal="modal_cardnotice"><span>더 보기</span></span>
+                                                        </td>
+                                                        <td>
+                                                            <div class="input_area">
+                                                                <input type="text" name="" id="accountAmt_KJ" value="" class="usepoint-input" title="보유 포인트" disabled="disabled">
+                                                                <span class="measure">P</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="input_area red">
+                                                                <input type="text" name="" id="useAmt_KJ" value="" class="usepoint-input red" title="사용가능 포인트" autocomplete="off">
+                                                                <span class="measure red">P</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr--> 
+                                                    <tr>
+                                                        <td>
+                                                            <span class="card_brand wr">우리 위비꿀머니</span>
+                                                            <span class="btn-info-card modal-open" data-modal="modal_cardnotice"><span>더 보기</span></span>                   
+                                                        </td>
+                                                        <td>
+                                                            <div class="input_area">
+                                                                <input type="text" name="" id="accountAmt_WR" value="120" class="usepoint-input" title="보유 포인트" disabled="disabled">
+                                                                <span class="measure">P</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="input_area red">
+                                                                <input type="text" name="" id="useAmt_WR" value="" class="usepoint-input red" title="사용가능 포인트" autocomplete="off">
+                                                                <span class="measure red">P</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="card_brand hn">하나멤버스</span>
+                                                            <span class="btn-info-card modal-open" data-modal="modal_cardnotice"><span>더 보기</span></span>                    
+                                                        </td>
+                                                        <td>
+                                                            <div class="input_area">
+                                                                <input type="text" name="" id="accountAmt_HN" value="0" class="usepoint-input" title="보유 포인트" disabled="disabled">
+                                                                <span class="measure">P</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="input_area red">
+                                                                <input type="text" name="" id="useAmt_HN" value="" class="usepoint-input red" title="사용가능 포인트" autocomplete="off">
+                                                                <span class="measure red">P</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr> 
+                                                    <tr>
+                                                        <td>
+                                                            <span class="card_brand lp">롯데 L.POINT</span>
+                                                            <span class="btn-info-card modal-open" data-modal="modal_cardnotice"><span>더 보기</span></span>                    
+                                                        </td>
+                                                        <td>
+                                                            <div class="input_area">
+                                                                <input type="text" name="" id="accountAmt_LP" value="7,864" class="usepoint-input" title="보유 포인트" disabled="disabled">
+                                                                <span class="measure">P</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="input_area red">
+                                                                <input type="text" name="" id="useAmt_LP" value="" class="usepoint-input red" title="사용가능 포인트" autocomplete="off">
+                                                                <span class="measure red">P</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>                                                                                                                        
+                                                </tbody>
+                                            </table>
+                                        </fieldset>   
+                                    </div>
+                                    <!-- //카드사별 포인트 내역 -->
+
+                                    <!-- 전액사용/초기화 button -->      
+                                    <div class="sbutton-wrap">
+                                        <ul class="button-area">
+                                            <li><a href="#" class="button all">전액사용</a></li>
+                                            <li><a href="#" class="button reset">초기화</a></li>
+                                        </ul>                    
+                                    </div>  
+                                    <!-- //전액사용/초기화 button --> 
+                                </div>
+                            </dd>    
+                        </dl>
+                        <!-- //상세보기 펼침/닫힘 -->
+                    </div>  
+                </div>
+
+                <!-- 사용할 포인트 합계/결제할 포인트 보기 -->
+                <div class="pointSum-inner">
+                    <h3>최종 결제 내역</h3>
+                    <div class="sum-wrap">
+                        <dl class="pointSum">
+                            <dt>사용 포인트</dt>
+                            <dd>
+                                <span>5,300</span><!-- 사용할 포인트 data -->
+                                <span>&nbsp;P</span><!-- 사용할 포인트 단위 -->                                
+                            </dd>
+                        </dl>
+                        <dl class="pointSum">
+                            <dt>충전 예상 금액</dt>
+                            <dd class="red">
+                                <span>53</span><!-- 결제할 포인트 data -->
+                                <span>&nbsp;쿠키</span><!-- 결제할 포인트 단위 -->                                
+                            </dd>
+                        </dl>
+                        <em class="pointSum_exchange">
+                            <span>(전환비율</span>
+                            <span class="exchange_num">1:100</span>)
+                        </em>
+                    </div>
+                </div>    
+                <!-- //사용할 포인트 합계/결제할 포인트 보기 -->
+
+                <!-- button -->      
+                <div class="button-wrap">
+                    <ul class="button-area">
+                        <li><a href="#" class="button cancle">취소</a></li>
+                        <li><a href="#" class="button">결제하기</a></li>
+                    </ul>                    
+                </div>  
+                <!-- //button -->            
+
+            </form>            
+            <!-- //포인트 조회 및 사용 -->
+
+            <!-- 유의사항 -->
+            <div class="pay-info">
+                <ul class="pay-info-list">
+                    <li>포인트 전환 비율은 이용하시는 사이트의 운영 정책에 따라 적용됩니다.</li>
+                    <li>포인트사 정책에 따라 보유포인트와 사용 가능한 포인트에 차이가 있을 수 있습니다.</li>
+                </ul>
+            </div>
+            <!--//유의사항 -->            
+
+        </div>    
+        <!-- //contents -->
+        
+    </section>
+    <!-- //container -->
+
+    <!-- 카드사별 포인트안내 // -->
+    <section id="modal_cardnotice" class="modal-wrap" style="display:none;">
+        <div class="modal-contents">
+            <div class="modal-body">
+                <p>BC TOP 포인트 사용 안내</p>
+                <ul>
+                    <li>보유포인트 중 100P 단위로 사용 가능합니다.</li>
+                    <li>일부 상품은 결제에서 제외될 수 있습니다.</li>
+                    <li>포인트 사용 시 취소 불가합니다.</li>
+                </ul>
+
+                <div class="modal-ex">
+                    <button type="button" class="modal-close">닫기</button>
+                </div> 
+            </div>           
+        </div> 
+        <div class="modal-mask"></div>
+    </section>  
+    <!-- // 카드사별 포인트안내 -->
+        
+</body>
+</html>
