@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>메인 - KB국민카드 Wise쇼핑안심서비스</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- do not link // -->
+    <meta name="format-detection" content="no" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- // do not link  -->
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript" ></script>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js" type="text/javascript" ></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://oss.maxcd.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<link rel="stylesheet" href="../styles/jquery-confirm.min.css" />
+    <link rel="stylesheet" href="../styles/style.min.css">
+    <script type="text/javascript" src="../scripts/common/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../scripts/slick/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../scripts/clipboard/clipboard-2.js"></script>
+    <script type="text/javascript" src="../scripts/lib/jquery-confirm.min.js"></script>
+    <script type="text/javascript" src="../scripts/common.js"></script>
+
+    <!-- barcord -->
+<!--     <link rel="stylesheet" type="text/css" href="../styles/common/code128.css"> -->
+    <script type="text/javascript" src="../scripts/barcord/base2-jsb-fp.js"></script>
+    <script type="text/javascript" src="../scripts/barcord/code128-base2.js"></script>
+    <script type="text/javascript" src="../scripts/barcord/get.js"></script>
+    <script type="text/javascript">
+        new jsb.Rule(".barcode, .barcode2, .barcode3", base2.Barcode.code128behaviour);
+    </script>
+</head>
+<body>
+	<!-- header -->
+	<header class="header-wrap main">
+		<button id="asideOpen" class="button-slidemenu">
+			<span class="screen-out">슬라이드메뉴 열기</span>
+		</button>         
+        <h1 class="h1">Wise쇼핑안심서비스</h1>       
+	</header>
+	<!-- //header -->
+	<!-- slidemenu -->
+	<aside id="asidebar" class="slidemenu-wrap">
+		<div class="my-area">
+			<p class="img" role="img">
+				<img src="../images/icon_slidemenu.png">
+			</p>
+			<p class="name"><span class="user_name">김국민</span> 님의</p>
+			<p class="service">Wise쇼핑안심서비스</p>
+			<button id="asideClose" class="slidemenu-close">
+				<span class="screen-out">슬라이드메뉴 닫기</span>
+			</button>
+		</div>
+		<nav class="gnb-wrap">
+			<ul class="gnb">
+				<li><a href="svcInfo.html" class="gnb-link">서비스 안내</a></li>
+				<li><a href="termAgree.html" class="gnb-link">이용약관</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<!-- //slidemenu -->
+	<!-- contents -->
+	<section class="contents-wrap main">
+        <h2 class="hide">메인 상세</h2>
+		<!-- mainVisual -->
+ 		<div class="mainvisual-wrap">
+			<div class="mainvisual">
+				<div>
+					<a href="./svcInfo.html" title="서비스안내">
+						<img src="../images/mainvisual_01.png" alt="Wise쇼핑안심서비스 멤버십으로 업그레이드 되었습니다~!">
+					</a>
+                </div>
+				<div>
+					<a href="#" target="_blank" title="새창-포샵 바로가기">
+						<img src="../images/mainvisual_02.png" alt="멤버십 회원님 다양한 매거진과 비밀특가 상품 확인하세요~">
+					</a>
+				</div>                
+			</div>
+		</div>
+        <!-- //mainVisual -->
+		<!-- mainList -->
+		<article class="mainlist-wrap">
+            <ul class="mainlist-type1">
+                <li>
+                    <!-- 메인 툴팁 추가(포샵이벤트 알림) // -->
+                    <div id="poshop-tooltip" class="main-tooltip">
+                        <div class="tooltip-wrap">
+                            <span class="point-copy">진행중</span>
+                            <span class="main-copy">초특가 할인 이벤트!</span>
+                            <button type="button" id="poshop-tooptip-closebtn" class="tooptip-close">
+                                <span class="screen-out">툴팁 닫기</span>
+                            </button>
+                        </div>
+                    </div>
+                    <script>
+                        $(function(){
+                            $('#poshop-tooptip-closebtn').click(function(){
+                                $('#poshop-tooltip').hide();
+                            });                                  
+                        });
+                    </script>
+                    <!-- // 메인 툴팁 추가(포샵이벤트 알림) -->                    
+                    <a href="./insPoshop.html" title="포샵&e매거진 바로가기">
+                        <img src="../images/main_menu_img2.png" alt="">
+                        <h3 class="menutitle">포샵 &amp; e매거진</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" title="새창-외식 할인쿠폰팩 바로가기">
+                        <img src="../images/main_menu_img3.png" alt="">
+                        <h3 class="menutitle">외식 할인쿠폰팩</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="./insGoods.html" title="구매물품 손실보상">
+                        <img src="../images/main_menu_img4.png" alt="">
+                        <h3 class="menutitle">구매물품 손실보상</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="./insPhone.html" itle="휴대폰 수리비용보상">
+                        <img src="../images/main_menu_img5.png" alt="">
+                        <h3 class="menutitle">휴대폰 수리비용보상</h3>
+                    </a>
+                </li>                                                                
+            </ul>
+
+            <div class="mainlist-type3">
+                <div class="mainlist-div">
+                    <a href="http://m.logii.com/vp/" target="_blank" title="새창-택배예약 바로가기">
+                        <p class="icon"><img src="../images/icon_quick_1.png" alt="아이콘"></p>
+                        <h3 class="maintitle2">택배예약</h3>
+                    </a>
+                </div>
+                <div class="mainlist-div">
+                    <a href="https://goo.gl/xnN1hw" target="_blank" title="새창-가상전화번호 바로가기">
+                        <p class="icon"><img src="../images/icon_quick_2.png" alt="아이콘"></p>
+                        <h3 class="maintitle2">가상<br>전화번호</h3>
+                    </a>
+                </div>
+                <div class="mainlist-div">
+                    <a href="#" target="_blank" title="새창-배송정보 통합검색 바로가기">
+                        <p class="icon"><img src="../images/icon_quick_3.png" alt="아이콘"></p>
+                        <h3 class="maintitle2">배송정보<br>통합검색</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="mainlist-type4">
+                <div class="mainlist-inner">
+                    <div class="box">                        
+                        <a href="./giftOff_emart.html" class="mainlist-link2 right-none" title="이마트 할인권">
+                            <h3 class="maintitle2">이마트 할인권</h3>
+                        </a>
+                    </div>
+                    <div class="box">
+                        <a href="./giftOff_cu.html" class="mainlist-link2 left-none" title="CU 할인권"> 
+                            <h3 class="maintitle2">CU 할인권</h3>
+                        </a>
+                    </div>
+                </div>               
+                <div class="mainlist-inner">
+                    <a href="./giftOn_homeplus.html" class="mainlist-link2" title="홈플러스 온라인마트 할인권">
+                        <h3 class="maintitle2">홈플러스 온라인마트 할인권</h3>
+                    </a>
+                </div>
+                <div class="mainlist-inner">
+                    <a href="./giftOn_11st.html" class="mainlist-link2" title="11번가 할인권">
+                        <h3 class="maintitle2">11번가 할인권</h3>
+                    </a>
+                </div>
+            </div>
+		</article>
+		<!-- //mainList -->
+	</section>
+	<!-- //contents -->
+	<!-- footer -->
+	<footer class="footer-wrap">
+		<address class="address">
+			브이피(주) | 사업자등록번호 : 220-81-89229<br>
+			(04548) 서울 중구 을지로 170 (을지로4가 323) <span class="nowrap">을지트윈타워 13층</span>
+			<p class="copyright">Copyright © VP Inc. All right reserved.</p>
+		</address>
+	</footer>
+	<!-- //footer -->
+		<div class="footer-cscenter">
+			<p class="cscenter">
+                <span class="csblack">Wise쇼핑안심서비스 고객센터 : 1899-3658</span><br>
+                (평일 09:00~18:00, 주말 및 공휴일 제외)
+            </p>
+		</div>
+</body>
+</html>

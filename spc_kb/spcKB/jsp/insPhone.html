@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>휴대폰 수리비용보상 - KB국민카드 Wise쇼핑안심서비스</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- do not link // -->
+    <meta name="format-detection" content="no" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- // do not link  -->
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript" ></script>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js" type="text/javascript" ></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://oss.maxcd.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ 
+	<link rel="stylesheet" href="../styles/jquery-confirm.min.css" />
+    <link rel="stylesheet" href="../styles/style.min.css">
+    <script type="text/javascript" src="../scripts/common/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../scripts/slick/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../scripts/clipboard/clipboard-2.js"></script>
+    <script type="text/javascript" src="../scripts/lib/jquery-confirm.min.js"></script>
+    <script type="text/javascript" src="../scripts/common.js"></script>
+
+    <!-- barcord -->
+<!--     <link rel="stylesheet" type="text/css" href="../styles/common/code128.css"> -->
+    <script type="text/javascript" src="../scripts/barcord/base2-jsb-fp.js"></script>
+    <script type="text/javascript" src="../scripts/barcord/code128-base2.js"></script>
+    <script type="text/javascript" src="../scripts/barcord/get.js"></script>
+    <script type="text/javascript">
+        new jsb.Rule(".barcode, .barcode2, .barcode3", base2.Barcode.code128behaviour);
+    </script>
+</head>
+<body>
+	<!-- header -->
+	<header class="header-wrap">
+		<a href="javascript();" onclick="history.back(); return false;" class="button-prev">
+			<span class="screen-out">이전 페이지</span>
+		</a>
+		<h1 class="h1">휴대폰 수리비용보상</h1>
+	</header>
+	<!-- //header -->
+	<!-- slidemenu -->
+	<aside id="asidebar" class="slidemenu-wrap">
+		<div class="my-area">
+			<p class="img" role="img">
+				<img src="../images/icon_slidemenu.png">
+			</p>
+			<p class="name"><span class="user_name">김국민</span> 님의</p>
+			<p class="service">Wise쇼핑안심서비스</p>
+			<button id="asideClose" class="slidemenu-close">
+				<span class="screen-out">슬라이드메뉴 닫기</span>
+			</button>
+		</div>
+		<nav class="gnb-wrap">
+			<ul class="gnb">
+				<li><a href="svcInfo.html" class="gnb-link">서비스 안내</a></li>
+				<li><a href="termAgree.html" class="gnb-link">이용약관</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<!-- //slidemenu -->
+	<!-- contents -->
+	<section class="contents-wrap">
+		<h2 class="hide">휴대폰 수리비용보상 상세</h2>
+		<!-- subtop -->
+		<div class="subtop-wrap">
+			<img src="../images/subtop_1.png" alt="">
+		</div>
+		<!-- //subtop -->
+		<!-- 상세내용 -->
+		<div class="inner-wrap detail">
+			<p class="title first">휴대폰 수리비용보상이란?</p>
+			<ul class="list-type-dash">
+				<li>“멤버십” 이용 기간 중 “회원” 명의의 휴대폰이 파손되거나 또는 침수되어 제조사가 설계한 동작 및 정상적인 사용이 불가능한 상태가 된 경우 그로 인해 발생하는 수리 비용을 KB국민카드(신용 및 체크)로 결제 시 보상해 드리는 “서비스”입니다. (절도, 도난, 분실로 인한 비용 제외)
+					<ol class="list-type-none">
+						<li>1) “회원”이 다른 보험 및 기타 보상 프로그램에 가입되어 있을 경우 그 보험 및 보상 프로그램이 우선 적용</li>
+						<li>2) 국내 구매 제품, 국내 발생 사고여야 하며, 제조사가 지정한 국내의 적법한 수리센터에서 수리가 이루어진 경우 보상</li>
+						<li>3) “서비스”개시일(가입 익일 0시)로부터 90일 이후에 발생한 사고에 대해 보상</li>
+					</ol>
+				</li>
+			</ul>
+			<p class="title">보상한도</p>
+			<ul class="list-type-dash">
+				<li>사고당 최대 10만원/연간 최대 10만원<br>(단, 자기부담금 사고당 3만원, 최대 수령 가능액 7만원)</li>
+			</ul>
+			<p class="mt">※ 상세내용은 이용약관을 참조하시기 바랍니다.</p>
+			<p>※ 보상센터 : 02-360-2571</p>
+			<!-- button -->
+			<div class="button-wrap button-mt">
+				<ul class="button-area">
+					<li>
+						<a href="./termAgree.html" class="button-confirm">이용약관 바로가기</a>
+					</li>
+				</ul>
+			</div>
+			<!-- //button -->
+		</div>
+		<!-- //상세내용 -->
+	</section>
+	<!-- //contents -->
+		<div class="footer-cscenter">
+			<p class="cscenter">
+                <span class="csblack">Wise쇼핑안심서비스 고객센터 : 1899-3658</span><br>
+                (평일 09:00~18:00, 주말 및 공휴일 제외)
+            </p>
+		</div>
+</body>
+</html>

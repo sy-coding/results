@@ -1,0 +1,54 @@
+.cpn_barcord_box .barcode {
+	float: left;
+	clear: both;
+	padding: 0 5px;
+	height: auto;
+}
+.cpn_barcord_box .right {
+	float: right
+}
+.cpn_barcord_box .barcode+* {
+	clear: both
+}
+.cpn_barcord_box .barcode div {
+	float: left;
+	height: 5rem
+}
+.cpn_barcord_box .barcode .bar1 {
+	border-left: 1px solid black
+}
+.cpn_barcord_box .barcode .bar2 {
+	border-left: 2px solid black
+}
+.cpn_barcord_box .barcode .bar3 {
+	border-left: 3px solid black
+}
+.cpn_barcord_box .barcode .bar4 {
+	border-left: 4px solid black
+}
+.cpn_barcord_box .barcode .space0 {
+	margin-right: 0
+}
+.cpn_barcord_box .barcode .space1 {
+	margin-right: 1px
+}
+.cpn_barcord_box .barcode .space2 {
+	margin-right: 2px
+}
+.cpn_barcord_box .barcode .space3 {
+	margin-right: 3px
+}
+.cpn_barcord_box .barcode .space4 {
+	margin-right: 4px
+}
+.cpn_barcord_box .barcode label {
+	clear: both;
+	display: block;
+	font-size:0.6rem;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	display: block;
+	letter-spacing: 0
+}
+
+/*# sourceMappingURL=code128.css.map */
