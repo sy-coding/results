@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@font-face{
+	font-family: 'ShinhanCard';
+	src: url('./ShinhanCardL.eot');
+	src: url('./ShinhanCardL.eot?#iefix') format('embedded-opentype'),
+		url('./ShinhanCardL.woff') format('woff'),
+		url('./ShinhanCardL.ttf') format('truetype');
+		font-weight: 400;
+		font-style: normal;
+}
+@font-face{
+	font-family: 'ShinhanCard';
+	src: url('./ShinhanCardM.eot');
+	src: url('./ShinhanCardM.eot?#iefix') format('embedded-opentype'),
+		url('./ShinhanCardM.woff') format('woff'),
+		url('./ShinhanCardM.ttf') format('truetype');
+		font-weight: 700;
+		font-style: normal;
+}
+@font-face{
+	font-family: 'ShinhanCard';
+	src: url('./ShinhanCardB.eot');
+	src: url('./ShinhanCardB.eot?#iefix') format('embedded-opentype'),
+		url('./ShinhanCardB.woff') format('woff'),
+		url('./ShinhanCardB.ttf') format('truetype');
+		font-weight: 900;
+		font-style: normal;
+}

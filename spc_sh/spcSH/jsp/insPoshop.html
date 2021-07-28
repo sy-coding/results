@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>포샵 & e매거진 - 신한카드 쇼핑 플러스</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- do not link // -->
+    <meta name="format-detection" content="no" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- // do not link  -->
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript" ></script>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js" type="text/javascript" ></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://oss.maxcd.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ 
+	<link rel="stylesheet" href="../styles/jquery-confirm.min.css" />
+    <link rel="stylesheet" href="../styles/style.min.css">
+    <script type="text/javascript" src="../scripts/common/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../scripts/slick/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../scripts/clipboard/clipboard-2.js"></script>
+    <script type="text/javascript" src="../scripts/lib/jquery-confirm.min.js"></script>
+    <script type="text/javascript" src="../scripts/common.js"></script>
+
+    <!-- barcord -->
+<!--     <link rel="stylesheet" type="text/css" href="../styles/common/code128.css"> -->
+    <script type="text/javascript" src="../scripts/barcord/base2-jsb-fp.js"></script>
+    <script type="text/javascript" src="../scripts/barcord/code128-base2.js"></script>
+    <script type="text/javascript" src="../scripts/barcord/get.js"></script>
+    <script type="text/javascript">
+        new jsb.Rule(".barcode, .barcode2, .barcode3", base2.Barcode.code128behaviour);
+    </script>
+</head>
+<body>
+	<!-- header -->
+	<header class="header-wrap">
+		<h1 class="h1">포샵 &amp; e매거진</h1>
+		<a href="cpnMain.html" class="button-home"><span class="screen-out">메인으로</span></a>
+		<button id="asideOpen" class="button-slidemenu">
+			<span class="screen-out">슬라이드메뉴 열기</span>
+		</button>		
+	</header>
+	<!-- //header -->
+	<!-- slidemenu -->
+	<aside id="asidebar" class="slidemenu-wrap">
+		<div class="my-area">
+			<p class="img" role="img">
+				<img src="../images/icon_slidemenu.png">
+			</p>
+			<p class="name"><span class="user_name">홍길동</span> 님의</p>
+			<p class="service">
+				쇼핑 플러스 가입일은
+				<span class="txtbr">
+					<span class="service_join">
+						<span class="year">2020</span>년
+						<span class="month">5</span>월
+						<span class="date">14</span>일
+					</span>
+				입니다.
+				</span>
+			</p>
+			<button id="asideClose" class="slidemenu-close">
+				<span class="screen-out">슬라이드메뉴 닫기</span>
+			</button>
+		</div>
+		<nav class="gnb-wrap">
+			<ul class="gnb">
+				<li><a href="svcNotice.html" class="gnb-link">공지사항</a></li>
+				<li><a href="svcInfo.html" class="gnb-link">서비스 안내</a></li>								
+				<li><a href="termAgree.html" class="gnb-link">이용약관</a></li>
+				<li><a href="svcFAQ.html" class="gnb-link">FAQ</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<!-- //slidemenu -->
+	<!-- contents -->
+	<section class="contents-wrap">
+
+		<!-- top 버튼 --><a href="#none" class="btn-top">top</a>
+
+		<!-- 포샵 프로모션 상단 배너 Slider 추가 // -->
+		<div class="evtSlide" id="eventSlide">
+			<div> 
+				<a href="http://bit.ly/2SX0XNT" target="_blank" title="새 창 열림">
+					<img src="http://scn.vpay.co.kr/sc/cpnbook/forshop/event/carebn_12.png" alt="(~ 11.30) 집콕 생활가전 기획전">
+				</a>
+			</div>				
+			<div> 
+				<a href="http://bit.ly/2SX0XNT" target="_blank" title="새 창 열림">
+					<img src="http://scn.vpay.co.kr/sc/cpnbook/forshop/event/carebn_11.png" alt="(~ 11.30) 겨울용품 기획전">
+				</a>
+			</div>	
+			<div>
+				<a href="http://bit.ly/2SX0XNT" target="_blank" title="새 창 열림">
+					<img src="http://scn.vpay.co.kr/sc/cpnbook/forshop/event/carebn_02.png" alt="키스해링 프리미엄 담요 0원 배송비만 내고 가져가세요!">
+				</a>
+			</div>					
+			<!--div> 
+				<a href="http://bit.ly/2SX0XNT" target="_blank" title="새 창 열림">
+					<img src="http://scn.vpay.co.kr/sc/cpnbook/forshop/event/carebn_09.png" alt="(~ 10.31) 여행가기 좋은 가을 갓성비 캠핑세트">
+				</a>
+			</div>
+			<div> 
+				<a href="http://bit.ly/2SX0XNT" target="_blank" title="새 창 열림">
+					<img src="http://scn.vpay.co.kr/sc/cpnbook/forshop/event/carebn_10.png" alt="(~ 10.31) 10월 신규 가입 + 첫 구매하면 쿠폰 증정">
+				</a>
+			</div>				
+			<div> 
+				<a href="http://bit.ly/2SX0XNT" target="_blank" title="새 창 열림">
+					<img src="http://scn.vpay.co.kr/sc/cpnbook/forshop/event/carebn_08.png" alt="(~ 10.31) 집에 있을수록 콕! 필요한 청소기">
+				</a>
+			</div>		
+			<div> 
+				<a href="http://bit.ly/2SX0XNT" target="_blank" title="새 창 열림">
+					<img src="http://scn.vpay.co.kr/sc/cpnbook/forshop/event/carebn_07.png" alt="(~ 10.31) 가을 모바일쿠폰 5% 할인">
+				</a>
+			</div>		
+			<div> 
+				<a href="http://bit.ly/2SX0XNT" target="_blank" title="새 창 열림">
+					<img src="http://scn.vpay.co.kr/sc/cpnbook/forshop/event/carebn_04.png" alt="(~ 10.31) 주방용품 기획전">
+				</a>
+			</div-->
+			<!--div> 
+				<a href="http://bit.ly/2SX0XNT" target="_blank" title="새 창 열림">
+					<img src="http://scn.vpay.co.kr/sc/cpnbook/forshop/event/carebn_05.png" alt="(~ 9.30) 위생용품 기획전">
+				</a>
+			</div-->	
+			<!--div> 
+				<a href="http://bit.ly/2SX0XNT" target="_blank" title="새 창 열림">
+					<img src="http://scn.vpay.co.kr/sc/cpnbook/forshop/event/carebn_06.png" alt="(~ 10.3) 추석 기획전">
+				</a>
+			</div-->						
+			<!--div> 200831 이벤트종료 처리
+				<a href="http://bit.ly/2SX0XNT" target="_blank" title="새 창 열림">
+					<img src="http://scn.vpay.co.kr/sc/cpnbook/forshop/event/carebn_03.png" alt="특별한홈캉스 저렴하게 구매하고 안전하게 배송 받으세요 포샵 회원 대상 이벤트">
+				</a>
+			</div-->			
+			<!--div> 200831 이벤트종료 처리
+				<a href="http://bit.ly/2SX0XNT" target="_blank" title="새 창 열림">
+					<img src="http://scn.vpay.co.kr/sc/cpnbook/forshop/event/carebn_01.png" alt="무더운 여름 시원한 가격 기프트샵 모바일상품권 5% 할인">
+				</a>
+			</div-->			
+		</div>
+		<!-- // 포샵 프로모션 상단 배너 Slider 추가 -->		
+
+		<!-- 상단페이지intro -->
+		<div class="inner-wrap">
+			<h2 class="first">포샵</h2>
+			<p>다양한 상품을 온라인 최저가로 구매할 수 있는 멤버십 회원 전용 특판몰입니다. 다양한 브랜드의 모바일쿠폰 5% 상시할인과 매월 진행하는 다채로운 이벤트로 다양한 생활용품들을 저렴한 가격에 득템하세요.</p>
+
+			<h2>e매거진</h2>
+			<p class="last">10여 종의 e-Book 형태의 매거진으로 제공합니다.</p>			
+		</div>		
+		<!-- //상단페이지intro -->		
+
+		<!-- subtop -->
+		<div class="subtop-wrap">
+			<img src="../images/subtop_1.png" alt="">
+		</div>
+		<!-- //subtop -->
+
+		<!-- 상세내용 -->
+		<div class="inner-wrap detail">
+			<h3 class="title first">이용방법</h3>
+			<p>
+				포샵 App 다운로드 후 포샵 &amp; e매거진 이용 가능<br>
+				※ e매거진 이용방법 : 포샵 App &gt; 마이페이지 &gt; e매거진
+			</p>
+
+			<h3 class="title">유의사항</h3>
+			<ul class="list-type-disc">
+				<li>포샵의 경우, 브이피(주)는 결제정보의 중개서비스 또는 통신판매 중개시스템의 제공자로서, 통신판매의 당사자가 아니며 상품의 주문, 배송 및 환불 등과 관련한 의무와 책임은 각 판매사에 있습니다.</li>
+				<li>e매거진의 경우, 온/오프라인에 무단으로 공유 또는 배포할 경우 법적 제재를 받을 수 있습니다.</li>
+			</ul>
+			
+			<!-- button -->
+			<div class="button-wrap button-mt">
+				<ul class="button-area bottom">
+					<li>
+						<a href="#" class="button-confirm">이용하기</a>
+					</li>
+				</ul>
+			</div>
+			<!-- //button -->
+		</div>
+		<!-- //상세내용 -->
+	</section>
+	<!-- //contents -->
+		<div class="footer-cscenter">
+			<p class="cscenter">
+				<span class="csblack">신한카드 쇼핑 플러스 고객센터</span>
+				<span class="callcenter"><a href="tel:1899-9599" class="call_tel">&#9742; 1899-9599</a></span>
+				<span class="txtbr">(평일 09:00~18:00, 주말 및 공휴일 제외)</span>
+            </p>
+		</div>
+</body>
+</html>

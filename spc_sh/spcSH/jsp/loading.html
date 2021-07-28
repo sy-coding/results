@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>로딩이미지 - KB국민카드 Wise쇼핑안심서비스</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- do not link // -->
+    <meta name="format-detection" content="no" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- // do not link  -->
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript" ></script>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js" type="text/javascript" ></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://oss.maxcd.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<link rel="stylesheet" href="../styles/jquery-confirm.min.css" />
+    <link rel="stylesheet" href="../styles/style.min.css">
+    <script type="text/javascript" src="../scripts/common/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../scripts/slick/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../scripts/clipboard/clipboard-2.js"></script>
+    <script type="text/javascript" src="../scripts/lib/jquery-confirm.min.js"></script>
+    <script type="text/javascript" src="../scripts/common.js"></script>
+
+    <!-- barcord -->
+<!--     <link rel="stylesheet" type="text/css" href="../styles/common/code128.css"> -->
+    <script type="text/javascript" src="../scripts/barcord/base2-jsb-fp.js"></script>
+    <script type="text/javascript" src="../scripts/barcord/code128-base2.js"></script>
+    <script type="text/javascript" src="../scripts/barcord/get.js"></script>
+    <script type="text/javascript">
+        new jsb.Rule(".barcode, .barcode2, .barcode3", base2.Barcode.code128behaviour);
+    </script>
+</head>
+<body>
+    <!-- loading -->
+    <div class="loading-wrap">
+        <div class="loading-area"><img src="../images/loading.png" alt="" class="loading"></div>
+    </div>
+    <!-- //loading -->
+</body>
+</html>

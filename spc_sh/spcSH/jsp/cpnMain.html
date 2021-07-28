@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>메인 - 신한카드 쇼핑 플러스</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- do not link // -->
+    <meta name="format-detection" content="no" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- // do not link  -->
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript" ></script>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js" type="text/javascript" ></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://oss.maxcd.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<link rel="stylesheet" href="../styles/jquery-confirm.min.css" />
+    <link rel="stylesheet" href="../styles/style.min.css">
+    <script type="text/javascript" src="../scripts/common/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../scripts/slick/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../scripts/clipboard/clipboard-2.js"></script>
+    <script type="text/javascript" src="../scripts/lib/jquery-confirm.min.js"></script>
+    <script type="text/javascript" src="../scripts/common.js"></script>
+
+    <!-- barcord -->
+<!--     <link rel="stylesheet" type="text/css" href="../styles/common/code128.css"> -->
+    <script type="text/javascript" src="../scripts/barcord/base2-jsb-fp.js"></script>
+    <script type="text/javascript" src="../scripts/barcord/code128-base2.js"></script>
+    <script type="text/javascript" src="../scripts/barcord/get.js"></script>
+    <script type="text/javascript">
+        new jsb.Rule(".barcode, .barcode2, .barcode3", base2.Barcode.code128behaviour);
+    </script>
+</head>
+<body>
+	<!-- header -->
+	<header class="header-wrap main">
+        <h1 class="h1"> <span class="logo-img">신한카드</span> 쇼핑 플러스</h1>
+		<a href="cpnMain.html" class="button-home"><span class="screen-out">메인으로</span></a>
+		<button id="asideOpen" class="button-slidemenu">
+			<span class="screen-out">슬라이드메뉴 열기</span>
+		</button>        
+	</header>
+	<!-- //header -->
+	<!-- slidemenu -->
+	<aside id="asidebar" class="slidemenu-wrap">
+		<div class="my-area">
+			<p class="img" role="img">
+				<img src="../images/icon_slidemenu.png">
+			</p>
+			<p class="name"><span class="user_name">홍길동</span> 님의</p>
+			<p class="service">
+				쇼핑 플러스 가입일은
+				<span class="txtbr">
+					<span class="service_join">
+						<span class="year">2020</span>년
+						<span class="month">5</span>월
+						<span class="date">14</span>일
+					</span>
+				입니다.
+				</span>
+			</p>
+			<button id="asideClose" class="slidemenu-close">
+				<span class="screen-out">슬라이드메뉴 닫기</span>
+			</button>
+		</div>
+		<nav class="gnb-wrap">
+			<ul class="gnb">
+				<li><a href="svcNotice.html" class="gnb-link">공지사항</a></li>
+				<li><a href="svcInfo.html" class="gnb-link">서비스 안내</a></li>								
+				<li><a href="termAgree.html" class="gnb-link">이용약관</a></li>
+				<li><a href="svcFAQ.html" class="gnb-link">FAQ</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<!-- //slidemenu -->
+	<!-- contents -->
+	<section class="contents-wrap main">
+        <h2 class="hide">메인 상세</h2>
+
+        <!-- top 버튼 --><a href="#none" class="btn-top">top</a>
+
+		<!-- mainVisual -->
+ 		<div class="mainvisual-wrap">
+			<div class="mainvisual">
+				<div>
+					<a href="./svcInfo.html" title="서비스안내 바로가기">
+						<img src="../images/mainbn01.png" alt="신한카드 쇼핑 플러스를 새롭게 오픈하였습니다">
+					</a>
+                </div>
+				<div>
+					<a href="./insPoshop.html" title="포샵 & e-매거진 바로가기">
+						<img src="../images/mainbn02.png" alt="멤버십 회원님 다양한 매거진과 비밀특가 상품을 확인하세요!">
+					</a>
+				</div>                
+			</div>
+		</div>
+        <!-- //mainVisual -->
+
+		<!-- mainList -->
+		<article class="mainlist-wrap">
+
+            <!-- 멤버십 보상 서비스 영역 -->
+            <div class="mainlist-type1">
+                <h3>서비스</h3>
+
+                <ul class="mbs-wrap clearfix">
+                    <li class="mbs-content mbs1">
+
+                        <!-- 메인 툴팁 추가(포샵이벤트 알림) // -->
+                        <div id="poshop-tooltip" class="main-tooltip">
+                            <div class="tooltip-wrap">
+                                <span class="point-copy">진행중</span>
+                                <span class="main-copy">초특가 할인 이벤트!</span>
+                                <button type="button" id="poshop-tooptip-closebtn" class="tooptip-close">
+                                    <span class="screen-out">툴팁 닫기</span>
+                                </button>
+                            </div>
+                        </div>
+                        <script>
+                            $(function(){
+                                $('#poshop-tooptip-closebtn').click(function(){
+                                    $('#poshop-tooltip').hide();
+                                });                                  
+                            });
+                        </script>
+                        <!-- // 메인 툴팁 추가(포샵이벤트 알림) -->
+
+                        <a href="./insPoshop.html" title="포샵 & e-매거진 바로가기">
+                            <img src="../images/icon_mbs_1.png" alt="">
+                            <span>포샵 &amp; e매거진</span>
+                        </a>
+                    </li>
+                    <li class="mbs-content mbs2">
+                        <a href="./insCoupon.html" title="외식 할인권 바로가기">
+                            <img src="../images/icon_mbs_2.png" alt="">
+                            <span>외식 할인권</span>
+                        </a>
+                    </li>                   
+                </ul>
+                <ul class="mbs-wrap bottom clearfix">
+                    <li class="mbs-content mbs3">
+                        <a href="./insGoods.html" title="구매물품 손실보상 바로가기">
+                            <img src="../images/icon_mbs_3.png" alt="">
+                            <span>구매물품 손실보상</span>
+                        </a>
+                    </li>
+                    <li class="mbs-content mbs4">
+                        <a href="./insPhone.html" title="휴대폰 수리비용보상 바로가기">
+                            <img src="../images/icon_mbs_4.png" alt="">
+                            <span>휴대폰 수리비용보상</span>
+                        </a>
+                    </li>                   
+                </ul>                
+            </div>
+
+            <div class="mainlist-type3">
+                <div class="mainlist-div">
+                    <a href="./insLogii.html" title="택배예약 바로가기">
+                        <p class="icon"><img src="../images/icon_quick_1.png" alt=""></p>
+                        <h3 class="maintitle2">택배예약</h3>
+                    </a>
+                </div>
+                <div class="mainlist-div">
+                    <a href="./insVirtualNum.html" title="가상전화번호 서비스 바로가기">
+                        <p class="icon"><img src="../images/icon_quick_2.png" alt=""></p>
+                        <h3 class="maintitle2">가상전화번호</h3>
+                    </a>
+                </div>
+                <div class="mainlist-div">
+                    <a href="./insDelivery.html" title="배송정보 통합조회 바로가기">
+                        <p class="icon"><img src="../images/icon_quick_3.png" alt=""></p>
+                        <h3 class="maintitle2">배송정보<br>통합조회</h3>
+                    </a>
+                </div>
+            </div>
+            <!-- //멤버십 보상 서비스 영역 -->
+
+            <!-- 할인권 영역 -->
+            <div class="mainlist-type4">
+                <h3>할인권</h3>
+                <div class="couponlist-wrap">
+                    <div class="coupon-issue">
+                        <a href="./giftOff_emart.html" class="couponissue-link" title="이마트 할인권 바로가기">
+                            <span class="category mart">대형마트</span>
+                            이마트
+                            <span class="coupon-logo emart">이마트</span>
+                            
+                        </a>
+                    </div>
+                    <div class="coupon-issue">
+                        <a href="./giftOff_homeplus.html" class="couponissue-link" title="홈플러스 할인권 바로가기">
+                            <span class="category mart">대형마트</span>
+                            홈플러스
+                            <span class="coupon-logo homeplus">홈플러스</span>
+                        </a>
+                    </div>
+                    <div class="coupon-issue">
+                        <a href="./giftOff_lottemart.html" class="couponissue-link" title="롯데마트 할인권 바로가기">
+                            <span class="category mart">대형마트</span>
+                            롯데마트
+                            <span class="coupon-logo lottemart">롯데마트</span>
+                        </a>
+                    </div>
+                    <div class="coupon-issue">
+                        <a href="./giftOn_11st.html" class="couponissue-link" title="11번가 할인권 바로가기">
+                            <span class="category online">온라인</span>
+                            11번가
+                            <span class="coupon-logo online_11st">11번가</span>
+                        </a>
+                    </div>                    
+                    <div class="coupon-issue">
+                        <a href="./giftOn_homeplus.html" class="couponissue-link" title="홈플러스 온라인마트 할인권 바로가기">
+                            <span class="category online">온라인</span>
+                            홈플러스 온라인마트
+                            <span class="coupon-logo homeplus">홈플러스</span>
+                        </a>
+                    </div> 
+                    <div class="coupon-issue">
+                        <a href="./giftOff_cu_3000.html" class="couponissue-link" title="CU 3천원 할인권 바로가기">
+                            <span class="category convenience">편의점</span>
+                            CU 3천원 할인
+                            <span class="coupon-logo cu">CU</span> 
+                        </a>
+                    </div>
+                    <div class="coupon-issue">
+                        <a href="./giftOff_cu_2000.html" class="couponissue-link" title="CU 2천원 할인권 바로가기">
+                            <span class="category convenience">편의점</span>
+                            CU 2천원 할인
+                            <span class="coupon-logo cu">CU</span>
+                        </a>
+                    </div>                    
+                    <div class="coupon-issue">
+                        <a href="./giftOff_gs25_3000.html" class="couponissue-link" title="GS25 3천원 할인권 바로가기">
+                            <span class="category convenience">편의점</span>
+                            GS25 3천원 할인
+                            <span class="coupon-logo gs25">GS25</span>
+                        </a>
+                    </div>
+                    <div class="coupon-issue">
+                        <a href="./giftOff_gs25_2000.html" class="couponissue-link" title="GS25 2천원 할인권 바로가기">
+                            <span class="category convenience">편의점</span>
+                            GS25 2천원 할인
+                            <span class="coupon-logo gs25">GS25</span>
+                        </a>
+                    </div>                                                            
+                </div>
+            </div>
+            <!-- //할인권 영역 -->
+
+		</article>
+		<!-- //mainList -->
+	</section>
+	<!-- //contents -->
+	<!-- footer -->
+	<footer class="footer-wrap">
+		<address class="address">
+			브이피(주) | 사업자등록번호 : 220-81-89229<br>
+			(04548) 서울 중구 을지로 170 (을지로4가 323) <span class="nowrap">을지트윈타워</span> 13층
+			<p class="copyright">copyright © VP Inc. ALL RIGHT RESERVED.</p>
+		</address>
+	</footer>
+	<!-- //footer -->
+		<div class="footer-cscenter">
+			<p class="cscenter">
+				<span class="csblack">신한카드 쇼핑 플러스 고객센터</span>
+				<span class="callcenter"><a href="tel:1899-9599" class="call_tel">&#9742; 1899-9599</a></span>
+				<span class="txtbr">(평일 09:00~18:00, 주말 및 공휴일 제외)</span>
+            </p>
+		</div>
+</body>
+</html>

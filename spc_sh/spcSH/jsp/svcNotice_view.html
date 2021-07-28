@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>공지사항 게시글 보기 - 신한카드 쇼핑 플러스</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- do not link // -->
+    <meta name="format-detection" content="no" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- // do not link  -->
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript" ></script>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js" type="text/javascript" ></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://oss.maxcd.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ 
+	<link rel="stylesheet" href="../styles/jquery-confirm.min.css" />
+    <link rel="stylesheet" href="../styles/style.min.css">
+    <script type="text/javascript" src="../scripts/common/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../scripts/slick/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../scripts/clipboard/clipboard-2.js"></script>
+    <script type="text/javascript" src="../scripts/lib/jquery-confirm.min.js"></script>
+    <script type="text/javascript" src="../scripts/common.js"></script>
+
+    <!-- barcord -->
+<!--     <link rel="stylesheet" type="text/css" href="../styles/common/code128.css"> -->
+    <script type="text/javascript" src="../scripts/barcord/base2-jsb-fp.js"></script>
+    <script type="text/javascript" src="../scripts/barcord/code128-base2.js"></script>
+    <script type="text/javascript" src="../scripts/barcord/get.js"></script>
+    <script type="text/javascript">
+        new jsb.Rule(".barcode, .barcode2, .barcode3", base2.Barcode.code128behaviour);
+    </script>
+</head>
+<body>
+	<!-- header -->
+	<header class="header-wrap">
+        <h1 class="h1">공지사항</h1>
+		<a href="cpnMain.html" class="button-home"><span class="screen-out">메인으로</span></a>
+		<button id="asideOpen" class="button-slidemenu">
+			<span class="screen-out">슬라이드메뉴 열기</span>
+		</button>	        
+	</header>
+    <!-- //header -->
+	<!-- slidemenu -->
+	<aside id="asidebar" class="slidemenu-wrap">
+		<div class="my-area">
+			<p class="img" role="img">
+				<img src="../images/icon_slidemenu.png">
+			</p>
+			<p class="name"><span class="user_name">홍길동</span> 님의</p>
+			<p class="service">
+				쇼핑 플러스 가입일은
+				<span class="txtbr">
+					<span class="service_join">
+						<span class="year">2020</span>년
+						<span class="month">5</span>월
+						<span class="date">14</span>일
+					</span>
+				입니다.
+				</span>
+			</p>
+			<button id="asideClose" class="slidemenu-close">
+				<span class="screen-out">슬라이드메뉴 닫기</span>
+			</button>
+		</div>
+		<nav class="gnb-wrap">
+			<ul class="gnb">
+				<li><a href="svcNotice.html" class="gnb-link">공지사항</a></li>
+				<li><a href="svcInfo.html" class="gnb-link">서비스 안내</a></li>								
+				<li><a href="termAgree.html" class="gnb-link">이용약관</a></li>
+				<li><a href="svcFAQ.html" class="gnb-link">FAQ</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<!-- //slidemenu -->    
+	<!-- contents -->
+	<section class="contents-wrap">        
+        <!-- top 버튼 --><a href="#none" class="btn-top">top</a>
+
+		<!-- 상단페이지intro -->
+		<div class="inner-wrap">
+			<h2 class="first">공지사항</h2>	
+		</div>		
+        <!-- //상단페이지intro -->        
+
+        <!-- 상세내용 -->
+        <section class="inner-wrap no-top">
+            <div class="notice_wrap">
+                <p class="notice_quantity">총 <span class="quantity">5</span>건</p>
+                <ul class="notice_list">
+                    <li>
+                        <a href="./svcNotice_view.html">
+                            <p class="title">회원 페이지 개선 안내 <span class="new">new</span></p>
+                            <p class="date">2020.11.01</p>
+                        </a>
+                        <p class="notice_view_content">
+                            안녕하세요.<br>
+                            회원 페이지 개선 안내 드립니다.<br><br>
+                            
+                            1. 공지사항 추가<br><br>
+                            2. FAQ 추가<br>
+                            - 서비스에 관련된 자주 묻는 질문을 확인할 수 있습니다.<br><br>
+                            3. 이용약관, 서비스 내용 확인 가능<br>
+                            - 앞으로 회원 페이지에서 서비스 약관 및 서비스 내용을 확인하실 수 있습니다.<br><br>
+
+                            감사합니다.<br><br>
+                        </p>
+                    </li>
+                    <li>
+                        <a href="./svcNotice_view.html">
+                            <p class="title">대형마트 청구할인 종료 안내</p>
+                            <p class="date">2020.06.23</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./svcNotice_view.html">
+                            <p class="title">이용약관 개정 안내</p>
+                            <p class="date">2020.06.01</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./svcNotice_view.html">
+                            <p class="title">편의점 할인권 발급 안내</p>
+                            <p class="date">2020.05.21</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./svcNotice_view.html">
+                            <p class="title">쇼핑 플러스에 가입하신 것을 환영합니다.</p>
+                            <p class="date">2020.05.14</p>
+                        </a>
+                    </li>
+                </ul>
+                <p class="notice_more">
+                    <button type="button" class="btn_more"><span>더보기</span></button>
+                </p>
+            </div>
+        </section>                
+        <!-- //상세내용 -->
+                
+	</section>
+	<!-- //contents -->
+		<div class="footer-cscenter">
+			<p class="cscenter">
+				<span class="csblack">신한카드 쇼핑 플러스 고객센터</span>
+				<span class="callcenter"><a href="tel:1899-9599" class="call_tel">&#9742; 1899-9599</a></span>
+				<span class="txtbr">(평일 09:00~18:00, 주말 및 공휴일 제외)</span>
+            </p>
+		</div>
+</body>
+
+</html>
