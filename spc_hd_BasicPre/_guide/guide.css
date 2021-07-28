@@ -1,0 +1,371 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Malgun Gothic, '맑은고딕';
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body,
+form,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+fieldset,
+input,
+td {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+}
+body {
+    padding-bottom: 30px;
+    background-color: #fff;
+}
+ol,
+ul,
+dl,
+li,
+dd,
+dt {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+a,
+a:hover,
+a:visited {
+    color: #333;
+    text-decoration: none;
+}
+a span {
+    color: blue;
+}
+
+
+
+h1 {
+    display: table;
+    /* position: fixed; */
+    overflow: hidden;
+    width: 100%;
+    height: 3em;
+    top: 0;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: #000;
+    z-index: 100;
+}
+h1 span {
+    display: table-cell;
+    padding-left: 1em;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+dl {
+    position: relative;
+   /*  margin-top: 3em; */
+    overflow: hidden;
+}
+dl dt {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #aaa;
+    color: #333;
+    border-bottom: 1px solid #787878;
+    border-top: 1px solid #aaa;
+}
+
+dl dt.on {
+    /*background-color: #666;*/
+    color: #333;
+}
+
+dl dt span {
+    color: #333;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+dl dt.on span{
+    color: #333;
+    font-weight: bold;
+}
+
+
+.page span:before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 1em;
+    right: 1em;
+    border-width: 6px 0px 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #333;
+}
+
+.page.on > span:before {
+    position: absolute;
+    top: 1.2em;
+    right: 1em;
+    border-width: 6px 6px 0px 6px;
+    border-color: #333 transparent transparent transparent
+}
+
+
+
+
+dd {
+    display: none;
+}
+
+dd.on {
+    display: block !important;
+}
+
+dd>ul>li {
+    position: relative;
+}
+
+
+li a.title {
+    position: relative;
+    display: block;
+    padding: 12px;
+    padding-left: 35px;
+    color: #333;
+    font-size: 1em;
+    border-bottom: 1px solid #aaa;
+    background: #ededed;
+
+}
+li.on{
+}
+
+li.on > .title {
+    color: #333;
+    font-weight: bold;
+}
+
+
+
+a.title:before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 1.3em;
+    left: 1em;
+    border-width: 6px 0px 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #333;
+}
+li.on > a.title:before {
+    position: absolute;
+    top: 1.5em;
+    left: 1em;
+    border-width: 6px 6px 0px 6px;
+    border-color: #333 transparent transparent transparent
+}
+
+
+
+.dep_01_list{
+    padding: 1em;
+}
+.dep_01_list > li {
+    width: 100%;
+}
+
+a.subtitle {
+    background: #ededed;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    padding: 0.2em 0.5em;
+    font-size: 14px;
+}
+
+.dep_01_list ul.inner{
+    padding: 0;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-top: 2px solid #333;
+    border-bottom: none;
+}
+
+.dep_01_list ul.inner > li {
+    width: 100%;
+    padding-right: 60px;
+    display: block;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+
+}
+.dep_01_list ul.inner > li:hover {
+    background: #f4f4f4;
+}
+
+
+
+
+
+a+a {
+    color: red !important;
+    display: inline;
+}
+a+a:before {
+    display: none !important;
+}
+
+a.on *,
+a.on span:last-child {
+    text-decoration: underline;
+}
+
+
+
+
+
+dd div {
+    padding-right: 10px;
+}
+dd div span {
+    display: block;
+    width: 60px;
+    float: left;
+    color: green;
+    text-align: center;
+    border-radius: 10px;
+}
+dd div span.today {
+    color: #fff;
+    background-color: green;
+}
+dd div span+span {
+    color: red;
+    margin-left: 6px;
+}
+dd div span+span.today {
+    background-color: red;
+}
+a.done a.modi {
+    position: relative;
+}
+a.done:after,
+a.modi span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 30px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: green;
+}
+a.modi span:after {
+    right: 12px;
+    background-color: red;
+}
+dd li {
+    position: relative;
+}
+
+
+/*새창*/
+a.new {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    color: #333;
+}
+/*//새창*/
+.guide+dd a+a {
+    position: absolute;
+    display: block;
+    top: 1em;
+    right: 20px;
+}
+.page+dd>ul>li>a span {
+    display: inline-block;
+    padding-left: 2px;
+}
+.page+dd>ul>li>a span:before {
+    content: "/";
+}
+dd>ul>li a span {
+    display: block;
+    padding-left: 0;
+    padding-right: 60px;
+    font-weight: normal;
+}
+dd>ul>li>ul {
+    display: none;
+    /*display:block;*/
+    /*padding: 0 0 16px 26px;*/
+}
+dd>ul>li.on>ul {
+    display: block;
+}
+.page+dd>ul>li>ul>li {
+    font-weight: bold;
+    line-height: 1.8em;
+}
+ul.guide>li>ul,
+.page+dd>ul>li>ul>li>ul {
+    display: block !important;
+    padding: 0 0 4px 10px;
+}
+ul.guide>li>ul>li,
+.page+dd>ul>li>ul>li>ul>li {
+    position: relative;
+    color: #666;
+    padding: 1em;
+    line-height: 1.5;
+    font-size: .875em;
+
+}
+.page+dd>ul>li>ul>li>ul>li:before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0px;
+    font-weight: bold;
+}
+ul.guide>li>ul>li,
+.page+dd>ul>li>ul>li>ul>li li {
+    line-height: 1.5;
+    font-weight: normal;
+}
+ul li div {
+    float: right;
+}
+ul li a {}
+ul li {}
+.db {
+    display: block !important;
+}

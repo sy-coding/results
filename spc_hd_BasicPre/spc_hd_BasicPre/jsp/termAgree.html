@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>이용약관 - 현대카드 쇼핑케어상품</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- do not link // -->
+    <meta name="format-detection" content="no" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- // do not link  -->
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript" ></script>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js" type="text/javascript" ></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://oss.maxcd.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<link rel="stylesheet" href="../styles/jquery-confirm.min.css" />
+    <link rel="stylesheet" href="../styles/style.min.css">
+    <script type="text/javascript" src="../scripts/common/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../scripts/slick/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../scripts/clipboard/clipboard-2.js"></script>
+    <script type="text/javascript" src="../scripts/lib/jquery-confirm.min.js"></script>
+    <script type="text/javascript" src="../scripts/common.js"></script>
+
+    <!-- barcord -->
+<!--     <link rel="stylesheet" type="text/css" href="../styles/common/code128.css"> -->
+    <script type="text/javascript" src="../scripts/barcord/base2-jsb-fp.js"></script>
+    <script type="text/javascript" src="../scripts/barcord/code128-base2.js"></script>
+    <script type="text/javascript" src="../scripts/barcord/get.js"></script>
+    <script type="text/javascript">
+        new jsb.Rule(".barcode, .barcode2, .barcode3", base2.Barcode.code128behaviour);
+    </script>
+</head>
+<body>
+	<!-- header -->
+	<header class="header-wrap">
+		<a href="javascript();" onclick="history.back(); return false;" class="button-prev">
+			<span class="screen-out">이전 페이지</span>
+		</a>
+		<h1 class="h1">이용약관</h1>
+	</header>
+	<!-- //header -->
+	<!-- contents -->
+	<section class="contents-wrap">
+		<h2 class="hide">이용약관 상세</h2>
+
+		<!-- top 버튼 --><a href="#none" class="btn-top">top</a>
+
+		<!-- subtop -->
+		<div class="subtop-wrap">
+			<img src="../images/subtop_2.png" alt="">
+		</div>
+		<!-- //subtop -->
+		<!-- 상세내용 -->
+		<div class="inner-wrap">
+
+			<!-- 시행일자별 이용약관 Select Box 추가 // -->
+			<div class="selectbox-wrap">
+				<select id="termSelect">
+					<option value="200801" selected="selected">2020년 8월 1일 시행안</option>
+					<option value="170301" >2017년 3월 1일 시행안</option>
+				</select>
+			</div>
+			<!-- // 시행일자별 이용약관 Select Box 추가 -->		
+
+            <div class="scrollable">
+                <iframe src="../html/termAgree_200801.html" id="termPanel" name="termPanel" class="external" marginwidth="0" marginheight="0" frameborder="0" width="100%" scrolling="yes"></iframe>
+            </div>
+		</div>
+		<!-- //상세내용 -->
+	</section>
+	<!-- //contents -->
+
+	<div class="footer-cscenter">
+		<p class="cscenter">
+			[상품 및 할인권 문의] 02-360-2430<br>
+			[정보 변경 및 해지 문의] 1588-3483<br>
+			[보상문의] 02-360-2535
+		</p>
+	</div>
+
+	<script type="text/javascript">
+		function init(){
+			var doc = document.getElementById("termPanel");
+			if(doc.offsetHeight == 0){
+			}else{
+				pageheight = doc.offsetHeight;
+				parent.document.getElementById("termPanel").height = pageheight+"px";
+			}
+		}
+		window.onload = function(){
+			init();
+		}
+	</script>	
+</body>
+</html>

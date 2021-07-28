@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>메인 - 현대카드 쇼핑케어상품 (프리미엄)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- do not link // -->
+    <meta name="format-detection" content="no" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <!-- // do not link  -->
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript" ></script>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js" type="text/javascript" ></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://oss.maxcd.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<link rel="stylesheet" href="../styles/jquery-confirm.min.css" />
+    <link rel="stylesheet" href="../styles/style.min.css">
+    <script type="text/javascript" src="../scripts/common/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../scripts/slick/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../scripts/clipboard/clipboard-2.js"></script>
+    <script type="text/javascript" src="../scripts/lib/jquery-confirm.min.js"></script>
+    <script type="text/javascript" src="../scripts/common.js"></script>
+
+    <!-- barcord -->
+<!--     <link rel="stylesheet" type="text/css" href="../styles/common/code128.css"> -->
+    <script type="text/javascript" src="../scripts/barcord/base2-jsb-fp.js"></script>
+    <script type="text/javascript" src="../scripts/barcord/code128-base2.js"></script>
+    <script type="text/javascript" src="../scripts/barcord/get.js"></script>
+    <script type="text/javascript">
+        new jsb.Rule(".barcode, .barcode2, .barcode3", base2.Barcode.code128behaviour);
+    </script>
+</head>
+<body>
+	<!-- header -->
+	<header class="header-wrap main">
+        <h1 class="h1"> 현대카드 쇼핑케어 상품(프리미엄)</h1>
+		<button id="asideOpen" class="button-slidemenu2">
+			<span class="screen-out">슬라이드메뉴 열기</span>
+		</button>        
+	</header>
+	<!-- //header -->
+	<!-- slidemenu -->
+	<aside id="asidebar" class="slidemenu-wrap">
+		<div class="my-area">
+			<p class="img" role="img">
+				<img src="../images/icon_slidemenu.png">
+			</p>
+			<p class="name">김현대 님의</p>
+			<p class="service">쇼핑케어 상품(프리미엄)</p>
+			<button id="asideClose" class="slidemenu-close">
+				<span class="screen-out">슬라이드메뉴 닫기</span>
+			</button>
+		</div>
+		<nav class="gnb-wrap">
+			<ul class="gnb">
+				<li><a href="svcInfo_Pre.html" class="gnb-link">상품 안내</a></li>
+				<li><a href="termAgree_Pre.html" class="gnb-link">이용약관</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<!-- //slidemenu -->
+    <!-- contents -->
+	<section class="contents-wrap main">
+        <h2 class="hide">메인 상세</h2>
+
+        <!-- top 버튼 --><a href="#none" class="btn-top">top</a>
+        
+		<article class="mainlist-wrap">
+
+            <!-- 200713 이용약관 개정 Message // -->
+            <div class="top_alert_wrap">
+                <a class="top_alert" href="../jsp/termAgree_Pre_revised.html" title="바로가기">
+                    <div class="text_box">
+                        <p class="alert_title">
+                            현대카드 쇼핑케어 상품(프리미엄) 이용약관
+                            <span class="nowrap">개정 안내 (20.8.1)</span>
+                        </p>
+                        
+                    </div>
+                </a>
+                <button id="alert-close" class="alert-close">
+                    <span class="screen-out">슬라이드메뉴 닫기</span>
+                </button>
+            </div>
+            <!-- // 200713 이용약관 개정 Message --> 
+
+            <div class="mainlist-type2">
+                <div class="mainlist-div">
+                    <!-- 메인 툴팁 추가(포샵이벤트 알림) // -->
+                    <div id="poshop-tooltip" class="main-tooltip">
+                        <div class="tooltip-wrap">
+                            <span class="point-copy">진행중</span>
+                            <span class="main-copy">초특가 할인 이벤트!</span>
+                            <button type="button" id="poshop-tooptip-closebtn" class="tooptip-close">
+                                <span class="screen-out">툴팁 닫기</span>
+                            </button>
+                        </div>
+                    </div>
+                    <script>
+                        $(function(){
+                            $('#poshop-tooptip-closebtn').click(function(){
+                                $('#poshop-tooltip').hide();
+                            });                                  
+                        });
+                    </script>
+                    <!-- // 메인 툴팁 추가(포샵이벤트 알림) -->                      
+                    <a href="./insPoshop.html" title="바로가기-포샵 & e매거진">
+                        <h3 class="maintitle arrow">포샵 &amp; e매거진</h3>
+                        <div class="mainlist-link">
+                            <img src="../images/main_forshop.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="mainlist-div">
+                    <a href="./insCoupon.html" title="바로가기-외식 할인쿠폰팩">
+                        <h3 class="maintitle arrow">외식 할인쿠폰팩</h3>
+                        <div class="mainlist-link">
+                            <img src="../images/main_salepack.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="mainlist-type2">
+                <div class="mainlist-div">
+                    <a href="./insGoods.html" title="바로가기-구매물품 손실보상">
+                        <h3 class="maintitle arrow">구매물품 손실보상</h3>
+                        <div class="mainlist-link">
+                            <img src="../images/main_insgoods.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="mainlist-div">
+                    <a href="./insCrossBorder1.html" title="바로가기-해외직구 운송손실보상">
+                        <h3 class="maintitle arrow">해외직구 운송손실보상</h3>
+                        <div class="mainlist-link">
+                            <img src="../images/main_inscrossborder1.png" alt="">
+                        </div>
+                    </a>
+                </div>                
+            </div>
+            <div class="mainlist-type2">
+                <div class="mainlist-div">
+                    <a href="./insCrossBorder2.html" title="바로가기-해외직구 수리비용보상">
+                        <h3 class="maintitle arrow">해외직구 수리비용보상</h3>
+                        <div class="mainlist-link">
+                            <img src="../images/main_inscrossborder2.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="mainlist-div">
+                    <a href="./insCrossBorder3.html" title="바로가기-해외직구 반품비용보상">
+                        <h3 class="maintitle arrow">해외직구 반품비용보상</h3>
+                        <div class="mainlist-link">
+                            <img src="../images/main_inscrossborder3.png" alt="">
+                        </div>
+                    </a>
+                </div>                
+            </div>            
+            <div class="mainlist-type3">
+                <div class="mainlist-div">
+                    <a href="./insVirtualNum.html" title="바로가기-가상전화번호">
+                        <p class="icon"><img src="../images/icon_main2.png" alt=""></p>
+                        <h3 class="maintitle2">가상 <span class="nowrap">전화번호</span></h3>
+                    </a>
+                </div>
+                <div class="mainlist-div">
+                    <a href="./insDelivery.html" title="바로가기-배송정보 통합검색">
+                        <p class="icon"><img src="../images/icon_main3.png" alt=""></p>
+                        <h3 class="maintitle2">배송정보 <span class="nowrap">통합검색</span></h3>
+                    </a>
+                </div>
+            </div>
+            <div class="mainlist-type1">
+                <div class="mainlist-inner">
+                    <div class="box"><!-- 이마트 / 홈플러스 / 롯데마트 선택한 고객에 따라 다르게 나오는 영역 -->                        
+                        <a href="./giftOff_emart.html" class="mainlist-link2" title="바로가기-마트 할인권">
+                            <h3 class="maintitle2">이마트 할인권</h3>
+                        </a>
+                    </div>
+                    <div class="box">
+                        <a href="./giftCvs_cu.html" class="mainlist-link2" title="바로가기-편의점 할인권">
+                            <h3 class="maintitle2">CU 할인권</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="mainlist-inner">
+                    <a href="./giftOn_homeplus.html" class="mainlist-link2" title="바로가기-홈플러스 온라인마트 할인권">
+                        <h3 class="maintitle2">홈플러스 온라인마트 할인권</h3>
+                    </a>
+                </div>
+                <div class="mainlist-inner">
+                    <a href="./giftOn_11st.html" class="mainlist-link2" title="바로가기-11번가 할인권">
+                        <h3 class="maintitle2">11번가 할인권</h3>
+                    </a>
+                </div>
+            </div>
+		</article>
+		<!-- //mainList -->
+	</section>
+	<!-- //contents -->
+	<!-- footer -->
+	<footer class="footer-wrap">
+		<address class="address">
+			브이피(주) | 사업자등록번호 : 220-81-89229<br>
+			(04548) 서울 중구 을지로 170 (을지로4가 323) <span class="nowrap">을지트윈타워</span> 13층
+			<p class="copyright">Copyright © VP Inc. All right reserved.</p>
+		</address>
+	</footer>
+	<!-- //footer -->
+		<div class="footer-cscenter">
+			<p class="cscenter">
+                [상품 및 할인권 문의] 02-360-2430<br>
+                [정보변경 및 해지 문의] 1588-3483<br>
+                [보상문의] 02-360-2535
+            </p>
+		</div>
+</body>
+</html>
