@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="loader" viewBox="0 0 24 24"><defs><style>@keyframes loader-stroke{0%{stroke-dashoffset:60}to{stroke-dashoffset:0}}</style></defs><circle cx="12" cy="12" r="10" style="animation:loader-stroke 2.5s linear infinite;overflow:hidden;" fill="none" stroke-dasharray="66" stroke-width="4" stroke="rgba(255,255,255,.3)"/></svg>

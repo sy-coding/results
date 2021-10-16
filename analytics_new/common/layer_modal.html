@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>CAFE24 Analytics</title>
+    <link rel="stylesheet" href="../libs/css/analytics_renew.css" />
+    <script type="text/javascript" src="../libs/js/jquery/jquery-3.4.0.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../libs/js/ui.js" charset="utf-8"></script>
+    <style>
+        .mLayer { display:block !important; position:relative !important; top:auto !important; left:auto !important; transform:none !important; }
+    </style>
+</head>
+<body>
+<div id="skipNavigation">
+    <p>
+        <a href="#sidebar">대메뉴 바로가기</a>
+        <a href="#content">컨텐츠 바로가기</a>
+    </p>
+</div>
+<hr class="layout" />
+<div id="wrap">
+    <!-- [header] -->
+    <header id="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#none">
+                    <img src="../libs/images/h1_logo.png" alt="cafe24 Analytics" />
+                </a>
+            </h1>
+            <div class="util">
+                <div class="fSelect mw200 nowrap left">
+                    <select id="mallSelect">
+                        <option value="1" selected="selected">shop 1</option>
+                        <option value="2">shop 2</option>
+                        <option value="3">shop 3</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header><!-- //[header] -->
+    <hr class="layout" /><div id="container">
+    <!-- [sidebar] -->
+<aside id="sidebar">
+    <!--참고
+        1. 메뉴 선택 시 .menuItem 에 .selected 추가
+    -->
+    <nav class="snb">
+        <ul>
+            <li class="mMenuGroup">
+                <h3 class="subject">Dashboard</h3>
+                <ul class="mMenuList">
+                    <li class="menuItem selected"><a href="../dashboard/realtime.html">실시간</a></li>
+                </ul>
+            </li>
+            <li class="mMenuGroup">
+                <h3 class="subject">Setting</h3>
+                <ul class="mMenuList">
+                    <li class="menuItem"><a href="../setting/analytics_settings.html">애널리틱스 설정</a></li>
+                    <li class="menuItem"><a href="../setting/advertisement.html">사용자 광고</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</aside>    <!-- [ content ] -->
+    <!--참고: 로딩중일 경우 .pageLoading class 추가 -->
+    <div id="content">
+        <!--광고 그룹 등록 레이어-->
+<div id="adGroupRegisterLayer" class="mLayer" style="display:none;">
+    <div class="layerHeader">
+        <span class="mTitle">광고 그룹 등록</span>
+    </div>
+    <div class="layerContent">
+        <div class="mFormBox">
+            <div class="column">
+                <div class="head">
+                    <strong class="title">광고그룹명</strong>
+                </div>
+                <div class="content">
+                    <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                    <div class="fText full">
+                        <input type="text" maxlength="30" required aria-required="true">
+                        <span class="txtByte" title="현재글자수/최대글자수"><strong>0</strong>/30</span>
+                    </div>
+                    <div class="txtDesc txtInfo">
+                        최대 30자까지 입력할 수 있습니다.
+                    </div>
+                    <!--참고: 광고 그룹명 미입력-->
+                    <!--div class="txtDesc txtWarn">
+                       광고 그룹명을 입력해 주세요.
+                    </di-->
+
+                    <!--참고: 광고 그룹명 중복시-->
+                    <!--div class="txtDesc txtWarn">
+                        기존에 등록된 광고 그룹명과 중복하여 사용할 수 없습니다.
+                    </div-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layerFooter gAlign right">
+        <button type="submit" class="btnNormal typeSubmit">
+            저장
+            <object class="ico_btnLoader" data="../libs/images/ico_btnLoader.svg" type="image/svg+xml"></object>
+        </button>
+    </div>
+    <button type="button" class="layerClose">닫기</button>
+</div>
+<!--광고 그룹 수정 레이어-->
+<div id="adGroupModifyLayer" class="mLayer" style="display:none;">
+    <div class="layerHeader">
+        <span class="mTitle">광고 그룹 수정</span>
+    </div>
+    <div class="layerContent">
+        <div class="mFormBox">
+            <div class="column">
+                <div class="head">
+                    <strong class="title">광고그룹명</strong>
+                </div>
+                <div class="content">
+                    <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                    <div class="fText full">
+                        <input type="text">
+                        <span class="txtByte" title="현재글자수/최대글자수"><strong>0</strong>/30</span>
+                    </div>
+                    <div class="txtDesc txtInfo">
+                        최대 30자까지 입력할 수 있습니다.
+                    </div>
+                    <!--참고: 광고 그룹명 미입력-->
+                    <!--div class="txtDesc txtWarn">
+                       광고 그룹명을 입력해 주세요.
+                    </di-->
+
+                    <!--참고: 광고 그룹명 중복시-->
+                    <!--div class="txtDesc txtWarn">
+                        기존에 등록된 광고 그룹명과 중복하여 사용할 수 없습니다.
+                    </div-->
+                </div>
+            </div>
+            <div class="column grid2">
+                <div class="content">
+                    <div class="column">
+                        <div class="head">
+                            <strong class="title">등록일시</strong>
+                        </div>
+                        <div class="conetnt">
+                            2020-10-25 16:23:32
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="head">
+                            <strong class="title">마지막 수정일시</strong>
+                        </div>
+                        <div class="content">
+                            2020-10-25 16:23:32
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layerFooter gAlign between">
+        <button type="submit" class="btnNormal typeDelete">삭제</button>
+        <button type="submit" class="btnNormal typeSubmit">
+            저장
+            <object class="ico_btnLoader" data="../libs/images/ico_btnLoader.svg" type="image/svg+xml"></object>
+        </button>
+    </div>
+    <button type="button" class="layerClose">닫기</button>
+</div>
+<!--광고 그룹 삭제 레이어-->
+<div id="adGroupDeleteLayer" class="mLayer" style="display:none;">
+    <div class="layerHeader">
+        <span class="mTitle">광고 그룹 삭제</span>
+    </div>
+    <div class="layerContent">
+        <strong>{$광고그룹명$}</strong>을 정말 삭제하시겠습니까?
+    </div>
+    <div class="layerFooter gAlign right">
+        <button type="submit" class="btnNormal typeCancel">취소</button><button type="submit" class="btnNormal typeSubmit">
+            확인
+            <object class="ico_btnLoader" data="../libs/images/ico_btnLoader.svg" type="image/svg+xml"></object>
+        </button>
+    </div>
+</div>
+<!--광고 그룹 삭제 레이어2-->
+<div id="adGroupDeleteLayer2" class="mLayer" style="display:none;">
+    <div class="layerHeader">
+        <span class="mTitle">광고 그룹 삭제</span>
+    </div>
+    <div class="layerContent">
+        <strong>{$광고그룹명$}</strong>에 현재 <strong class="txtEm">{$개별광고갯수$}</strong>의 광고가 등록되어 있습니다.<br/>
+        광고 그룹 삭제 시 하위 광고도 모두 삭제됩니다. 정말 삭제하시겠습니까?
+    </div>
+    <div class="layerFooter gAlign right">
+        <button type="submit" class="btnNormal typeCancel">취소</button>
+        <button type="submit" class="btnNormal typeSubmit">
+            확인
+            <object class="ico_btnLoader" data="../libs/images/ico_btnLoader.svg" type="image/svg+xml"></object>
+        </button>
+    </div>
+</div>
+
+<!--광고 등록 레이어-->
+<div id="adRegisterLayer" class="mLayer" style="display:none;">
+    <div class="layerHeader">
+        <span class="mTitle">광고 등록</span>
+    </div>
+    <div class="layerContent">
+        <div class="mFormBox">
+            <div class="column">
+                <div class="head">
+                    <strong class="title">광고그룹명</strong>
+                </div>
+                <div class="content">
+                    <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                    <div class="fSelect full">
+                        <select id="adGroupTitle">
+                            <option value="1">네이버</option>
+                            <option value="2">쿠팡</option>
+                            <option value="3">11번가</option>
+                        </select>
+                    </div>
+                    <div class="txtDesc txtInfo">
+                        등록된 광고 그룹 중 하나를 선택하세요.
+                    </div>
+                    <!--참고: 광고 그룹 미선택-->
+                    <!--div class="txtDesc">
+                        광고 그룹을 선택해주세요.
+                    </div-->
+                </div>
+            </div>
+            <div class="column">
+                <div class="head">
+                    <strong class="title">광고명</strong>
+                </div>
+                <div class="content">
+                    <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                    <div class="fText full">
+                        <input type="text">
+                        <span class="txtByte" title="현재글자수/최대글자수"><strong>0</strong>/30</span>
+                    </div>
+                    <div class="txtDesc txtInfo">
+                        최대 30자까지 입력할 수 있습니다.
+                    </div>
+                    <!--참고: 광고명 중복시-->
+                    <!--div class="txtDesc txtWarn">
+                       기존에 등록된 광고명과 중복하여 사용할 수 없습니다.
+                    </div-->
+                </div>
+            </div>
+            <div class="column">
+                <div class="head">
+                    <strong class="title">랜딩페이지 URL</strong>
+                </div>
+                <div class="content">
+                    <div class="fGrid">
+                        <div class="fSelect">
+                            <select id="protocol">
+                                <option value="1">https://</option>
+                                <option value="2">http://</option>
+                            </select>
+                        </div>
+                        <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                        <div class="fText">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="txtDesc txtInfo">
+                        랜딩페이지로 사용할 URL을 입력하세요.
+                    </div>
+                    <!--참고: URL 미입력-->
+                    <!--div class="txtDesc txtWarn">
+                       랜딩페이지 URL을 반드시 입력해주세요.
+                    </di-->
+                </div>
+            </div>
+            <div class="column">
+                <div class="head">
+                    <strong class="title">광고 코드</strong>
+                </div>
+                <div class="content">
+                    <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                    <div class="fText full">
+                        <input type="text">
+                        <span class="txtByte" title="현재글자수/최대글자수"><strong>0</strong>/30</span>
+                    </div>
+                    <div class="txtDesc txtInfo">
+                        영문, 숫자 조합만 사용하여 최대 30자까지 입력할 수 있습니다.
+                    </div>
+                    <!--참고: 광고 코드 중복시-->
+                    <!--div class="txtDesc txtWarn">
+                        기존에 등록된 광고 코드와 중복하여 사용할 수 없습니다.
+                    </div-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layerFooter gAlign right">
+        <button type="submit" class="btnNormal typeSubmit">
+            저장
+            <object class="ico_btnLoader" data="../libs/images/ico_btnLoader.svg" type="image/svg+xml"></object>
+        </button>
+    </div>
+    <button type="button" class="layerClose">닫기</button>
+</div>
+<!--광고 수정 레이어-->
+<div id="adModifyLayer" class="mLayer" style="display:none;">
+    <div class="layerHeader">
+        <span class="mTitle">광고 수정</span>
+    </div>
+    <div class="layerContent">
+        <div class="mFormBox">
+            <div class="column">
+                <div class="head">
+                    <strong class="title">광고그룹명</strong>
+                </div>
+                <div class="content">
+                    <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                    <div class="fSelect full">
+                        <select id="adGroupTitle2">
+                            <option value="1">네이버</option>
+                            <option value="2">쿠팡</option>
+                            <option value="3">11번가</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="head">
+                    <strong class="title">광고명</strong>
+                </div>
+                <div class="content">
+                    <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                    <div class="fText full">
+                        <input type="text" value="블로그 바이럴_리얼코코">
+                        <span class="txtByte" title="현재글자수/최대글자수"><strong>25</strong>/100</span>
+                    </div>
+                    <div class="txtDesc txtInfo">
+                        최대 30자까지 입력할 수 있습니다.
+                    </div>
+                    <!--참고: 광고명 중복시-->
+                    <!--div class="txtDesc txtWarn">
+                       기존에 등록된 광고명과 중복하여 사용할 수 없습니다.
+                    </div-->
+                </div>
+            </div>
+            <div class="column">
+                <div class="head">
+                    <strong class="title">랜딩페이지 URL</strong>
+                </div>
+                <div class="content">
+                    <div class="fGrid">
+                        <div class="fSelect">
+                            <select id="protocol2">
+                                <option value="1">https://</option>
+                                <option value="2">http://</option>
+                            </select>
+                        </div>
+                        <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                        <div class="fText">
+                            <input type="text" value="realcoco.cafe24.com/index.php">
+                        </div>
+                    </div>
+                    <div class="txtDesc txtInfo">
+                        랜딩페이지로 사용할 URL을 입력하세요.
+                    </div>
+                    <!--참고: URL 미입력-->
+                    <!--div class="txtDesc txtWarn">
+                       랜딩페이지 URL을 반드시 입력해주세요.
+                    </di-->
+                </div>
+            </div>
+            <div class="column">
+                <div class="head">
+                    <strong class="title">광고 코드</strong>
+                </div>
+                <div class="content">
+                    <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                    <div class="fText full">
+                        <input type="text" disabled="disabled" value="ue_blogmarketing">
+                    </div>
+                    <div class="txtDesc txtInfo">
+                        최초 생성된 광고 코드는 수정이 불가능합니다.
+                    </div>
+                    <!--참고: 광고 코드 중복시-->
+                    <!--div class="txtDesc txtWarn">
+                        기존에 등록된 광고 코드와 중복하여 사용할 수 없습니다.
+                    </div-->
+                </div>
+            </div>
+            <div class="column grid2">
+                <div class="content">
+                    <div class="column">
+                        <div class="head">
+                            <strong class="title">등록일시</strong>
+                        </div>
+                        <div class="conetnt">
+                            2020-10-25 16:23:32
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="head">
+                            <strong class="title">마지막 수정일시</strong>
+                        </div>
+                        <div class="content">
+                            2020-10-25 16:23:32
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layerFooter gAlign between">
+        <button type="submit" class="btnNormal typeDelete">삭제</button>
+        <button type="submit" class="btnNormal typeSubmit">
+            저장
+            <object class="ico_btnLoader" data="../libs/images/ico_btnLoader.svg" type="image/svg+xml"></object>
+        </button>
+    </div>
+    <button type="button" class="layerClose">닫기</button>
+</div>
+<!--광고 삭제 레이어-->
+<div id="adDeleteLayer" class="mLayer" style="display:none;">
+    <div class="layerHeader">
+        <span class="mTitle">광고 삭제</span>
+    </div>
+    <div class="layerContent">
+        한번 삭제된 광고 코드와 동일한 광고 코드는 이후에 등록할 수 없습니다.<br/>
+        <strong>{$광고명$}</strong>을 정말 삭제하시겠습니까?
+    </div>
+    <div class="layerFooter gAlign right">
+        <button type="submit" class="btnNormal typeCancel">취소</button>
+        <button type="submit" class="btnNormal typeSubmit">
+            확인
+            <object class="ico_btnLoader" data="../libs/images/ico_btnLoader.svg" type="image/svg+xml"></object>
+        </button>
+    </div>
+</div>
+
+<div class="layerDim"></div>    </div><!-- [ content ] -->
+    </div>
+        <div class="toastWrap">
+            <div class="toastList"></div>
+        </div>
+</div>
+<!-- 참고 : UI개발팀 퍼블리싱 참고용 -->
+<script type="text/javascript" src="../libs/js/analytics_new.js" charset="utf-8"></script>
+<script type="text/javascript" src="../libs/js/ui_select.js" charset="utf-8"></script>
+</body>
+</html>

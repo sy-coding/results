@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>CAFE24 Analytics</title>
+    <!--<link rel="stylesheet" href="//img.echosting.cafe24.com/css/ec/analytics_renew.css" />-->
+    <link rel="stylesheet" href="../libs/css/analytics_renew.css" />
+    <script type="text/javascript" src="../libs/js/jquery/jquery-3.4.0.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../libs/js/ui.js" charset="utf-8"></script>
+</head>
+<body>
+<div id="skipNavigation">
+    <p>
+        <a href="#sidebar">대메뉴 바로가기</a>
+        <a href="#content">컨텐츠 바로가기</a>
+    </p>
+</div> 
+<hr class="layout" />
+<div id="wrap">
+    <!-- [header] -->
+    <header id="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#none">
+                    <img src="../libs/images/h1_logo.png" alt="cafe24 Analytics" />
+                </a>
+            </h1>
+            <div class="util">
+                <div class="fSelect mw200 nowrap left">
+                    <select id="mallSelect">
+                        <option value="1" selected="selected">옵션의 텍스트가 긴 경우(UI 확인 용)</option>
+                        <option value="2">shop 2</option>
+                        <option value="3">shop 3</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header><!-- //[header] -->
+    <hr class="layout" /><div id="container">
+    <!-- [sidebar] -->
+<aside id="sidebar">
+    <!--참고
+        1. 메뉴 선택 시 .menuItem 에 .selected 추가
+    -->
+    <nav class="snb">
+        <ul>
+            <li class="mMenuGroup">
+                <h3 class="subject">Dashboard</h3>
+                <ul class="mMenuList">
+                    <li class="menuItem selected"><a href="../dashboard/realtime.html">실시간</a></li>
+                </ul>
+            </li>
+            <li class="mMenuGroup">
+                <h3 class="subject">Setting</h3>
+                <ul class="mMenuList">
+                    <li class="menuItem"><a href="../setting/analytics_settings.html">애널리틱스 설정</a></li>
+                    <li class="menuItem"><a href="../setting/advertisement.html">사용자 광고</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</aside>    <!-- [ content ] -->
+    <!--참고: 로딩중일 경우 .pageLoading class 추가 -->
+    <div id="content">
+        <div class="headingArea">
+            <div class="util gAlign">
+                <div class="mDropDown">
+                    <button type="button" class="btnSub typeEtc eTakeout">내보내기</button>
+                    <ul class="optionGroup">
+                        <li class="option"><button type="button">PDF로 저장</button></li>
+                        <li class="option selected"><button type="button" onclick="window.print()">현재페이지로 인쇄</button></li>
+                    </ul>
+                </div>
+                <button type="button" class="btnSub typeEtc">도움말</button>
+            </div>
+            <div class="mTitle">
+                <h1>실시간</h1>
+                <p class="desc">최근 60분간의 데이터를 대상으로 한 요약 대시보드입니다.</p>
+            </div>
+        </div>
+        <div class="mColumnSet">
+            <div class="columnBox small">
+                <div class="mCard">
+                    <div class="mTitle">
+                        <h2>
+                            디바이스
+                            <div class="cTip" code="PT.PE.100">
+                                <div class="mTooltip gSmall">
+                                    <button type="button" class="icon eTip">도움말</button>
+                                    <div class="tooltip">
+                                        <div class="content">
+                                            <strong class="titleEm">인기 페이지</strong>
+                                            현재 쇼핑에서 가장 인기있는 페이지 뷰 정보를 확인 할 수 있습니다.
+                                        </div>
+                                        <button type="button" class="close eClose">닫기</button>
+                                        <span class="edge"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="content">
+                        <ul class="mList">
+                            <li><input type="checkbox" id="checkbox1" class="fCheck" name="checkbox" value="1" checked><label for="checkbox1" class="fLabel"> 전체</label></li>
+                            <li>
+                                <input type="checkbox" id="checkbox2" class="fCheck" name="checkbox" value="1" ><label for="checkbox2" class="fLabel">PC</label><input type="checkbox" id="checkbox3" class="fCheck" name="checkbox" value="1" ><label for="checkbox3" class="fLabel">모바일웹</label><input type="checkbox" id="checkbox4" class="fCheck" name="checkbox" value="1" ><label for="checkbox4" class="fLabel">모바일앱</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mCard">
+                    <div class="mTitle">
+                        <h2>
+                            주요지표
+                            <div class="cTip" code="PT.PE.100">
+                                <div class="mTooltip gSmall">
+                                    <button type="button" class="icon eTip">도움말</button>
+                                    <div class="tooltip">
+                                        <div class="content">
+                                            <strong class="titleEm">인기 페이지</strong>
+                                            현재 쇼핑에서 가장 인기있는 페이지 뷰 정보를 확인 할 수 있습니다.
+                                        </div>
+                                        <button type="button" class="close eClose">닫기</button>
+                                        <span class="edge"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="content">
+                        <div class="mRelayState">
+                            <ul class="stateList">
+                                <li class="stateItem">
+                                        <span class="title">
+                                            현재 접속자 수
+                                            <div class="cTip" code="PT.PE.100">
+                                               <div class="mTooltip gSmall">
+                                                   <button type="button" class="icon eTip small">도움말</button>
+                                                   <div class="tooltip">
+                                                       <div class="content">
+                                                           <strong class="titleEm">인기 페이지</strong>
+                                                          현재 쇼핑에서 가장 인기있는 페이지 뷰 정보를 확인 할 수 있습니다.
+                                                       </div>
+                                                       <button type="button" class="close eClose">닫기</button>
+                                                       <span class="edge"></span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                        </span>
+                                    <strong class="quantity txtEm">99,999,999</strong>
+                                </li>
+                                <li class="stateItem">
+                                        <span class="title">
+                                            누적 페이지뷰
+                                            <div class="cTip" code="PT.PE.100">
+                                               <div class="mTooltip gSmall">
+                                                   <button type="button" class="icon eTip small">도움말</button>
+                                                   <div class="tooltip">
+                                                       <div class="content">
+                                                           <strong class="titleEm">인기 페이지</strong>
+                                                          현재 쇼핑에서 가장 인기있는 페이지 뷰 정보를 확인 할 수 있습니다.
+                                                       </div>
+                                                       <button type="button" class="close eClose">닫기</button>
+                                                       <span class="edge"></span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                        </span>
+                                    <strong class="quantity txtEm">99,999,999</strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columnBox large">
+                <div class="mCard full">
+                    <div class="mTitle">
+                        <h2>
+                            페이지뷰 추이
+                            <div class="cTip" code="PT.PE.100">
+                                <div class="mTooltip gSmall">
+                                    <button type="button" class="icon eTip">도움말</button>
+                                    <div class="tooltip">
+                                        <div class="content">
+                                            <strong class="titleEm">인기 페이지</strong>
+                                            현재 쇼핑에서 가장 인기있는 페이지 뷰 정보를 확인 할 수 있습니다.
+                                        </div>
+                                        <button type="button" class="close eClose">닫기</button>
+                                        <span class="edge"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="content">
+                        //그래프 삽입 위치입니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mColumnSet">
+            <div class="columnBox medium">
+                <div class="mCard">
+                    <div class="mTitle gAlign between">
+                        <h2>
+                            인기 페이지
+                            <div class="cTip" code="PT.PE.100">
+                                <div class="mTooltip gSmall">
+                                    <button type="button" class="icon eTip">도움말</button>
+                                    <div class="tooltip">
+                                        <div class="content">
+                                            <strong class="titleEm">인기 페이지</strong>
+                                            현재 쇼핑에서 가장 인기있는 페이지 뷰 정보를 확인 할 수 있습니다.
+                                        </div>
+                                        <button type="button" class="close eClose">닫기</button>
+                                        <span class="edge"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </h2>
+                        <span class="txtInfo">(상위 10개 노출)</span>
+                    </div>
+                    <div class="content">
+                        <div class="mChartBoard">
+                            <div class="chartHead gAlign between">
+                                <strong class="title">페이지</strong>
+                                <strong class="title">페이지 뷰</strong>
+                            </div>
+                            <div class="chartList">
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:100%;"></span>
+                                        <span class="text">/product/list.html?cate_no=28</span>
+                                    </div>
+                                    <span class="value">99,999,999</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:98%;"></span>
+                                        <span class="text">/product/list.html?cate_no=26</span>
+                                    </div>
+                                    <span class="value">220</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:96%;"></span>
+                                        <span class="text">/product/10월할인브린-핀턱-슬릿-스커트가을/list.html?cate_no=25</span>
+                                    </div>
+                                    <span class="value">201</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:79%;"></span>
+                                        <span class="text">/product/list.html?cate_no=245</span>
+                                    </div>
+                                    <span class="value">169</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:75%;"></span>
+                                        <span class="text">/product/list.html?cate_no=243</span>
+                                    </div>
+                                    <span class="value">150</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:73%;"></span>
+                                        <span class="text">/product/list.html?cate_no=27</span>
+                                    </div>
+                                    <span class="value">144</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:67.5%;"></span>
+                                        <span class="text">/product/10월할인애니-폴라-니트-원피스2종/list.html?cate_no=101</span>
+                                    </div>
+                                    <span class="value">143</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:62.5%;"></span>
+                                        <span class="text">/product/list.html?cate_no=36</span>
+                                    </div>
+                                    <span class="value">127</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:33.7%;"></span>
+                                        <span class="text">/product/10월할인골지-니트-트임-스커트</span>
+                                    </div>
+                                    <span class="value">99</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:7.6%;"></span>
+                                        <span class="text">/product/10월할인골지-아우터-특별가/special.html</span>
+                                    </div>
+                                    <span class="value">24</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mCard">
+                    <div class="mTitle gAlign between">
+                        <h2>
+                            마케팅 효과
+                            <div class="cTip" code="PT.PE.100">
+                                <div class="mTooltip gSmall">
+                                    <button type="button" class="icon eTip">도움말</button>
+                                    <div class="tooltip">
+                                        <div class="content">
+                                            <strong class="titleEm">인기 페이지</strong>
+                                            현재 쇼핑에서 가장 인기있는 페이지 뷰 정보를 확인 할 수 있습니다.
+                                        </div>
+                                        <button type="button" class="close eClose">닫기</button>
+                                        <span class="edge"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </h2>
+                        <span class="txtInfo">(상위 10개 노출)</span>
+                    </div>
+                    <div class="content">
+                        <div class="mChartBoard">
+                            <div class="chartHead gAlign between">
+                                <strong class="title">페이지</strong>
+                                <strong class="title">페이지 뷰</strong>
+                            </div>
+                            <div class="chartList">
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:100%;"></span>
+                                        <span class="text">네이버 > 쇼핑</span>
+                                    </div>
+                                    <span class="value">232</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:97%;"></span>
+                                        <span class="text">[U] 네이버 블로그 바이럴 > 30s Fashion Pick</span>
+                                    </div>
+                                    <span class="value">220</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:95%;"></span>
+                                        <span class="text">네이버 > 트렌드픽 우먼즈</span>
+                                    </div>
+                                    <span class="value">201</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mCard">
+                    <div class="mTitle gAlign between">
+                        <h2>
+                            마케팅 효과
+                            <div class="cTip">
+                                <div class="mTooltip gSmall">
+                                    <button type="button" class="icon eTip">도움말</button>
+                                    <div class="tooltip">
+                                        <div class="content">
+                                            <strong class="titleEm">인기 페이지</strong>
+                                            현재 쇼핑에서 가장 인기있는 페이지 뷰 정보를 확인 할 수 있습니다.
+                                        </div>
+                                        <button type="button" class="close eClose">닫기</button>
+                                        <span class="edge"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </h2>
+                        <span class="txtInfo">(상위 10개 노출)</span>
+                    </div>
+                    <div class="content">
+                        <div class="mChartBoard empty"><!-- 참고: 데이터가 없을 경우 .mChartBoard 에 empty class 추가 -->
+                            <span class="message">현재 조건에 해당되는 데이터가 없습니다.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columnBox medium">
+                <div class="mCard">
+                    <div class="mTitle gAlign between">
+                        <h2>
+                            유입 도메인
+                            <div class="cTip" code="PT.PE.100">
+                                <div class="mTooltip gSmall">
+                                    <button type="button" class="icon eTip">도움말</button>
+                                    <div class="tooltip">
+                                        <div class="content">
+                                            <strong class="titleEm">인기 페이지</strong>
+                                            현재 쇼핑에서 가장 인기있는 페이지 뷰 정보를 확인 할 수 있습니다.
+                                        </div>
+                                        <button type="button" class="close eClose">닫기</button>
+                                        <span class="edge"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </h2>
+                        <span class="txtInfo">(상위 10개 노출)</span>
+                    </div>
+                    <div class="content">
+                        <div class="mChartBoard">
+                            <div class="chartHead gAlign between">
+                                <strong class="title">페이지</strong>
+                                <strong class="title">페이지 뷰</strong>
+                            </div>
+                            <div class="chartList">
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:100%;"></span>
+                                        <span class="text">https://app.zeplin.io/project/5fca02faeecb5e623b0b4f50/screen/5fca0a04eecb5e623b0b8a5ddfdf</span>
+                                    </div>
+                                    <span class="value">232</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:90%;"></span>
+                                        <span class="text">trendpick.shopping.naver.com</span>
+                                    </div>
+                                    <span class="value">121</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:80%;"></span>
+                                        <span class="text">search.naver.com/search.naver</span>
+                                    </div>
+                                    <span class="value">67</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:40%;"></span>
+                                        <span class="text">facebook.com</span>
+                                    </div>
+                                    <span class="value">46</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:20%;"></span>
+                                        <span class="text">instagram.com</span>
+                                    </div>
+                                    <span class="value">14</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:7%;"></span>
+                                        <span class="text">googl.co.kr</span>
+                                    </div>
+                                    <span class="value">9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mCard">
+                    <div class="mTitle gAlign between">
+                        <h2>
+                            인기 검색어
+                            <div class="cTip" code="PT.PE.100">
+                                <div class="mTooltip gSmall">
+                                    <button type="button" class="icon eTip">도움말</button>
+                                    <div class="tooltip">
+                                        <div class="content">
+                                            <strong class="titleEm">인기 페이지</strong>
+                                            현재 쇼핑에서 가장 인기있는 페이지 뷰 정보를 확인 할 수 있습니다.
+                                        </div>
+                                        <button type="button" class="close eClose">닫기</button>
+                                        <span class="edge"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </h2>
+                        <span class="txtInfo">(상위 10개 노출)</span>
+                    </div>
+                    <div class="content">
+                        <div class="mChartBoard">
+                            <div class="chartHead gAlign between">
+                                <strong class="title">페이지</strong>
+                                <strong class="title">페이지 뷰</strong>
+                            </div>
+                            <div class="chartList">
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:100%;"></span>
+                                        <span class="text">해당영역은뒤에막대그래프가최대값100%인경우를표현해당영역은뒤에막대그래프가최a3f</span>
+                                    </div>
+                                    <span class="value">232</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:81.187%;"></span>
+                                        <span class="text">니트스커트</span>
+                                    </div>
+                                    <span class="value">188</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:30.678%;"></span>
+                                        <span class="text">리얼코코</span>
+                                    </div>
+                                    <span class="value">67</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:29.654%;"></span>
+                                        <span class="text">롱패딩</span>
+                                    </div>
+                                    <span class="value">46</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:12.066%;"></span>
+                                        <span class="text">여자목폴라</span>
+                                    </div>
+                                    <span class="value">14</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:7.16%;"></span>
+                                        <span class="text">경량패딩베스트</span>
+                                    </div>
+                                    <span class="value">9</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:5.726%;"></span>
+                                        <span class="text">코지웜팬츠</span>
+                                    </div>
+                                    <span class="value">8</span>
+                                </div>
+                                <div class="itemList gAlign between">
+                                    <div class="figure">
+                                        <span class="bar" style="width:3.275%;"></span>
+                                        <span class="text">해당텍스트영역의최대480px로광고명검색어URL등의정보가나타나는영역이므로480px최대</span>
+                                    </div>
+                                    <span class="value">6</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--참고: #content에 .pageLoading class 추가시 mLoading 노출 -->
+        <div class="mLoading">
+            <span class="spinner">
+                <img src="../libs/images/ico_loader.svg"  class="ico_loader" alt="loading">
+             </span>
+            <strong class="state">Loading</strong>
+        </div>
+    </div><!-- [ content ] -->
+    <!--광고 그룹 등록 레이어-->
+<div id="adGroupRegisterLayer" class="mLayer" style="display:none;">
+    <div class="layerHeader">
+        <span class="mTitle">광고 그룹 등록</span>
+    </div>
+    <div class="layerContent">
+        <div class="mFormBox">
+            <div class="column">
+                <div class="head">
+                    <strong class="title">광고그룹명</strong>
+                </div>
+                <div class="content">
+                    <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                    <div class="fText full">
+                        <input type="text" maxlength="30" required aria-required="true">
+                        <span class="txtByte" title="현재글자수/최대글자수"><strong>0</strong>/30</span>
+                    </div>
+                    <div class="txtDesc txtInfo">
+                        최대 30자까지 입력할 수 있습니다.
+                    </div>
+                    <!--참고: 광고 그룹명 미입력-->
+                    <!--div class="txtDesc txtWarn">
+                       광고 그룹명을 입력해 주세요.
+                    </di-->
+
+                    <!--참고: 광고 그룹명 중복시-->
+                    <!--div class="txtDesc txtWarn">
+                        기존에 등록된 광고 그룹명과 중복하여 사용할 수 없습니다.
+                    </div-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layerFooter gAlign right">
+        <button type="submit" class="btnNormal typeSubmit">
+            저장
+            <object class="ico_btnLoader" data="../libs/images/ico_btnLoader.svg" type="image/svg+xml"></object>
+        </button>
+    </div>
+    <button type="button" class="layerClose">닫기</button>
+</div>
+<!--광고 그룹 수정 레이어-->
+<div id="adGroupModifyLayer" class="mLayer" style="display:none;">
+    <div class="layerHeader">
+        <span class="mTitle">광고 그룹 수정</span>
+    </div>
+    <div class="layerContent">
+        <div class="mFormBox">
+            <div class="column">
+                <div class="head">
+                    <strong class="title">광고그룹명</strong>
+                </div>
+                <div class="content">
+                    <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                    <div class="fText full">
+                        <input type="text">
+                        <span class="txtByte" title="현재글자수/최대글자수"><strong>0</strong>/30</span>
+                    </div>
+                    <div class="txtDesc txtInfo">
+                        최대 30자까지 입력할 수 있습니다.
+                    </div>
+                    <!--참고: 광고 그룹명 미입력-->
+                    <!--div class="txtDesc txtWarn">
+                       광고 그룹명을 입력해 주세요.
+                    </di-->
+
+                    <!--참고: 광고 그룹명 중복시-->
+                    <!--div class="txtDesc txtWarn">
+                        기존에 등록된 광고 그룹명과 중복하여 사용할 수 없습니다.
+                    </div-->
+                </div>
+            </div>
+            <div class="column grid2">
+                <div class="content">
+                    <div class="column">
+                        <div class="head">
+                            <strong class="title">등록일시</strong>
+                        </div>
+                        <div class="conetnt">
+                            2020-10-25 16:23:32
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="head">
+                            <strong class="title">마지막 수정일시</strong>
+                        </div>
+                        <div class="content">
+                            2020-10-25 16:23:32
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layerFooter gAlign between">
+        <button type="submit" class="btnNormal typeDelete">삭제</button>
+        <button type="submit" class="btnNormal typeSubmit">
+            저장
+            <object class="ico_btnLoader" data="../libs/images/ico_btnLoader.svg" type="image/svg+xml"></object>
+        </button>
+    </div>
+    <button type="button" class="layerClose">닫기</button>
+</div>
+<!--광고 그룹 삭제 레이어-->
+<div id="adGroupDeleteLayer" class="mLayer" style="display:none;">
+    <div class="layerHeader">
+        <span class="mTitle">광고 그룹 삭제</span>
+    </div>
+    <div class="layerContent">
+        <strong>{$광고그룹명$}</strong>을 정말 삭제하시겠습니까?
+    </div>
+    <div class="layerFooter gAlign right">
+        <button type="submit" class="btnNormal typeCancel">취소</button><button type="submit" class="btnNormal typeSubmit">
+            확인
+            <object class="ico_btnLoader" data="../libs/images/ico_btnLoader.svg" type="image/svg+xml"></object>
+        </button>
+    </div>
+</div>
+<!--광고 그룹 삭제 레이어2-->
+<div id="adGroupDeleteLayer2" class="mLayer" style="display:none;">
+    <div class="layerHeader">
+        <span class="mTitle">광고 그룹 삭제</span>
+    </div>
+    <div class="layerContent">
+        <strong>{$광고그룹명$}</strong>에 현재 <strong class="txtEm">{$개별광고갯수$}</strong>의 광고가 등록되어 있습니다.<br/>
+        광고 그룹 삭제 시 하위 광고도 모두 삭제됩니다. 정말 삭제하시겠습니까?
+    </div>
+    <div class="layerFooter gAlign right">
+        <button type="submit" class="btnNormal typeCancel">취소</button>
+        <button type="submit" class="btnNormal typeSubmit">
+            확인
+            <object class="ico_btnLoader" data="../libs/images/ico_btnLoader.svg" type="image/svg+xml"></object>
+        </button>
+    </div>
+</div>
+
+<!--광고 등록 레이어-->
+<div id="adRegisterLayer" class="mLayer" style="display:none;">
+    <div class="layerHeader">
+        <span class="mTitle">광고 등록</span>
+    </div>
+    <div class="layerContent">
+        <div class="mFormBox">
+            <div class="column">
+                <div class="head">
+                    <strong class="title">광고그룹명</strong>
+                </div>
+                <div class="content">
+                    <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                    <div class="fSelect full">
+                        <select id="adGroupTitle">
+                            <option value="1">네이버</option>
+                            <option value="2">쿠팡</option>
+                            <option value="3">11번가</option>
+                        </select>
+                    </div>
+                    <div class="txtDesc txtInfo">
+                        등록된 광고 그룹 중 하나를 선택하세요.
+                    </div>
+                    <!--참고: 광고 그룹 미선택-->
+                    <!--div class="txtDesc">
+                        광고 그룹을 선택해주세요.
+                    </div-->
+                </div>
+            </div>
+            <div class="column">
+                <div class="head">
+                    <strong class="title">광고명</strong>
+                </div>
+                <div class="content">
+                    <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                    <div class="fText full">
+                        <input type="text">
+                        <span class="txtByte" title="현재글자수/최대글자수"><strong>0</strong>/30</span>
+                    </div>
+                    <div class="txtDesc txtInfo">
+                        최대 30자까지 입력할 수 있습니다.
+                    </div>
+                    <!--참고: 광고명 중복시-->
+                    <!--div class="txtDesc txtWarn">
+                       기존에 등록된 광고명과 중복하여 사용할 수 없습니다.
+                    </div-->
+                </div>
+            </div>
+            <div class="column">
+                <div class="head">
+                    <strong class="title">랜딩페이지 URL</strong>
+                </div>
+                <div class="content">
+                    <div class="fGrid">
+                        <div class="fSelect">
+                            <select id="protocol">
+                                <option value="1">https://</option>
+                                <option value="2">http://</option>
+                            </select>
+                        </div>
+                        <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                        <div class="fText">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="txtDesc txtInfo">
+                        랜딩페이지로 사용할 URL을 입력하세요.
+                    </div>
+                    <!--참고: URL 미입력-->
+                    <!--div class="txtDesc txtWarn">
+                       랜딩페이지 URL을 반드시 입력해주세요.
+                    </di-->
+                </div>
+            </div>
+            <div class="column">
+                <div class="head">
+                    <strong class="title">광고 코드</strong>
+                </div>
+                <div class="content">
+                    <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                    <div class="fText full">
+                        <input type="text">
+                        <span class="txtByte" title="현재글자수/최대글자수"><strong>0</strong>/30</span>
+                    </div>
+                    <div class="txtDesc txtInfo">
+                        영문, 숫자 조합만 사용하여 최대 30자까지 입력할 수 있습니다.
+                    </div>
+                    <!--참고: 광고 코드 중복시-->
+                    <!--div class="txtDesc txtWarn">
+                        기존에 등록된 광고 코드와 중복하여 사용할 수 없습니다.
+                    </div-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layerFooter gAlign right">
+        <button type="submit" class="btnNormal typeSubmit">
+            저장
+            <object class="ico_btnLoader" data="../libs/images/ico_btnLoader.svg" type="image/svg+xml"></object>
+        </button>
+    </div>
+    <button type="button" class="layerClose">닫기</button>
+</div>
+<!--광고 수정 레이어-->
+<div id="adModifyLayer" class="mLayer" style="display:none;">
+    <div class="layerHeader">
+        <span class="mTitle">광고 수정</span>
+    </div>
+    <div class="layerContent">
+        <div class="mFormBox">
+            <div class="column">
+                <div class="head">
+                    <strong class="title">광고그룹명</strong>
+                </div>
+                <div class="content">
+                    <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                    <div class="fSelect full">
+                        <select id="adGroupTitle2">
+                            <option value="1">네이버</option>
+                            <option value="2">쿠팡</option>
+                            <option value="3">11번가</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="head">
+                    <strong class="title">광고명</strong>
+                </div>
+                <div class="content">
+                    <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                    <div class="fText full">
+                        <input type="text" value="블로그 바이럴_리얼코코">
+                        <span class="txtByte" title="현재글자수/최대글자수"><strong>25</strong>/100</span>
+                    </div>
+                    <div class="txtDesc txtInfo">
+                        최대 30자까지 입력할 수 있습니다.
+                    </div>
+                    <!--참고: 광고명 중복시-->
+                    <!--div class="txtDesc txtWarn">
+                       기존에 등록된 광고명과 중복하여 사용할 수 없습니다.
+                    </div-->
+                </div>
+            </div>
+            <div class="column">
+                <div class="head">
+                    <strong class="title">랜딩페이지 URL</strong>
+                </div>
+                <div class="content">
+                    <div class="fGrid">
+                        <div class="fSelect">
+                            <select id="protocol2">
+                                <option value="1">https://</option>
+                                <option value="2">http://</option>
+                            </select>
+                        </div>
+                        <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                        <div class="fText">
+                            <input type="text" value="realcoco.cafe24.com/index.php">
+                        </div>
+                    </div>
+                    <div class="txtDesc txtInfo">
+                        랜딩페이지로 사용할 URL을 입력하세요.
+                    </div>
+                    <!--참고: URL 미입력-->
+                    <!--div class="txtDesc txtWarn">
+                       랜딩페이지 URL을 반드시 입력해주세요.
+                    </di-->
+                </div>
+            </div>
+            <div class="column">
+                <div class="head">
+                    <strong class="title">광고 코드</strong>
+                </div>
+                <div class="content">
+                    <!--참고: 입력 error 발생시 .fText에 warn class 추가-->
+                    <div class="fText full">
+                        <input type="text" disabled="disabled" value="ue_blogmarketing">
+                    </div>
+                    <div class="txtDesc txtInfo">
+                        최초 생성된 광고 코드는 수정이 불가능합니다.
+                    </div>
+                    <!--참고: 광고 코드 중복시-->
+                    <!--div class="txtDesc txtWarn">
+                        기존에 등록된 광고 코드와 중복하여 사용할 수 없습니다.
+                    </div-->
+                </div>
+            </div>
+            <div class="column grid2">
+                <div class="content">
+                    <div class="column">
+                        <div class="head">
+                            <strong class="title">등록일시</strong>
+                        </div>
+                        <div class="conetnt">
+                            2020-10-25 16:23:32
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="head">
+                            <strong class="title">마지막 수정일시</strong>
+                        </div>
+                        <div class="content">
+                            2020-10-25 16:23:32
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layerFooter gAlign between">
+        <button type="submit" class="btnNormal typeDelete">삭제</button>
+        <button type="submit" class="btnNormal typeSubmit">
+            저장
+            <object class="ico_btnLoader" data="../libs/images/ico_btnLoader.svg" type="image/svg+xml"></object>
+        </button>
+    </div>
+    <button type="button" class="layerClose">닫기</button>
+</div>
+<!--광고 삭제 레이어-->
+<div id="adDeleteLayer" class="mLayer" style="display:none;">
+    <div class="layerHeader">
+        <span class="mTitle">광고 삭제</span>
+    </div>
+    <div class="layerContent">
+        한번 삭제된 광고 코드와 동일한 광고 코드는 이후에 등록할 수 없습니다.<br/>
+        <strong>{$광고명$}</strong>을 정말 삭제하시겠습니까?
+    </div>
+    <div class="layerFooter gAlign right">
+        <button type="submit" class="btnNormal typeCancel">취소</button>
+        <button type="submit" class="btnNormal typeSubmit">
+            확인
+            <object class="ico_btnLoader" data="../libs/images/ico_btnLoader.svg" type="image/svg+xml"></object>
+        </button>
+    </div>
+</div>
+
+<div class="layerDim"></div></div>
+        <div class="toastWrap">
+            <div class="toastList"></div>
+        </div>
+</div>
+<!-- 참고 : UI개발팀 퍼블리싱 참고용 -->
+<script type="text/javascript" src="../libs/js/analytics_new.js" charset="utf-8"></script>
+<script type="text/javascript" src="../libs/js/ui_select.js" charset="utf-8"></script>
+</body>
+</html>
